@@ -1,0 +1,20 @@
+{
+  "name": "QCComputing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch public index.js "
+  },
+  "author": "Adam Lucia",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.1",
+    "gulp": "^3.9.1",
+    "gulp-nunjucks-render": "^2.2.1",
+    "gulp-sass": "^3.1.0",
+    "nodemon": "^1.11.0",
+    "nunjucks": "^3.0.1"
+  }
+}

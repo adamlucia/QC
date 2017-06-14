@@ -1,0 +1,144 @@
+$background-color: #1c5996;
+
+// dubuggin css
+* *:hover { border:2px solid #89A81E }                   /* Solid Green */
+* * *:hover { border:2px solid #F34607 }                 /* Solid Orange */
+* * * *:hover { border:2px solid #5984C3 }               /* Solid Blue */
+* * * * *:hover { border:2px solid #CD1821 }             /* Solid Red */
+* * * * * *:hover { border:2px dotted #89A81E }          /* Dotted Green */
+* * * * * * *:hover { border:2px dotted #F34607 }        /* Dotted Orange */
+* * * * * * * *:hover { border:2px dotted #5984C3 }      /* Dotted Blue */
+* * * * * * * * *:hover { border:2px dotted #CD1821 }    /* Dotted Red */
+
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+body, html {
+  height: 100%;
+}
+
+.background {
+    background-color: $background-color;
+    min-height: 100vh;
+    height: 100vw;
+}
+#header {
+
+
+    #logo {
+        background: url('/images/logo.png') no-repeat;
+        width: 531px;
+        height: 128px;
+    }
+
+    #phone {
+        background: url('/images/phone.png') no-repeat;
+        width: 21px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    #contact-text {
+        display: inline-block;
+    }
+    #phone-number {
+        display: inline-block;
+    }
+}
+
+#content {
+    overflow: auto;
+    min-width: 100%;
+    min-height: 100%;
+    padding:0px;
+
+    #globe {
+        background: url('/images/globe.png') no-repeat;
+        background-position: center;
+        min-width: 860px;
+        top: 15px;
+        width: 100%;
+        height: 950px;
+        position: absolute;
+        z-index: 0;
+        padding: 0px;
+    }
+
+    #navigation {
+        position: relative;
+        z-index: 1;
+        #nav {
+            padding: 0px;
+            float:right;
+            margin-right: 60px;
+            background-color: #1c5312;
+            list-style: none;
+            width: 400px;
+
+            li {
+                color: #f6f6f6;
+
+                &:after {
+                    content:"";
+                    background: black;
+                    position: absolute;
+                    width: 30%;
+                    right: 225px;
+                    height: 1px;
+
+                }
+                &:last-child {
+                    &:after {
+                        content:"";
+                        background: black;
+                        position: absolute;
+                        width: 50%;
+                        right: 0px;
+                        height: 0px;
+                    }
+                }
+            }
+            a {
+                padding: 40px 50px;
+                display: block;
+            }
+        }
+    }
+
+    #main-content {
+        height: 800px;
+
+        #tagline {
+            position: absolute;
+            top: 40%;
+            transform: translateY(-50%);
+            font-size: 30px;
+
+            .bold {
+
+            }
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 0px;
+            right:0px;
+
+            .arrow {
+                display: inline-block;
+                background: url('/images/scroll-down.png') no-repeat;
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+    }
+}
