@@ -46,13 +46,15 @@
   margin: 0 -9999rem;
   /* add back negative margin value */
   padding: 0.25rem 9999rem;
-  background: #26723a; }
+  background: #18540c; }
 
 body, html {
   height: 100%; }
 
 body {
   overflow-x: hidden; }
+  body p {
+    font-size: 20px; }
 
 hr {
   background-color: #26723a;
@@ -65,6 +67,8 @@ hr {
   height: auto; }
 
 #header #logo {
+  position: relative;
+  z-index: 1;
   background: url("/images/logo.png") no-repeat;
   width: 531px;
   height: 128px; }
@@ -100,6 +104,21 @@ hr {
     background-position: center;
     width: 325px;
     height: 65px; }
+  #content .qc {
+    background: url("/images/qc.png") no-repeat;
+    margin-top: -70px;
+    width: 680px;
+    height: 390px;
+    position: absolute;
+    z-index: 0; }
+  #content .book-collection {
+    background: url("/images/book-collection.png") no-repeat;
+    z-index: 1;
+    position: absolute;
+    height: 560px;
+    width: 545px;
+    margin-top: -205px;
+    margin-left: 75px; }
   #content #globe {
     background: url("/images/globe.png") no-repeat;
     background-position: center;
@@ -160,3 +179,17 @@ hr {
     margin-bottom: 100px; }
     #content #more-content .testimonials {
       text-align: center; }
+    #content #more-content .news h2 {
+      text-align: center; }
+
+#footer .fb {
+  background: url("/images/fb.png") no-repeat;
+  width: 21px;
+  height: 22px;
+  display: inline-block; }
+
+#footer .twitter {
+  background: url("/images/facebook.png") no-repeat;
+  width: 21px;
+  height: 22px;
+  display: inline-block; }

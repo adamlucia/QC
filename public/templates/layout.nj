@@ -1,23 +1,14 @@
-{% extends "base.html" %}
+{% extends "base.nj" %}
 {% block content %}
     <section id="header" class="container-fluid">
-        <div class="col-12 col-md-6">
-            <a href="/"><div id="logo"></div></a>
-        </div>
-        <div class="col-12 col-md-6">
-            <div id="contact-text">
-                <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
-            </div>
-            <div id="phone"></div>
-            <div id="phone-number">206-832-5485</div>
-        </div>
+        {% include "header.nj" %}
     </section>
     <section id="content" class="container">
         <div id="globe"></div>
         <div class="row">
             <section id="navigation" class="col-md-5">
                 <ul id="nav">
-                    <li><a href="/quickbooks">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
+                    <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
                     <li><a href="/analysis">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
                     <li><a href="/testimonials">CLIENT TESTIMONIALS</a></li>
                     <li><a href="/radicallysimple">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
@@ -28,21 +19,18 @@
                 </ul>
             </section>
             <section id="main-content" class="col-md-7 container">
-                {% block main %}
-
-                {% endblock %}
+                {% block main %}{% endblock %}
             </section>
         </div>
         <div class="row">
             <section id="more-content" class="col-12 container">
                 {% block more %}
-
                 {% endblock %}
             </section>
         </div>
     </section>
-    <section id="footer" class="container-fluid">
-
+    <section id="footer" class="container">
+        {% include "footer.nj" %}
     </section>
 
 {% endblock %}

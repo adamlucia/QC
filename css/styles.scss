@@ -1,6 +1,7 @@
 $background-color: #1c5996;
 $dark-blue: #25405b;
-$dark-green: #26723a;
+$light-green: #26723a;
+$dark-green: #18540c;
 
 // dubuggin css
 * *:hover { border:2px solid #89A81E }                   /* Solid Green */
@@ -44,10 +45,14 @@ body, html {
 
 body {
     overflow-x: hidden;
+
+    p {
+        font-size: 20px;
+    }
 }
 
 hr {
-    background-color: $dark-green;
+    background-color: $light-green;
     height: 2px;
     border: 0;
 }
@@ -59,6 +64,8 @@ hr {
 }
 #header {
     #logo {
+        position: relative;
+        z-index: 1;
         background: url('/images/logo.png') no-repeat;
         width: 531px;
         height: 128px;
@@ -107,6 +114,23 @@ hr {
         background-position: center;
         width: 325px;
         height: 65px;
+    }
+    .qc {
+        background: url('/images/qc.png') no-repeat;
+        margin-top: -70px;
+        width: 680px;
+        height: 390px;
+        position: absolute;
+        z-index: 0;
+    }
+    .book-collection {
+        background: url('/images/book-collection.png') no-repeat;
+        z-index: 1;
+        position: absolute;
+        height:560px;
+        width: 545px;
+        margin-top: -205px;
+        margin-left: 75px;
     }
 
     #globe {
@@ -198,5 +222,31 @@ hr {
         .testimonials {
             text-align: center;
         }
+
+        .news {
+            h2 {
+                text-align: center;
+            }
+
+            .item {
+
+            }
+        }
+    }
+}
+
+#footer {
+    .fb {
+        background: url('/images/fb.png') no-repeat;
+        width: 21px;
+        height: 22px;
+        display: inline-block;
+    }
+
+    .twitter {
+        background: url('/images/facebook.png') no-repeat;
+        width: 21px;
+        height: 22px;
+        display: inline-block;
     }
 }

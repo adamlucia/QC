@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.get('/', function(req, res) {
-    res.render('main.html');
+    res.render('index.html');
 });
 
 app.listen(3000, function () {

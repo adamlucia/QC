@@ -1,0 +1,13 @@
+{% block header %}
+        <div class="col-12 col-md-6">
+            <a href="/"><div id="logo"></div></a>
+            <!--<a href="/"><img src="images/logo.png" id="logo"></a>-->
+        </div>
+        <div class="col-12 col-md-6">
+            <div id="contact-text">
+                <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
+            </div>
+            <div id="phone"></div>
+            <div id="phone-number">206-832-5485</div>
+        </div>
+{% endblock %}

@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var render = require('gulp-nunjucks-render');
+var data = require('gulp-data');
+var nunjucksRender = require('gulp-nunjucks-render');
 
 gulp.task('sass', function () {
     return gulp.src('./css/*.scss')
@@ -13,10 +14,19 @@ gulp.task('sass:watch', function () {
     gulp.watch('./css/**/*.scss', ['sass']);
 });
 
+function getDataForFile(file) {
+  return {
+    example: 'data loaded for ' + file.relative
+  };
+}
 gulp.task('nunjucks', function() {
-  return gulp.src('./**/*.+(nj)')
-  .pipe(render({
-      path: ['./templates']
+  return gulp.src('./public/templates/pages/*.+(nj)')
+  .pipe(data(getDataForFile))
+  .pipe(nunjucksRender({
+      path: ['public/templates'],
+      envOptions: {
+        watch: true
+      },
     }))
   .pipe(gulp.dest('public'))
 });
