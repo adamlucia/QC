@@ -1,17 +1,19 @@
 $background-color: #1c5996;
 $dark-blue: #25405b;
+$med-blue: #294865;
 $light-green: #26723a;
 $dark-green: #18540c;
+$white: #f4f6f4;
 
-// dubuggin css
-* *:hover { border:2px solid #89A81E }                   /* Solid Green */
-* * *:hover { border:2px solid #F34607 }                 /* Solid Orange */
-* * * *:hover { border:2px solid #5984C3 }               /* Solid Blue */
-* * * * *:hover { border:2px solid #CD1821 }             /* Solid Red */
-* * * * * *:hover { border:2px dotted #89A81E }          /* Dotted Green */
-* * * * * * *:hover { border:2px dotted #F34607 }        /* Dotted Orange */
-* * * * * * * *:hover { border:2px dotted #5984C3 }      /* Dotted Blue */
-* * * * * * * * *:hover { border:2px dotted #CD1821 }    /* Dotted Red */
+// dubugging css
+// * *:hover { border:2px solid #89A81E }                   /* Solid Green */
+// * * *:hover { border:2px solid #F34607 }                 /* Solid Orange */
+// * * * *:hover { border:2px solid #5984C3 }               /* Solid Blue */
+// * * * * *:hover { border:2px solid #CD1821 }             /* Solid Red */
+// * * * * * *:hover { border:2px dotted #89A81E }          /* Dotted Green */
+// * * * * * * *:hover { border:2px dotted #F34607 }        /* Dotted Orange */
+// * * * * * * * *:hover { border:2px dotted #5984C3 }      /* Dotted Blue */
+// * * * * * * * * *:hover { border:2px dotted #CD1821 }    /* Dotted Red */
 
 
 //Utilities
@@ -20,21 +22,32 @@ $dark-green: #18540c;
     padding-left:0;
 }
 
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+
 .vcenter {
-    display: inline-block;
-    vertical-align: middle;
-    float: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.center-text {
+    text-align: center;
 }
 
 .margin-50-bottom {
     margin-bottom: 50px;
 }
-
+.green-fill {
+    background: $dark-green;
+}
 .full-width-bar {
   margin: 0 -9999rem;
   /* add back negative margin value */
   padding: 0.25rem 9999rem;
-  background: $dark-green;
 }
 
 //PAGES
@@ -45,9 +58,20 @@ body, html {
 
 body {
     overflow-x: hidden;
-
+    color: $white;
     p {
         font-size: 20px;
+    }
+
+    a {
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+
+    h2 {
+        font-family: serif;
     }
 }
 
@@ -80,6 +104,7 @@ hr {
 
     #contact-text {
         display: inline-block;
+        text-align: left;
     }
     #phone-number {
         display: inline-block;
@@ -88,22 +113,25 @@ hr {
 
 #content {
     overflow: visible;
-    min-height: 100%;
+    min-height: inherit;
     padding: 0px;
 
+
     .blue-backdrop {
+        border: 25px solid $dark-blue;
 
     }
+    .green-backdrop {
+        border: 25px solid $dark-green;
 
+    }
     .notepad {
-        border: 50px solid $dark-blue;
         background: url('/images/notepad.png') no-repeat;
         width: 490px;
         height: 325px;
     }
 
     .help {
-        border: 50px solid $dark-blue;
         background: url('/images/analysis-help.png') no-repeat;
         width: 490px;
         height: 325px;
@@ -115,6 +143,15 @@ hr {
         width: 325px;
         height: 65px;
     }
+
+    .quickbooks-logo {
+        background: url('/images/quickbooks-logo.png') no-repeat;
+        background-position: center;
+        width: 380px;
+        height: 238px;
+        float: right;
+    }
+
     .qc {
         background: url('/images/qc.png') no-repeat;
         margin-top: -70px;
@@ -132,12 +169,96 @@ hr {
         margin-top: -205px;
         margin-left: 75px;
     }
+    .lock {
+        background: url('/images/lock.png') no-repeat;
+        width: 435px;
+        height: 290px;
+        background-position: center;
+    }
+    .pointer {
+        background: url('/images/pointer.png') no-repeat;
+        width: 435px;
+        height: 290px;
+        background-position: center;
+    }
+    .writing {
+        background: url('/images/writing.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .graph {
+        background: url('/images/graph.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .pen {
+        background: url('/images/pen.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .shake {
+        background: url('/images/shake.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+
+    .pointinggraph {
+        background: url('/images/shutterstock1.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .meeting {
+        background: url('/images/shutterstockmeeting.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .accounting-book{
+        background: url('/images/shutterstockbook.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .meeting-dude {
+        background: url('/images/shutterstockdude.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .comparison {
+        background: url('/images/shutterstockpaper.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .collab {
+        background: url('/images/shutterstockcollab.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .review {
+        background: url('/images/shutterstockreview.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .laptop {
+        background: url('/images/shutterstocklaptop.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .shake {
+        background: url('/images/shutterstockshake.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+    .thinking {
+        background: url('/images/shutterstockthinking.png') no-repeat;
+        width: 435px;
+        height: 290px;
+    }
+
 
     #globe {
         background: url('/images/globe.png') no-repeat;
         background-position: center;
         min-width: 860px;
-        top: 15px;
+        top: -100px;
         left: 0px;
         width: 100%;
         height: 950px;
@@ -152,7 +273,6 @@ hr {
         #nav {
             padding: 0px;
             float:right;
-            margin-right: 60px;
             background-color: #1c5312;
             list-style: none;
             width: 400px;
@@ -165,7 +285,7 @@ hr {
                     background: black;
                     position: absolute;
                     width: 30%;
-                    right: 225px;
+                    right: 245px;
                     height: 1px;
 
                 }
@@ -189,6 +309,26 @@ hr {
 
     #main-content {
         min-height: 800px;
+
+        #main {
+            background-color: $med-blue;
+            min-height: inherit;
+
+            &.short {
+                min-height: 20px;
+            }
+            p {
+
+            }
+        }
+        #secondary {
+            margin-top: 50px;
+            min-height: 20px;
+            > div {
+                background-color: $med-blue;
+            }
+        }
+
 
         #tagline {
             position: absolute;

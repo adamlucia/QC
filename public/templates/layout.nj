@@ -5,20 +5,20 @@
     </section>
     <section id="content" class="container">
         <div id="globe"></div>
-        <div class="row">
-            <section id="navigation" class="col-md-5">
+        <div class="row no-gutter">
+            <section id="navigation" class="col-md-4">
                 <ul id="nav">
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
-                    <li><a href="/analysis">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
-                    <li><a href="/testimonials">CLIENT TESTIMONIALS</a></li>
-                    <li><a href="/radicallysimple">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
-                    <li><a href="/news">NEWS AND PUBLICATIONS</a></li>
-                    <li><a href="/save">SAVE ON SOFTWARE & SUPPLIES</a></li>
-                    <li><a href="/blog">BLOG</a></li>
-                    <li><a href="/about">ABOUT US</a></li>
+                    <li><a href="/analysis.html">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
+                    <li><a href="/testimonials.html">CLIENT TESTIMONIALS</a></li>
+                    <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
+                    <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
+                    <li><a href="/save.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
+                    <li><a href="/blog.html">BLOG</a></li>
+                    <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
             </section>
-            <section id="main-content" class="col-md-7 container">
+            <section id="main-content" class="col-md-8 container">
                 {% block main %}{% endblock %}
             </section>
         </div>

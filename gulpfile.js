@@ -30,3 +30,7 @@ gulp.task('nunjucks', function() {
     }))
   .pipe(gulp.dest('public'))
 });
+
+gulp.task('nunjucks:watch', function () {
+    gulp.watch('./public/templates/pages/*.+(nj)', ['nunjucks']);
+});

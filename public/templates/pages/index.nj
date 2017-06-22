@@ -31,12 +31,12 @@
                 <a href="/#" class="square-button">MORE ABOUT OUR WORK</a>
             </div>
             <div class="col-12 col-md-6">
-                <div class="notepad"></div>
+                <div class="notepad blue-backdrop"></div>
             </div>
         </div>
         <div class="row margin-50-bottom">
             <div class="col-12 col-md-6">
-                <div class="help"></div>
+                <div class="help green-backdrop"></div>
             </div>
             <div class="col-12 col-md-6">
                 <h2>SMALL BUSINESS FINANCIAL ANALYSIS</h2>
@@ -61,7 +61,7 @@
                 <p>Shows you a simpler way to learn private business accounting,  gain control of your finances, and make more profit!</p>
             </div>
         </div>
-        <div class="row margin-50-bottom full-width-bar">
+        <div class="row margin-50-bottom full-width-bar green-fill">
             <div class="col-12 col-md-6">
                 <p>As an experienced business analyst, Madeline Bailey saves business owners from making the same accounting mistakes over and over again, helping them gain control of their finances in the process. That's why she wrote, Radically Simple Accounting, to help business owners who don't quite"connect" with traditional accounting books. She can help you make your businesses more profitable!</p>
             </div>

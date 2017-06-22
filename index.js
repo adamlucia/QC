@@ -7,7 +7,8 @@ app.set('view engine', 'html');
 // nunjucks.configure(path.join(__dirname, 'templates'), {
 nunjucks.configure('public/templates', {
     autoescape: true,
-    express: app
+    express: app,
+    watch: true
 });
 
 //app.use(express.static('publc/*'))
