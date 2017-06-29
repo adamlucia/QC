@@ -17,12 +17,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 </head>
 <body>
-    <div class="background container-fluid">
+    <div class="background no-gutters">
+        <div class="wave"></div>
           
     <section id="header" class="container-fluid">
         
@@ -31,12 +34,11 @@
                 <a href="/"><div id="logo"></div></a>
                 <!--<a href="/"><img src="images/logo.png" id="logo"></a>-->
             </div>
-            <div class="col-12 col-md-6 vcenter center-text">
+            <div class="col-12 col-md-6 vcenter text-right">
                 <div id="contact-text">
                     <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
                 </div>
-                <div id="phone"></div>
-                <div id="phone-number">206-832-5485</div>
+                <div class="phone">206-832-5485</div>
             </div>
         </div>
 
@@ -44,7 +46,7 @@
     </section>
     <section id="content" class="container">
         <div id="globe"></div>
-        <div class="row no-gutter">
+        <div class="row no-gutter  margin-100-bottom">
             <section id="navigation" class="col-md-4">
                 <ul id="nav">
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
@@ -52,7 +54,7 @@
                     <li><a href="/testimonials.html">CLIENT TESTIMONIALS</a></li>
                     <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
-                    <li><a href="/save.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
+                    <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
                     <li><a href="/blog.html">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
@@ -60,14 +62,16 @@
             <section id="main-content" class="col-md-8 container">
                 
     <div class="row">
-        <span id="tagline">Helping Your Business
-            </br><span class="bold">Become More Profitable</span>
-        </span>
-        <span class="scroll-down">
-            SCROLL DOWN</br>
-            FOR MORE INFO
-            <div class="arrow"></div>
-        </span>
+        <div class="col-12 full">
+            <span id="tagline">
+                Helping Your Business</br>
+                <h1 class="font-serif">Become More</br>Profitable</h1>
+            </span>
+            <div class="scroll-down">
+                SCROLL DOWN FOR MORE INFO
+            </div>
+        </div>
+
     </div>
 
             </section>
@@ -75,77 +79,84 @@
         <div class="row">
             <section id="more-content" class="col-12 container">
                 
-        <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+        <div class="row margin-150-bottom">
+            <div class="col-12 col-md-5">
                 <div class="quickbooks"></div>
             </div>
-            <div class="col-12 col-md-6">
-                <h2>QuickBooks Software Expert</h2>
+            <div class="col-12 col-md-7">
+                <h2>QUICKBOOKS SOFTWARE EXPERT</h2>
                 <p>Ms. Bailey offers software consultation, including setup, training and problem-solving, for every year, every version, and every edition of QuickBooks software.  A relationship-driven firm, Ms. Bailey works with one client per day.</p>
-                <a href="/quickbooks" class="square-button">MORE DETAILS ABOUT QUICK BOOKS CONSULTING</a>
+                <a href="/quickbooks" class="square-button double-line">MORE DETAILS ABOUT QUICK BOOKS CONSULTING</a>
             </div>
         </div>
 
-        <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+        <div class="row margin-150-bottom">
+            <div class="col-12 col-md-7">
                 <h2>SENIOR ACCOUNTANT</h2>
                 <p>You are a successful business person with hundreds of concerns. If one of them is your accounting, you've come to the right place. Ms Bailey is an accounting fixer. She turns disasters into GAAP financial reporting. Beyond that, she can offer you support with every aspect of financial management and office systems. With many clients this involves active financial consultation.</p>
                 <a href="/#" class="square-button">MORE ABOUT OUR WORK</a>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5">
                 <div class="notepad blue-backdrop"></div>
             </div>
         </div>
-        <div class="row margin-50-bottom">
+        <div class="row margin-150-bottom">
             <div class="col-12 col-md-6">
                 <div class="help green-backdrop"></div>
             </div>
             <div class="col-12 col-md-6">
                 <h2>SMALL BUSINESS FINANCIAL ANALYSIS</h2>
                 <p>You didnt go into business to manage a business, nor were you born with those skills. You may be brilliant at what you do, but even the most successful entrepreneur does not have the skills to solve every problem. That's where a Small Business Financial Analyst comes into play.</p>
-                <a href="/analysis" class="square-button">MORE DETAILS HOW WE CAN HELP YOU</a>
+                <a href="/analysis" class="square-button double-line">MORE DETAILS HOW WE CAN HELP YOU</a>
             </div>
         </div>
         <hr/>
-        <div class="row margin-50-bottom">
-            <div class="col-12 testimonials">
+        <div class="row margin-150-bottom testimonials">
+            <div class="col-12">
                 <h2>CLIENTS TESTIMONIALS</h2>
-                <!-- JS slider -->
-                <p>You didnt go into business to manage a business, nor were you born with those skills. You may be brilliant at what you do, but even the most successful entrepreneur does not have the skills to solve every problem. That's where a Small Business Financial Analyst comes into play.</p>
-                <span class="quote">CLIENT LASTNAME</span>
-                <a href="/testimonials" class="square-button">MORE DETAILS HOW WE CAN HELP YOU</a>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"You didnt go into business to manage a business, nor were you born with those skills. You may be brilliant at what you do, but even the most successful entrepreneur does not have the skills to solve every problem. That's where a Small Business Financial Analyst comes into play."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <center><span class="name">Petr Gvozd,</span></center>
+                        <center><span class="business">Window Fella's Windows & Doors</span></center>
+                        <a href="/testimonials.html" class="see-more">SEE MORE ABOUT WHAT OUR CLIENTS SAY</a>
+                    </div>
+                </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-md-6">
                 <h2>RADICALLY SIMPLE ACCOUNTING</h2>
                 <p>Shows you a simpler way to learn private business accounting,  gain control of your finances, and make more profit!</p>
             </div>
         </div>
-        <div class="row margin-50-bottom full-width-bar green-fill">
-            <div class="col-12 col-md-6">
+        <div class="row margin-150-bottom no-gutter full-width-bar green-fill">
+            <div class="col-12 col-md-7 top-level">
                 <p>As an experienced business analyst, Madeline Bailey saves business owners from making the same accounting mistakes over and over again, helping them gain control of their finances in the process. That's why she wrote, Radically Simple Accounting, to help business owners who don't quite"connect" with traditional accounting books. She can help you make your businesses more profitable!</p>
             </div>
-            <div class="col-12 col-md-6 visible-md-6">
+            <div class="col-12 col-md-5 visible-md-5">
                 <div class="qc"></div>
                 <div class="book-collection"></div>
             </div>
         </div>
-        <div class="row margin-50-bottom">
-            <div class="col-xs-12">
-                <a href="/analysis" class="square-button">BOOK PURCHASE OPTIONS AND MORE DETAILS</a>
+        <div class="row margin-150-bottom">
+            <div class="col-12">
+                <a href="/analysis" class="square-button double-line margin-top-25">BOOK PURCHASE OPTIONS AND MORE DETAILS</a>
             </div>
         </div>
         <div class="row news">
             <div class="col-12">
-                <h2>LATEST NEWS</h2>
+                <h4>LATEST NEWS</h4>
             </div>
             <!-- dynamically pull in content-->
             <div class="col-12 col-md-4 item">
-                <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+                <h5>Lorem ipsum dolor sit amet, consectetur</h5>
                 <p>Vivamus quis laoreet arcu. Suspendisse condimentum lacus vitae risus dapibus, quis feugiat lectus venenatis. Praesent mattis, orci nec ornare tempor, nunc lectus viverra massa, nec pharetra tellus neque eu neque.</p>
-                <div><span class="date">April 4 2017</span><a href="/more">READ MORE</a></div>
+                <div><span class="date">April 4 2017</span><a href="/more" class="float-right read-more">Read More</a></div>
             </div>
             <div class="col-12 col-md-4">
                 <h3>Lorem ipsum dolor sit amet, consectetur</h3>
@@ -164,18 +175,22 @@
     </section>
     <section id="footer" class="container">
         
-        <div class="row margin-50-bottom">
-            <div class="col-xs-12 col-md-3">
-                2001 - 2017 QC Computing, LLC. All Rights Reserved.
+        <div class="row no-gutters">
+            <div class="col-12 col-md-3">
+                <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
             </div>
-            <div class="col-xs-12 col-md-5">
-                CONTACT US TODAY: <div id="phone"></div>
-                <div id="phone-number">206-832-5485</div>
+            <div class="col-12 col-md-5 vcenter">
+                <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
-            <div class="col-xs-12 col-md-3">
-                or send email to:
-                bailey@qccomputing.com
-                <div class="pull-right"><div class="fb"></div><div class="twitter"></div></div>
+            <div class="col-12 col-md-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="footer-text">or send email to: bailey@qccomputing.com</div>
+                    </div>
+                    <div class="col-4 vcenter">
+                        <div class="float-right"><div class="fb"></div><div class="linked-in"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
 

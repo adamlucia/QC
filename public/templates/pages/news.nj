@@ -1,0 +1,37 @@
+{% extends "layout.nj" %}
+{% block main %}
+    <h2>Latest News</h2>
+    <div id="main" class="row ">
+        <div class="col-10 offset-2 blue-background">
+            <p>Shows you a simpler way to learn private business accounting,  gain control of your finances, and make more profit!</p>
+            <p>As an experienced business analyst, Madeline Bailey saves business owners from making the same accounting mistakes over and over again, helping them gain control of their finances in the process. That's why she wrote, Radically Simple Accounting, to help business owners who don't quite"connect" with traditional accounting books. She can help you make your businesses more profitable!</p>
+        </div>
+        <div class="col-10 offset-2 blue-background">
+            <p>Shows you a simpler way to learn private business accounting,  gain control of your finances, and make more profit!</p>
+            <p>As an experienced business analyst, Madeline Bailey saves business owners from making the same accounting mistakes over and over again, helping them gain control of their finances in the process. That's why she wrote, Radically Simple Accounting, to help business owners who don't quite"connect" with traditional accounting books. She can help you make your businesses more profitable!</p>
+        </div>
+    </div>
+    <span class="scroll-down">
+        SCROLL DOWN</br>
+        FOR MORE INFO
+        <div class="arrow"></div>
+    </span>
+{% endblock %}
+
+
+{% block more %}
+        <div class="row margin-50-bottom full-width-bar green-background">
+            <div class="col-12 col-md-6">
+                <h2>Business Analyst</h2>
+                <p>You may be brilliant at what you do, but even the most successful entrepreneur does not have skills to solve every problem. That's where a business analyst like Madeline Bailey comes in to play. Ms. Bailey has a B.A. in Management, plus 28 years of business management practice and expertise. She can provide you with the following:</p>
+                <ul>
+                    <li>QuickBooks Software Expertise</li>
+                    <li>Financial Analysis Review</li>
+                    <li>Senior Accounting Services</li>
+                    <li>Organizational Workflow & Filing Systems</li>
+                    <li>PC Technology for Small Businesses</li>
+                    <li>Small Business Analysis</li>
+                </ul>
+            </div>
+        </div>
+{% endblock %}

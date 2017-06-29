@@ -17,12 +17,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
 </head>
 <body>
-    <div class="background container-fluid">
+    <div class="background no-gutters">
+        <div class="wave"></div>
           
     <section id="header" class="container-fluid">
         
@@ -31,12 +34,11 @@
                 <a href="/"><div id="logo"></div></a>
                 <!--<a href="/"><img src="images/logo.png" id="logo"></a>-->
             </div>
-            <div class="col-12 col-md-6 vcenter center-text">
+            <div class="col-12 col-md-6 vcenter text-right">
                 <div id="contact-text">
                     <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
                 </div>
-                <div id="phone"></div>
-                <div id="phone-number">206-832-5485</div>
+                <div class="phone">206-832-5485</div>
             </div>
         </div>
 
@@ -44,7 +46,7 @@
     </section>
     <section id="content" class="container">
         <div id="globe"></div>
-        <div class="row no-gutter">
+        <div class="row no-gutter  margin-100-bottom">
             <section id="navigation" class="col-md-4">
                 <ul id="nav">
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
@@ -52,7 +54,7 @@
                     <li><a href="/testimonials.html">CLIENT TESTIMONIALS</a></li>
                     <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
-                    <li><a href="/save.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
+                    <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
                     <li><a href="/blog.html">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
@@ -61,13 +63,13 @@
                 
     <h2>Business Analyst</h2>
     <div id="main" class="row short">
-        <div class="col-12">
+        <div class="col-12 blue-background">
             <h4>Benefits of a Business Analyst?</h4>
             <p>We are all in business together. We work overtime to make our businesses the best they can be. While providing first-rate packages for your customers and services for your clients is demanding, running a profitable business can be even more so. Every day it seems as if there's a new challenge that tests your problem-solving skills. Naturally your problem solving skills are well developed or your business wouldn't be as successful as it is. But one day you will face a problem for which you have no ready solution. If that day has come with your accounting system that's the problem, contact Madeline Bailey for help.</p>
         </div>
     </div>
     <div id="secondary" class="row">
-        <div class="col-10 offset-2">
+        <div class="col-10 offset-2 blue-background">
             <h4>You'll benefit from Madeline's collaborative, insightful approach.</h4>
             <p>Madeline takes the time to listen and truly understand your business problems first, which seems unique among business analysts. The best solution is to help you clarify the problem with better financial information, which lights up the solution. If Madeline has dealt this this before, she'll recommend a possible solution. If this is something that's out of her jurisdiction, she'll try to refer you to a qualified resource.</p>
         </div>
@@ -205,18 +207,22 @@
     </section>
     <section id="footer" class="container">
         
-        <div class="row margin-50-bottom">
-            <div class="col-xs-12 col-md-3">
-                2001 - 2017 QC Computing, LLC. All Rights Reserved.
+        <div class="row no-gutters">
+            <div class="col-12 col-md-3">
+                <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
             </div>
-            <div class="col-xs-12 col-md-5">
-                CONTACT US TODAY: <div id="phone"></div>
-                <div id="phone-number">206-832-5485</div>
+            <div class="col-12 col-md-5 vcenter">
+                <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
-            <div class="col-xs-12 col-md-3">
-                or send email to:
-                bailey@qccomputing.com
-                <div class="pull-right"><div class="fb"></div><div class="twitter"></div></div>
+            <div class="col-12 col-md-3">
+                <div class="row">
+                    <div class="col-8">
+                        <div class="footer-text">or send email to: bailey@qccomputing.com</div>
+                    </div>
+                    <div class="col-4 vcenter">
+                        <div class="float-right"><div class="fb"></div><div class="linked-in"></div></div>
+                    </div>
+                </div>
             </div>
         </div>
 

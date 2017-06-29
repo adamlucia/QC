@@ -1,0 +1,138 @@
+{% extends "layout.nj" %}
+{% block main %}
+    <h2>About Us</h2>
+    <div id="main">
+        <div class="row blue-background">
+            <div class="col-12">
+                <div class="wrap-text-right up-and-right green-backdrop">
+                    <img src="/images/seattle.png" width="350" height="250" align="right">
+                </div>
+                <p>Madeline Bailey consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.  Madeline Bailey consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.</p>
+                <p><b>We bring our services to your place of business!</b> For clients who live out of state, we offer remote consulting services and/or we travel. We ask for four hours minimum for new clients so that we can get to know you and your business. Our policy is to be paid on retainer or in full at time of service. We accept cash, checks, paypal, bitcoin, silver, gold, credit cards (+fees), and intuit payment plan (+fees).</p>
+                <p><b>Our goal is to empower private business owners to make more profit!</b></p>
+            </div>
+        </div>
+        <div class="row">
+            <span class="scroll-down">
+                SCROLL DOWN</br>
+                FOR MORE INFO
+                <div class="arrow"></div>
+            </span>
+        </div>
+    </div>
+{% endblock %}
+
+{% block more %}
+        <div class="row">
+            <div class="col-12">
+                <h2><center>Contact Us</center></h2>
+            </div>
+        </div>
+        <div class="row green-background margin-50-bottom">
+            <div class="col-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="phone">206-832-5485</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="email">bailey@qccomputing</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="follow-us">Follow Us on:</div>
+                        <div class="social-media">
+                            <div class="facebook"></div>
+                            <div class="linked-in"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <form class="contact" action="/action_page.php">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="FIRST NAME">
+                        </div>
+                        <div class="col-6">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="LAST NAME">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="EMAIL">
+                        </div>
+                        <div class="col-6">
+                            <label for="phone">Last Name</label>
+                            <input type="text" id="phone" name="phone" placeholder="PHONE NUMBER">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="description">Subject</label>
+                            <textarea id="description" name="description" placeholder="DESCRIPTION OF SERVICE"></textarea></br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="g-recaptcha" data-sitekey="6Ldq_CYUAAAAACX8ZLWPNdRSf4SlBms0EbV3POFS"></div>
+                                </div>
+                                <div class="col-6 text-right">
+                                    <div class="submit">
+                                        <input type="submit" value="Submit">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row margin-50-bottom">
+            <div class="col-12">
+                <div class="wrap-text-left profile-crop green-backdrop">
+                    <img src="/images/madeline.png" width="350" align="left">
+                </div>
+                <h2>Madeline Bailey</h2>
+                <p>A premier private business analyst with 22 years of PC expertise, Madeline began her financial career as a computer programmer for SSG Accounting Software (a Peachtree competitor). She next worked as a software developer creating the world's leading cancer-research software, and then as a manager for a government IT department, managing programmers, hardware techs, a call center staff, and statisticians. It wasn't until 1991 that Madeline joined her husband as managing partner of their own software publishing company. Frustrated with the lack of financial visibility offered by the company's manual income &amp; expense tracking system, Madeline implemented QuickBooks Accounting software for DOS and profitability soared!</p>
+
+                <p>Word of her success spread and soon the SBA and entrepreneurs were asking if she could do the same for them? This opened the door to starting QC Computing LLC in 1997, a consulting firm specializing in QuickBooks for businesses in a wide variety of industries. While working as a QuickBooks expert for CPA's and Fortune-1000 firms, and as a private accountant and business analyst to some of Silicon Valley's wealthiest individuals, Madeline noticed a communication gap between some accountants and their clients.</p>
+                <p>To empower business people financially, Madeline developed an entirely new, more intuitive approach to teaching accounting. Now in its second printing, and with a new audiobook release, Radically Simple Accounting is popular with entrepreneurs and their bookkeepers.
+
+                <p>Madeline holds a B.A. in Management and is a frequent speaker.</p>
+                <p>Ms. Bailey belongs to the professional organization Accounting &amp; Financial Women's Alliance A deeply spiritual person, Madeline is a light worker who tithes.</p>
+            </div>
+            <div class="col-12">
+                <div class="">View Ms. Bailey's Resume (.pdf)</div>
+            </div>
+        </div>
+        <div class="row margin-50-bottom">
+            <div class="col-12 col-md-7">
+                <h2>Shelly Tutt</h2>
+                <h3>BOOKKEEPER</h3>
+                <p>Shelly Tutt is certified in QuickBooks Online Edition. A self-motivated person, she started out as the bookkeeper for her family business. She enjoyed it so much that she decided to obtain her AAS Degree in Accounting from Bellevue College. While at college, she was referred by a professor to a bookkeeping job for a contractor, who raves about her work. After graduation, Shelly decided that bookkeeping was going to be her new path and came to work for QC Computing. In her private life, Shelly likes Yoga class and horseback riding, so she brings a healthy glow to your office along with her many professional talents. Familiar with all versions of QuickBooks, Shelly is the perfect addition to your small business team.</p>
+            </div>
+            <div class="col-12 col-md-5">
+                <div class="shelly green-backdrop"></div>
+            </div>
+        </div>
+        <div class="row margin-50-bottom">
+            <div class="col-12 col-md-5">
+                <div class="dana green-backdrop"></div>
+            </div>
+            <div class="col-12 col-md-7">
+                <h2>Dana Johnson</h2>
+                <h3>BOOKKEEPER</h3>
+                <p>Dana Johnson has been keeping the books for her family owned small business, A.J. Hauling Inc., for the last 20 years. Her passion is children, especially her own but now that they are in college, she's happy to share her gift for detail, organization, and bookkeeping with other small busines owners. Dana's value system of honesty and loyalty are an inspiration to all around her, including our clients. In her spare time, she and her husband like to go boating on Lake Sammamish, and camping at Mt. Ranier. A lovely woman, with stellar references; she's the perfect addition to your small business team.</p>
+            </div>
+        </div>
+{% endblock %}

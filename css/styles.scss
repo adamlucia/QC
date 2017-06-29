@@ -1,6 +1,7 @@
 $background-color: #1c5996;
 $dark-blue: #25405b;
 $med-blue: #294865;
+$light-blue: #205993;
 $light-green: #26723a;
 $dark-green: #18540c;
 $white: #f4f6f4;
@@ -15,7 +16,9 @@ $white: #f4f6f4;
 // * * * * * * * *:hover { border:2px dotted #5984C3 }      /* Dotted Blue */
 // * * * * * * * * *:hover { border:2px dotted #CD1821 }    /* Dotted Red */
 
-
+* {
+    z-index: 1;
+}
 //Utilities
 .no-gutter > [class*='col-'] {
     padding-right:0;
@@ -41,6 +44,19 @@ $white: #f4f6f4;
 .margin-50-bottom {
     margin-bottom: 50px;
 }
+
+.margin-100-bottom {
+    margin-bottom: 100px;
+}
+
+.margin-150-bottom {
+    margin-bottom: 150px;
+}
+
+.margin-top-25 {
+    margin-top: 25px;
+}
+
 .green-fill {
     background: $dark-green;
 }
@@ -50,8 +66,22 @@ $white: #f4f6f4;
   padding: 0.25rem 9999rem;
 }
 
-//PAGES
+.font-serif {
+    font-family: serif !important;
+}
+.font-sans-serif {
+    font-family: sans-serif !important;
+}
+.top-level {
+    z-index: 99;
+}
 
+
+.inline-block {
+    display: inline-block;
+}
+
+//PAGES
 body, html {
     height: 100%;
 }
@@ -60,18 +90,39 @@ body {
     overflow-x: hidden;
     color: $white;
     p {
-        font-size: 20px;
+        font-size: 17px;
+        margin: 1.5em 0px;
+        font-weight: 100;
+        position: relative;
+        z-index: 100 !important;
     }
 
     a {
         color: $white;
+        text-decoration: underline;
         &:hover {
             color: $white;
         }
     }
 
+    h1 {
+        font-size: 60px;
+        font-weight: 100;
+    }
+
     h2 {
         font-family: serif;
+        font-weight: 100;
+    }
+
+    h3 {
+        font-family: serif;
+        font-weight: 100;
+    }
+
+    h4 {
+        font-family: serif;
+        font-weight: 100;
     }
 }
 
@@ -91,6 +142,100 @@ hr {
     background-color: $med-blue;
 }
 
+.green-background {
+    background-color: $dark-green;
+
+    .border {
+        border: 3px solid $med-blue;
+        display: inline-block;
+    }
+}
+
+.phone {
+    display: inline-block;
+
+    &:before {
+        content:'';
+        background: url('/images/phone.png') no-repeat;
+        display: inline-block;
+        width: 21px;
+        height: 22px;
+        margin-right: 5px;
+        margin-bottom: -2px;
+    }
+}
+
+.social-media {
+    .facebook {
+        background: url('/images/facebook.png') no-repeat;
+        display: inline-block;
+        width: 21px;
+        height: 22px;
+    }
+    .linked-in {
+        background: url('/images/linked-in.png') no-repeat;
+        display: inline-block;
+        width: 21px;
+        height: 22px;
+    }
+}
+
+.contact {
+    padding:50px;
+    /* Style inputs with type="text", select elements and textareas */
+    input[type=text], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */
+        border: 1px solid #ccc; /* Gray border */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+    textarea {
+        width: 100%;
+    }
+
+    /* Style the submit button with a specific background color etc */
+    .submit {
+        display: inline-block;
+    }
+
+    input[type=submit] {
+        background-color: $med-blue;
+        color: $white;
+        padding: 27px 85px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    /* When moving the mouse over the submit button, add a darker green color */
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    label {
+        display: none;
+    }
+
+    .g-recaptcha{
+        display: inline-block;
+    }
+}
+
+.wave {
+    background: url('/images/wave.png') no-repeat;
+    background-position: center;
+    width: 2700px;
+    height: 580px;
+    position: absolute;
+    top: 1110px;
+    left: -1100px;
+    z-index: 0;
+    padding: 0px;
+}
+
 #header {
     #logo {
         position: relative;
@@ -98,21 +243,19 @@ hr {
         background: url('/images/logo.png') no-repeat;
         width: 531px;
         height: 128px;
-    }
-
-    #phone {
-        background: url('/images/phone.png') no-repeat;
-        width: 21px;
-        height: 22px;
-        display: inline-block;
+        margin-bottom: 25px;
     }
 
     #contact-text {
         display: inline-block;
         text-align: left;
+        line-height: 1em;
+        font-size: 12px;
+        margin-right: 15px;
     }
-    #phone-number {
-        display: inline-block;
+    .phone {
+        font-size: 30px;
+        font-family: serif;
     }
 }
 
@@ -121,6 +264,13 @@ hr {
     min-height: inherit;
     padding: 0px;
 
+    .contact-text {
+        display: inline-block;
+        text-align: left;
+    }
+    .phone-number {
+        display: inline-block;
+    }
 
     .blue-backdrop {
         border: 25px solid $dark-blue;
@@ -159,7 +309,8 @@ hr {
 
     .qc {
         background: url('/images/qc.png') no-repeat;
-        margin-top: -70px;
+        top: -70px;
+        left: -130px;
         width: 680px;
         height: 390px;
         position: absolute;
@@ -167,12 +318,13 @@ hr {
     }
     .book-collection {
         background: url('/images/book-collection.png') no-repeat;
-        z-index: 1;
         position: absolute;
-        height:560px;
-        width: 545px;
-        margin-top: -205px;
-        margin-left: 75px;
+        z-index: 1;
+        background-position: center;
+        height:525px;
+        width: 510px;
+        top: -205px;
+        left: -45px;
     }
     .lock {
         background: url('/images/lock.png') no-repeat;
@@ -190,81 +342,261 @@ hr {
         background: url('/images/writing.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .graph {
         background: url('/images/graph.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .pen {
         background: url('/images/pen.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .shake {
         background: url('/images/shake.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
 
     .pointinggraph {
         background: url('/images/shutterstock1.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .meeting {
         background: url('/images/shutterstockmeeting.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .accounting-book{
         background: url('/images/shutterstockbook.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .meeting-dude {
         background: url('/images/shutterstockdude.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .comparison {
         background: url('/images/shutterstockpaper.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .collab {
         background: url('/images/shutterstockcollab.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .review {
         background: url('/images/shutterstockreview.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .laptop {
         background: url('/images/shutterstocklaptop.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .shake {
         background: url('/images/shutterstockshake.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
     }
     .thinking {
         background: url('/images/shutterstockthinking.png') no-repeat;
         width: 435px;
         height: 290px;
+        background-position: center;
+    }
+    .glasses {
+        background: url('/images/shutterstockglasses.png') no-repeat;
+        width: 435px;
+        height: 290px;
+        background-position: center;
+    }
+    .calculator {
+        background: url('/images/shutterstockcalculator.png') no-repeat;
+        width: 435px;
+        height: 290px;
+        background-position: center;
+    }
+    .double {
+        background: url('/images/shutterstockdouble.png') no-repeat;
+        width: 435px;
+        height: 290px;
+        background-position: center;
+    }
+    .relaxing {
+        background: url('/images/shutterstockrelaxing.png') no-repeat;
+        width: 435px;
+        height: 435px;
+        background-position: center;
+    }
+    .bliss {
+        background: url('/images/shutterstockbliss.png') no-repeat;
+        width: 435px;
+        height: 200px;
+        background-position: center;
     }
 
+    .shelly {
+        background: url('/images/shelly.png') no-repeat;
+        width: 400px;
+        height: 325px;
+    }
+
+    .dana {
+        background: url('/images/dana.png') no-repeat;
+        width: 400px;
+        height: 325px;
+        background-position: center;
+    }
+
+    // .enterprise {
+    //     background: url('/images/qb-enterprise.png') no-repeat;
+    //     width: 435px;
+    //     height: 200px;
+    //     background-position: center;
+    //     display: inline-block;
+    // }
+
+    .qb-background-border {
+        //display: inline-block;
+        background: $med-blue;
+        width: 300px;
+        height: 300px;
+        border: 25px solid $dark-green;
+        float:left;
+        position: relative;
+
+        img {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+        }
+    }
+
+    .wrap-text-right {
+        float:right;
+        position: relative;
+
+        &.up-and-right {
+            left:50px;
+            bottom:50px;
+        }
+    }
+
+    .wrap-text-left {
+        float:left;
+        position: relative;
+
+        &.up-and-right {
+            left:50px;
+            bottom:50px;
+        }
+    }
+
+    .profile-crop {
+        width: 300px;
+        height:300px;
+        overflow: hidden;
+        position: relative;
+        img {
+            position: absolute;
+            top: 0; bottom:0; left: 0; right:0;
+            margin: auto;
+        }
+    }
+
+    .see-more {
+        float: right;
+        line-height: 10px;
+        font-size: 10px;
+        text-decoration: none;
+        position: relative;
+        width: 160px;
+        display: inline-block;
+        text-align: right;
+        padding: 15px 25px 15px 10px;
+
+        &:before {
+            content:'';
+            display: inline-block;
+            background: url('/images/comment.png')  no-repeat;
+            margin-left: 5px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0px;
+
+
+        }
+
+        &:hover {
+            opacity: .8;
+            cursor: pointer;
+        }
+    }
+
+    .square-button {
+        text-decoration: none;
+        padding: 18px 40px;
+        border: 2px solid $white;
+        width: 245px;
+        font-size: 10px;
+        position: relative;
+        background-color: $light-blue;
+        height: 50px;
+        line-height: 10px;
+        text-align: center;
+        display: inline-block;
+
+        &.double-line {
+            padding: 15px 60px 15px 40px;
+            text-align: right;
+        }
+        &:hover {
+            opacity: .8;
+        }
+        &:before {
+            content:'';
+            display: inline-block;
+            background: url('/images/arrow.png')  no-repeat;
+            margin-left: 5px;
+            width: 20px;
+            height: 10px;
+            position: absolute;
+            right: 15px;
+            top: 18px;
+
+        }
+    }
 
     #globe {
         background: url('/images/globe.png') no-repeat;
         background-position: center;
         min-width: 860px;
-        top: -100px;
-        left: 0px;
+        top: -120px;
+        left: 65px;
         width: 100%;
         height: 950px;
         position: absolute;
@@ -284,6 +616,10 @@ hr {
 
             li {
                 color: #f6f6f6;
+
+                &:hover {
+                    opacity: .8;
+                }
 
                 &:after {
                     content:"";
@@ -306,22 +642,34 @@ hr {
                 }
             }
             a {
-                padding: 40px 50px;
+                padding: 30px 50px;
                 display: block;
+                text-decoration: none;
             }
         }
     }
 
     #main-content {
-        min-height: 800px;
+        // *[class^='col-*'] {
+        //         height: 800px;
+        // }
+        .full {
+            height: 745px;
+        }
 
         #main {
-            background-color: $med-blue;
             min-height: inherit;
 
             &.short {
                 min-height: 20px;
             }
+
+            .book-collection {
+                margin-left: -50px;
+                margin-top: -100px;
+                background-position: center;
+            }
+
             p {
 
             }
@@ -329,9 +677,6 @@ hr {
         #secondary {
             margin-top: 50px;
             min-height: 20px;
-            > div {
-                background-color: $med-blue;
-            }
         }
 
         #tagline {
@@ -339,7 +684,8 @@ hr {
             top: 40%;
             transform: translateY(-50%);
             font-size: 30px;
-
+            margin-left: 75px;
+            font-weight: 200;
             .bold {
 
             }
@@ -349,15 +695,29 @@ hr {
             position: absolute;
             bottom: 0px;
             right:0px;
+            line-height: 1em;
+            font-size: 12px;
+            width: 150px;
+            text-align: right;
+            padding-right: 35px;
 
-            .arrow {
+            &:before {
+                content:'';
                 display: inline-block;
                 background: url('/images/scroll-down.png') no-repeat;
+                margin-left: 5px;
                 width: 25px;
                 height: 25px;
+                position: absolute;
+                right: 0px;
+
+            }
+
+            &:hover {
+                opacity: .8;
+                cursor: pointer;
             }
         }
-
     }
 
     #more-content {
@@ -381,29 +741,78 @@ hr {
 
 
         .news {
-            h2 {
+            h4 {
+                font-weight: 400;
+                font-family: sans-serif;
+                text-align: center;
+                margin-bottom: 35px;
                 text-align: center;
             }
 
             .item {
 
+                h5 {
+                    font-weight: 400;
+                    font-family: sans-serif;
+                }
+
+                .read-more {
+                    padding:5px 10px;
+                    background-color: $dark-green;
+                    font-size: 13px;
+                    text-decoration: none;
+                    &:hover {
+                        opacity: .8;
+                    }
+                }
+            }
+
+            .date {
+                font-size: 13px;
+                margin: 1em 0px;
+                padding-top: 5px;
+                font-weight: 100;
+                position: relative;
+                z-index: 100 !important;
             }
         }
     }
 }
 
 #footer {
-    .fb {
-        background: url('/images/fb.png') no-repeat;
-        width: 21px;
-        height: 22px;
-        display: inline-block;
+
+    .footer-text {
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 200;
+        width: 240px;
     }
 
-    .twitter {
+    .phone {
+        font-size: 20px;
+    }
+
+    .fb {
         background: url('/images/facebook.png') no-repeat;
         width: 21px;
         height: 22px;
         display: inline-block;
+
+        &:hover {
+            opacity: .8;
+            cursor: pointer;
+        }
+    }
+
+    .linked-in {
+        background: url('/images/linked-in.png') no-repeat;
+        width: 21px;
+        height: 22px;
+        display: inline-block;
+
+        &:hover {
+            opacity: .8;
+            cursor: pointer;
+        }
     }
 }

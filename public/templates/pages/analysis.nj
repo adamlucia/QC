@@ -2,13 +2,13 @@
 {% block main %}
     <h2>Business Analyst</h2>
     <div id="main" class="row short">
-        <div class="col-12">
+        <div class="col-12 blue-background">
             <h4>Benefits of a Business Analyst?</h4>
             <p>We are all in business together. We work overtime to make our businesses the best they can be. While providing first-rate packages for your customers and services for your clients is demanding, running a profitable business can be even more so. Every day it seems as if there's a new challenge that tests your problem-solving skills. Naturally your problem solving skills are well developed or your business wouldn't be as successful as it is. But one day you will face a problem for which you have no ready solution. If that day has come with your accounting system that's the problem, contact Madeline Bailey for help.</p>
         </div>
     </div>
     <div id="secondary" class="row">
-        <div class="col-10 offset-2">
+        <div class="col-10 offset-2 blue-background">
             <h4>You'll benefit from Madeline's collaborative, insightful approach.</h4>
             <p>Madeline takes the time to listen and truly understand your business problems first, which seems unique among business analysts. The best solution is to help you clarify the problem with better financial information, which lights up the solution. If Madeline has dealt this this before, she'll recommend a possible solution. If this is something that's out of her jurisdiction, she'll try to refer you to a qualified resource.</p>
         </div>
