@@ -1,13 +1,17 @@
 {% extends "layout.nj" %}
+{% block background %}
+    <div id="globe"></div>
+    <div class="wave hidden-md-down"></div>
+{% endblock %}
 {% block main %}
     <h2>Testimonials</h2>
-    <div id="main" class="row short">
-        <div class="col-12 blue-background">
+    <div id="main" class="row short blue-background">
+        <div class="col-12">
             <p>Our strict policy regarding client privacy is one of our core principles and highly coveted in the world of finance and technology. These clients have chosen to share their names and testimony with you.</p>
         </div>
     </div>
     <div id="secondary" class="row">
-        <div class="col-10 offset-2 blue-background">
+        <div class="col-11 offset-1 blue-background padding-25">
             <div class="row">
                 <div class="col-12">
                     <p><i>"Being a bookkeeper is a huge responsibility. It can be really scary. And because the previous accountant wasn't answering my questions, I was put into a position of second-guessing alot of my work in QuickBooks. My manager brought in Madeline as the new accountant. At one point during her first visit, she said, "Don't worry. You are my 150th client. I know exactly what to do." My manager looked at me and we both laughed, because we felt safe. Madeline involved us both in fixing the chart of accounts, so I really understood where to post transactions. She taught me how to create a filing system from scratch that was connected to the chart of accounts. Pretty soon I knew where a piece of paper was located before I got out of my chair, which saved me time and stress. Madeline worked with me until the A/P and A/R were perfect. Eventually, I was reconciling the bank &amp; credit card accounts. Madeline's teaching method was simple: She     listened to every question I had, and answered it with a smile."</i></p>
@@ -30,7 +34,7 @@
 {% endblock %}
 
 {% block more %}
-<div class="row margin-150-bottom testimonials blue-background">
+<div class="row margin-50-bottom testimonials blue-background">
     <div class="col-12">
         <div class="row">
             <div class="col-12">

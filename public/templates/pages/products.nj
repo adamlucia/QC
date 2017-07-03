@@ -1,18 +1,22 @@
 {% extends "layout.nj" %}
+{% block background %}
+    <div id="globe"></div>
+    <div class="slant"></div>
+{% endblock %}
 {% block main %}
     <h2>Latest News</h2>
-    <div id="main" class="row short">
-        <div class="col-12  blue-background">
+    <div id="main" class="row short blue-background">
+        <div class="col-12">
             <p>Here at QC Computing, LLC, we use a wide variety of products to keep our business running at peak efficiency. We support all years, all versions and editions of QuickBooks Desktop and Online. All of the products on this page have been tested and given an A++. To purchase any of them, just Click or Call Us.</p>
         </div>
     </div>
     <div id="secondary" class="row short">
-        <div class="col-10 offset-2">
+        <div class="col-11 offset-1">
             <div class="qb-background-border">
                 <img src="/images/qb-enterprise.png" align="left">
             </div>
             <h2>QuickBooks Enterprise Version: Multi-User, High- Level, Desktop or Hosted</h2>
-            <p>Here at QC Computing, LLC, we use a wide variety of products to keep our business running at peak efficiency. We support all years, all versions and editions of QuickBooks Desktop and Online. All of the products on this page have been tested and given an A++. To purchase any of them, just Click or Call Us.</p>
+            <p>Awesome software! We are QuickBooks Enterprise Certified. If you're interested in QuickBooks Enterprise Solutions for 5-30 users, consider using our services. We can install QuickBooks Enterprise Solutions software across your network, setup users, and support the product. To buy the software that is right for your organization, we'll refer you to our Authorized Reseller. Our reseller can demo the software and answer any questions you may have. You'll have a much better experience and get a better price than you would on your own. Boost QuickBooks productivity across your organization.</p>
         </div>
     </div>
     <span class="scroll-down">
@@ -25,91 +29,107 @@
 
 {% block more %}
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
-                <h2>QuickBooks Premier Software</h2>
-                <p><a href="softwarelink">Click here</a> or on above logo to receive a 20% discount on QuickBooks Premier with free shipping if you order the physical CD. QuickBooks Premier includes one general and five industry-specific editions: General Business Edition, 1). Contractor's Edition, 2). Manufacturing &amp; Wholesale Edition, 3). Non-Profit Edition, 4). Professional Services Edition, and 5). Retail Edition. We support all of them, and are happy to consult with you on which edition would be best for your business at this time?</p>
+            <div class="col-12 col-md-7 vertical-center">
+                <div class="container">
+                    <h2>QuickBooks Premier Software</h2>
+                    <p><a href="softwarelink">Click here</a> or on above logo to receive a 20% discount on QuickBooks Premier with free shipping if you order the physical CD. QuickBooks Premier includes one general and five industry-specific editions: General Business Edition, 1). Contractor's Edition, 2). Manufacturing &amp; Wholesale Edition, 3). Non-Profit Edition, 4). Professional Services Edition, and 5). Retail Edition. We support all of them, and are happy to consult with you on which edition would be best for your business at this time?</p>
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="qb-background-border">
+            <div class="col-12 col-md-5">
+                <div class="qb-background-border float-right">
                     <img src="/images/qb-premier.png">
                 </div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5">
                 <div class="qb-background-border">
                     <img src="/images/qb-pro.png">
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <h2>QuickBooks Pro Software</h2>
-                <p><a href="softwarelink">Click here</a> or on above logo to receive a 20% discount on QuickBooks Pro with free shipping. QuickBooks Pro is ideal for most small businesses. We're always happy to consult with you on which edition would be best for your new business?</p>
+            <div class="col-12 col-md-7 vertical-center">
+                <div class="container">
+                    <h2>QuickBooks Pro Software</h2>
+                    <p><a href="softwarelink">Click here</a> or on above logo to receive a 20% discount on QuickBooks Pro with free shipping. QuickBooks Pro is ideal for most small businesses. We're always happy to consult with you on which edition would be best for your new business?</p>
+                </div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
-                <h2>QuickBooks Online Edition</h2>
-                <p><a href="softwarelink">Click here</a> or on the above logo to start using QuickBooks Online with real time anywhere access. Try NOW free for 30 days!</p>
+            <div class="col-12 col-md-7 vertical-center">
+                <div class="container">
+                    <h2>QuickBooks Online Edition</h2>
+                    <p><a href="softwarelink">Click here</a> or on the above logo to start using QuickBooks Online with real time anywhere access. Try NOW free for 30 days!</p>
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="qb-background-border">
+            <div class="col-12 col-md-5">
+                <div class="qb-background-border float-right">
                     <img src="/images/qb-online.png">
                 </div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5">
                 <div class="qb-background-border">
                     <img src="/images/qb-mac.png">
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <h2>QuickBooks for the Mac</h2>
-                <p><a href="softwarelink">Click here</a> or on the above logo to save 20% on QuickBooks for the Mac, and free shipping when you order the CD. Intuit does not plan to update the Mac version in 2017. I own a MacBook laptop myself, and support all Mac versions.</p>
+            <div class="col-12 col-md-7 vertical-center">
+                <div class="container">
+                    <h2>QuickBooks for the Mac</h2>
+                    <p><a href="softwarelink">Click here</a> or on the above logo to save 20% on QuickBooks for the Mac, and free shipping when you order the CD. Intuit does not plan to update the Mac version in 2017. I own a MacBook laptop myself, and support all Mac versions.</p>
+                </div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
-                <h2>Intuit Merchant Account: Accept Credit Cards</h2>
-                <p><a href="softwarelink">Click here</a> or on the above logo to accept credit cards from customers, plus integrate the processing inside QuickBooks Receive Payments. Or contact anyone at QC Computing.   Either way, you'll be referred to the top Intuit merchant account salesrep, Rodney Baker, who works directly with our clients.  So far he has saved every client money on their merchant processing!</p>
+            <div class="col-12 col-md-7 vertical-center">
+                <div class="container">
+                    <h2>Intuit Merchant Account: Accept Credit Cards</h2>
+                    <p><a href="softwarelink">Click here</a> or on the above logo to accept credit cards from customers, plus integrate the processing inside QuickBooks Receive Payments. Or contact anyone at QC Computing.   Either way, you'll be referred to the top Intuit merchant account salesrep, Rodney Baker, who works directly with our clients.  So far he has saved every client money on their merchant processing!</p>
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="qb-background-border">
+            <div class="col-12 col-md-5">
+                <div class="qb-background-border float-right">
                     <img src="/images/qb-accountant.png">
                 </div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5">
                 <div class="qb-background-border">
                     <img src="/images/gusto.png">
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <h2>QuickBooks for the Mac</h2>
-                <p><a href="softwarelink">Click here</a> or on above logo to sign up for Gusto Full Service Payroll, with a 2 month free trial. While we support and troubleshoot all Intuit payroll services, we recommend Gusto. This business model perfect for entrepreneurs. The only clients it doesn't work for are clients who need to job cost, for example some larger contractors. For more information on why we recommend Gusto check out Madeline's Blog Post on "Why ZenPayroll (now Gusto)"?, or go to Gusto and watch their intro video. When you add yourself as a user, add Madeline with her email, "bailey@qccomputing.com" as a collaborator. That is the only way...     you'll get the best Gusto on-boarding rep to support you in the startup or transition, plus allows us to support you too.</p>
+            <div class="col-12 col-md-7 vertical-center">
+                <div class="container">
+                    <h2>QuickBooks for the Mac</h2>
+                    <p><a href="softwarelink">Click here</a> or on above logo to sign up for Gusto Full Service Payroll, with a 2 month free trial. While we support and troubleshoot all Intuit payroll services, we recommend Gusto. This business model perfect for entrepreneurs. The only clients it doesn't work for are clients who need to job cost, for example some larger contractors. For more information on why we recommend Gusto check out Madeline's Blog Post on "Why ZenPayroll (now Gusto)"?, or go to Gusto and watch their intro video. When you add yourself as a user, add Madeline with her email, "bailey@qccomputing.com" as a collaborator. That is the only way...     you'll get the best Gusto on-boarding rep to support you in the startup or transition, plus allows us to support you too.</p>
+                </div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
-                <h2>Intuit Payroll</h2>
-                <p><a href="softwarelink">Click here</a> or on above logo to save 20% on payroll tax tables that allow you to process payroll inside QuickBooks. Intuit offers Enhanced and Online Payroll solutions as well.</p>
+            <div class="col-12 col-md-7 vertical-center">
+                <div class="container">
+                    <h2>Intuit Payroll</h2>
+                    <p><a href="softwarelink">Click here</a> or on above logo to save 20% on payroll tax tables that allow you to process payroll inside QuickBooks. Intuit offers Enhanced and Online Payroll solutions as well.</p>
+                </div>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="qb-background-border">
+            <div class="col-12 col-md-5">
+                <div class="qb-background-border float-right">
                     <img src="/images/intuit.png">
                 </div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5">
                 <div class="qb-background-border">
                     <img src="/images/headset.png">
                 </div>
             </div>
-            <div class="col-12 col-md-6">
-                <h2>Plantronics Voyager Pro Bluetooth Headset</h2>
-                <p><a href="softwarelink">Click here</a> to buy a headset that will give you excellent hands-free reception with a cell phone. Plantronics headsets improve office productivity by up to 40%! No more twisted neck. Once you try a headset you will never go back. This is how we can be good listeners, and take notes at the same time, when you call with your business concerns.</p>
+            <div class="col-12 col-md-7 vertical-center">
+                <div class="container">
+                    <h2>Plantronics Voyager Pro Bluetooth Headset</h2>
+                    <p><a href="softwarelink">Click here</a> to buy a headset that will give you excellent hands-free reception with a cell phone. Plantronics headsets improve office productivity by up to 40%! No more twisted neck. Once you try a headset you will never go back. This is how we can be good listeners, and take notes at the same time, when you call with your business concerns.</p>
+                </div
             </div>
         </div>
 {% endblock %}

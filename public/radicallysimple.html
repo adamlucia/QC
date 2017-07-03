@@ -25,9 +25,20 @@
 </head>
 <body>
     <div class="background no-gutters">
-        <div class="wave"></div>
-          
-    <section id="header" class="container-fluid">
+        
+    <div id="globe"></div>
+    <div class="wave hidden-md-down"></div>
+
+
+        
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="offcanvas"]').click(function () {
+            $('.row-offcanvas').toggleClass('active')
+            });
+        });
+    </script>
+    <section id="header" class="container top-level">
         
         <div class="row row-eq-height">
             <div class="col-12 col-md-6">
@@ -44,9 +55,8 @@
 
 
     </section>
-    <section id="content" class="container">
-        <div id="globe"></div>
-        <div class="row no-gutter  margin-100-bottom">
+    <section id="content" class="container top-level">
+        <div class="row no-gutters margin-100-bottom">
             <section id="navigation" class="col-md-4">
                 <ul id="nav">
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
@@ -55,19 +65,39 @@
                     <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
                     <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
-                    <li><a href="/blog.html">BLOG</a></li>
+                    <li><a href="blog.qccomputing.com">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
+                <nav class="navbar navbar-fixed-top navbar-inverse">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Project name</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse in" aria-expanded="true">
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div><!-- /.nav-collapse -->
+                  </div><!-- /.container -->
+                </nav>
             </section>
             <section id="main-content" class="col-md-8 container">
                 
     <h2>Radically Simple Accounting</h2>
     <div id="main" class="row short blue-background">
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-6">
             <p>Shows you a simpler way to learn private business accounting,  gain control of your finances, and make more profit!</p>
             <p>As an experienced business analyst, Madeline Bailey saves business owners from making the same accounting mistakes over and over again, helping them gain control of their finances in the process. That's why she wrote, Radically Simple Accounting, to help business owners who don't quite"connect" with traditional accounting books. She can help you make your businesses more profitable!</p>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6">
             <div class="book-collection"></div>
         </div>
     </div>
@@ -211,54 +241,54 @@
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5">
                 <div class="glasses green-backdrop"></div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-7">
                 <h2>Accounting is the Language of Business</h2>
                 <p>Being accounting-illiterate can cost you dearly. Ignore your accounting and you may find yourself overpaying vendors, undercharging customers, overpaying employees, bouncing checks, paying too much in taxes, getting audited, paying late fees and interest on past taxes, paying too much in bank charges, interest and credit card finance charges, and even allowing fraud to persist. Did you know that taxes are the biggest expense for most business people? Poor accounting management can even cause the successful business you've worked so hard to build to go down the tubes. As an experienced accountant, Madeline Bailey has seen hundreds of people make the same accounting mistakes over and over again, losing quite a lot of money in the process. That's why she wrote Radically Simple Accounting for people who can't quite "connect" with traditional accounting books and want something modern.</p>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-7">
                 <h2>A Way out of the dark and into the Profit</h2>
                 <p>Dubbed the first user-friendly accounting book, Radically Simple Accounting introduces a simpler way to learn accounting that successful people from students to stars find engaging.  Whether you are doing your own bookkeeping, or managing a bookkeeper, this book will empower you financially.  This accounting primer works with ALL accounting software. (QuickBooks tips and tricks are included as side-notes.)  This accounting primer is useful for all types of private businesses, and for individuals who are a business of one. What is a business of one? If you receive a 1099 tax form, you're classified as a business by the IRS, even if you feel like an employee. Without a good accounting system, you'll grossly overpay taxes. On the other hand, it can be advantageous tax-wise to be classified as a business, but only if you learn how to take the proper write-off's against your income. Also, these days our private financial lives are so complicated that many individuals and families are in essence, a business of one.</p>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="meeting green-backdrop"></div>
+            <div class="col-12 col-md-5">
+                <div class="meeting blue-backdrop float-right"></div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5">
                 <div class="calculator green-backdrop"></div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-7">
                 <h2>Is this right for me? I'm not the "Radical" type...</h2>
                 <p>The truth is, traditional accounting practices used today were invented in 1492. Accounting is not an industry where things are often shaken up by new ways of thinking. You may have checked out the regular accounting books, and found that they read like appliance repair manuals. They don't relate to your small business problems or how you think as a small business owner. Even small business owners with MBA's can sometimes not translate traditional accounting debits and credits into their way of doing business.  As an entrepreneur who lacked quality accounting, Madeline Bailey has walked in your shoes. She developed this new methodology with the help of small business clients, from pre-profit startups to millionaires, before codifying it as a systematic approach.  That's why the best solution has to be Radical!</p>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-7">
                 <h2>I need Help, not another book that doesn't deliver</h2>
                 <p>Of course you do. That's why you're walked step by step through creating your own chart of accounts. A chart of accounts is a list of categories. Your chart of accounts is the backbone of your accounting system. Once your chart of accounts is correct, you will understand your GAAP financial reports, specifically your Profit and Loss Report, and Balance Sheet. Your financial reports are your business scorecards. Are you winning or losing when it comes to your business finances? Is your bookkeeper and financial advisor making sense, or are they talking nonsense? After you read this book, you'll know.</p>
                 <p>Whatever your numbers, GAAP financial reports prove to financial advisors such as venture capitalists, loan officers, CPAs, tax experts, angel investors, and portfolio investment advisors that you are "in the game", know the rules, and have what it takes to win.</p>
             </div>
-            <div class="col-12 col-md-6">
-                <div class="double green-backdrop"></div>
+            <div class="col-12 col-md-5">
+                <div class="double blue-backdrop float-right"></div>
             </div>
         </div>
         <div class="row margin-50-bottom blue-background">
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-8 padding-25 sample">
                     <h2>Heres a sample of the kind of things that you will learn:</h2>
                     <ul>
                         <li>Tons of expenses you are allowed to take as deductions, including some you may not have known about; and some you may know how to take, like car expenses, whether you buy, lease, or use your own vehicle.</li>
                         <li>Plus, the book itself is a tax-deductible expense you can write off against your income.</li>
                         <li>A look at accounting basics, including calendar or fiscal year, cash or accrual basis, and other fundamentals...</li>
                     </ul>
-                    <a href="">Read All</a>
+                    <a href="" class="read-more">Read All</a>
                 </div>
-                <div class="col-12 col-md-4 green-background">
-                    <span class="border">
+                <div class="col-12 col-md-4 green-background padding-25">
+                    <span class="border padding-25">
                         <h2>Gain control of your finances, Improve your profit tomorrow</h2>
                         <p>Make your accounting Radically Simple!</p>
                     </span>
@@ -266,12 +296,12 @@
         </div>
         <div class="row margin-50-bottom">
             <div class="col-12">
-                <h1><center>Listen to Learn Accounting</center></h1>
+                <h1 class="margin-50-bottom"><center>Listen to Learn Accounting</center></h1>
             </div>
             <div class="col-12 col-md-7">
-                <h2>Listen to Learn Accounting - the language of business!</h2>
+                <h2 class="font-sans-serif">Listen to Learn Accounting - the language of business!</h2>
                 <p>If you haven't listened to this book yet, it may seem as if your accountant, CPA and tax expert are speaking a foreign language. Accrual Basis. Reconciliation. Equity Accounts. Performa Profit &amp; Loss Report. Do you really need to know what all these words mean? Yes, if you want your business to be successful!</p>
-                <h3>The easiest way to learn a language is by listening.</h3>
+                <h3 class="font-sans-serif">The easiest way to learn a language is by listening.</h3>
                 <p>Accounting is most definitely a unique language. So why not learn it like you would any other language by listening? Listening to Radically Simple Accounting makes the book:</p>
                 <ul>
                     <li>Easier to understand and remember the concepts;</li>
@@ -285,10 +315,10 @@
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-5">
                 <div class="bliss green-backdrop"></div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-7">
                 <h2>Radically Simple Accounting Audiobook</h2>
                 <p>Covers four key accounting concepts you must understand to run a profitable business</p>
                 <ul>
@@ -311,7 +341,7 @@
                 </ul>
             </div>
             <div class="col-12 col-md-4">
-                <div class="book-collection"></div>
+                <div class="book-collection-small"></div>
             </div>
         </div>
         <div class="row margin-50-bottom">
@@ -323,13 +353,13 @@
             </section>
         </div>
     </section>
-    <section id="footer" class="container">
+    <section id="footer" class="container top-level">
         
         <div class="row no-gutters">
             <div class="col-12 col-md-3">
                 <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
             </div>
-            <div class="col-12 col-md-5 vcenter">
+            <div class="col-12 col-md-6 vcenter">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
             <div class="col-12 col-md-3">

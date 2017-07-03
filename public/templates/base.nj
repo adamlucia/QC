@@ -25,9 +25,11 @@
 </head>
 <body>
     <div class="background no-gutters">
-        <div class="wave"></div>
-          {% block content %}
-          {% endblock %}
+        {% block background %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
     </div>
 </body>
 </html>

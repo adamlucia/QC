@@ -25,9 +25,20 @@
 </head>
 <body>
     <div class="background no-gutters">
-        <div class="wave"></div>
-          
-    <section id="header" class="container-fluid">
+        
+    <div id="globe"></div>
+    <div class="wave hidden-md-down"></div>
+
+
+        
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="offcanvas"]').click(function () {
+            $('.row-offcanvas').toggleClass('active')
+            });
+        });
+    </script>
+    <section id="header" class="container top-level">
         
         <div class="row row-eq-height">
             <div class="col-12 col-md-6">
@@ -44,9 +55,8 @@
 
 
     </section>
-    <section id="content" class="container">
-        <div id="globe"></div>
-        <div class="row no-gutter  margin-100-bottom">
+    <section id="content" class="container top-level">
+        <div class="row no-gutters margin-100-bottom">
             <section id="navigation" class="col-md-4">
                 <ul id="nav">
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
@@ -55,21 +65,41 @@
                     <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
                     <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
-                    <li><a href="/blog.html">BLOG</a></li>
+                    <li><a href="blog.qccomputing.com">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
+                <nav class="navbar navbar-fixed-top navbar-inverse">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Project name</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse in" aria-expanded="true">
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div><!-- /.nav-collapse -->
+                  </div><!-- /.container -->
+                </nav>
             </section>
             <section id="main-content" class="col-md-8 container">
                 
     <h2>Business Analyst</h2>
-    <div id="main" class="row short">
-        <div class="col-12 blue-background">
+    <div id="main" class="row short blue-background">
+        <div class="col-12 padding-25">
             <h4>Benefits of a Business Analyst?</h4>
             <p>We are all in business together. We work overtime to make our businesses the best they can be. While providing first-rate packages for your customers and services for your clients is demanding, running a profitable business can be even more so. Every day it seems as if there's a new challenge that tests your problem-solving skills. Naturally your problem solving skills are well developed or your business wouldn't be as successful as it is. But one day you will face a problem for which you have no ready solution. If that day has come with your accounting system that's the problem, contact Madeline Bailey for help.</p>
         </div>
     </div>
     <div id="secondary" class="row">
-        <div class="col-10 offset-2 blue-background">
+        <div class="col-11 offset-1  padding-25 blue-background">
             <h4>You'll benefit from Madeline's collaborative, insightful approach.</h4>
             <p>Madeline takes the time to listen and truly understand your business problems first, which seems unique among business analysts. The best solution is to help you clarify the problem with better financial information, which lights up the solution. If Madeline has dealt this this before, she'll recommend a possible solution. If this is something that's out of her jurisdiction, she'll try to refer you to a qualified resource.</p>
         </div>
@@ -86,10 +116,10 @@
             <section id="more-content" class="col-12 container">
                 
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-5">
             <div class="pointinggraph green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>Business Analyst</h2>
             <p>You may be brilliant at what you do, but even the most successful entrepreneur does not have skills to solve every problem. That's where a business analyst like Madeline Bailey comes in to play. Ms. Bailey has a B.A. in Management, plus 28 years of business management practice and expertise. She can provide you with the following:</p>
             <ul>
@@ -103,58 +133,58 @@
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>Even business owners who are business experts benefit from having an accountant who's a business analyst</h2>
             <p>Most CPA's provide accounting and tax filing services, but rarely enlighten you about the hundreds of ways you could improve your business profitability. It simply isn't their focus. Big accounting firms offer services comparable to ours but individual clients are assigned to the junior staff. Madeline Bailey is the "missing link", answering the call for a creative approach to improving profitability and preserving wealth.</p>
         </div>
-        <div class="col-12 col-md-6">
-            <div class="meeting green-backdrop"></div>
+        <div class="col-12 col-md-5">
+            <div class="meeting green-backdrop float-right"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-5">
             <div class="accounting-book green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>You'll benefit from an Architecta of Accounting Systems</h2>
             <p>An accounting system is both a structure, and a series of transactions. People constantly remark to Madeline, "No matter what accounting problem I throw at you, you know how to solve it". That's because a business analyst sees how your business model can be mapped into an accounting system structure. Do you want your accounting system cobbled together or designed? You want it designed. Once Madeline creates a design, any and all transactions fit (or don't fit) into that structure. No matter what's gone on before, no matter how many bookkeepers you've had masticate your business, or how much you obfuscate your business model, Madeline can design an accounting system that works for your business model.</p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>Business analysts create efficient, top-down structural systems.</h2>
             <p>As a private accountant, Madeline Bailey does anything and everything. Whether it's rolling out a new filing system structure or fixing back tax problems, her holistic talents come into play. You can focus on your business expertise and trust her & her team to manage your business accounting.</p>
-            <p><span>Madeline says, As retainer clients become familiar with her services, they jokingly tell Madeline, "You're working yourself out of a job!"</span></p>
+            <p><span>Madeline says, <i>As retainer clients become familiar with her services, they jokingly tell Madeline, "You're working yourself out of a job!"</i></span></p>
         </div>
-        <div class="col-12 col-md-6">
-            <div class="meeting-dude green-backdrop"></div>
+        <div class="col-12 col-md-5">
+            <div class="meeting-dude green-backdrop float-right"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-5">
             <div class="comparison green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>Business analysts know business terminology.</h2>
             <p>A business analyst is more familiar with the world of business than your typical accountant. Whether you want to understand how the IRS "thinks", negotiate with vendors, write your first dunning letter to collect on customer debt, not get overcharged by financial or taxing insituation, or discuss a myrid of problems, Madeline is uniquely qualified to help you find ways to save money without changing the way you conduct business. She will even call for you to negotiate a better deal. Accounting alone saves you thousands of dollars in taxes. Beyond that, Madeline has helped clients make thousands of dollars more in profit as a business analyst. To learn more about business terminology, here is a list of books that Madeline recommends on business, accounting, money, success, and investments. Many books did not make the cut, and every book title includes a short review, so that you can select the ones of interest to you. To download to PDF, click on this link. <a href="/radicallysimple.html">Radically Simple Accounting Recommended Business Books.</a></p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>A business analysts provides expert collaboration.</h2>
             <p>One client complained about her lack of profit. After creating more accurate financials, Madeline noticed that her Accounts Receivables were inordinately high. A/R affects cash flow which affects profit. So Madeline focused on the "Open Invoice Report" and showed the client how to get ratios for A/R to Income, Income to Profit, and A/R to Profit. The client came up with the idea of accepting credit cards. Madeline helped her get a merchant account with Intuit so that payments could be processed within QuickBooks for faster bookkeeping. Customers started paying faster, A/R was greatly reduced, and profitability improved. While the client told everyone that, "Madeline is brilliant", clearly, the problem was solved collaboratively.</p>
 
             <p>Another client (a couple) complained about an extraordinarily profitable year (or rather the stiff taxes they would face as a result of that profit). Further listening proved that was was originally posed as a business problem was in fact a personal problem between the husband & wife. One partner wanted to relocate the business and incur more expenses that way, while the other partner wanted to stay put even if it meant paying more taxes. It's not possible to separate your private life from being an entrepreneur, so Madeline continued to listen actively until the couple came to an agreement to stay put. At that point, Madeline suggested that they could protect some of their profit from taxes by funding a retirement account. They loved this idea and knew of an investment advisor. The following year, they thanked Madeline profusely. They were both so happy with their decision. Because these clients are famous people, you won't see any mention of their name or a testimonial, but clearly, the problem was solved collaboratively.</p>
         </div>
-        <div class="col-12 col-md-6">
-            <div class="collab green-backdrop"></div>
+        <div class="col-12 col-md-5">
+            <div class="collab green-backdrop float-right"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-5">
             <div class="review green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>Madeline knows how to leverage small business technology.</h2>
             <p>As technology is at the core of every successful business, Madeline routinely helps clients with a variety of technical problems:</p>
             <ul>
@@ -168,19 +198,19 @@
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>Would you benefit from "Cloud" computing?</h2>
             <p>Cloud computing is location-independent computing. Intuit is marketing that as QuickBooks Online, but there are other cloud solutions. A business analyst is well-equipped to work with clients all over the US, plus clients who live overseas but have a nexus in WA state. For more information on how you can make cloud computing work for your business, read this 30-page white paper, writing by Madeline Bailey. Remote Access Options for QuickBooks. Best of all, it's 100% Free!</p>
         </div>
-        <div class="col-12 col-md-6">
-            <div class="laptop green-backdrop"></div>
+        <div class="col-12 col-md-5">
+            <div class="laptop green-backdrop float-right"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-5">
             <div class="shake green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>Let's create a better future for your business.</h2>
             <p>Many business owners neglect installing a backup system for critical data. This is a common oversight, but a dangerous one. What would happen if overnight all the data you've been maintaining became inaccessible? It happens more often than you imagine.</p>
             <ul>
@@ -193,25 +223,25 @@
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7">
             <h2>Your concerns are our concerns.</h2>
             <p>If you want, Madeline Bailey will work with you to analyze the total health of your infrastructure and make strategic suggestions for improvement. If an ounce of prevention is worth a pound of cure, then your business can become 93.75% more profitable in certain areas, and first rate in <b>every way!</b></p>
         </div>
-        <div class="col-12 col-md-6">
-            <div class="thinking green-backdrop"></div>
+        <div class="col-12 col-md-5">
+            <div class="thinking green-backdrop float-right"></div>
         </div>
     </div>
 
             </section>
         </div>
     </section>
-    <section id="footer" class="container">
+    <section id="footer" class="container top-level">
         
         <div class="row no-gutters">
             <div class="col-12 col-md-3">
                 <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
             </div>
-            <div class="col-12 col-md-5 vcenter">
+            <div class="col-12 col-md-6 vcenter">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
             <div class="col-12 col-md-3">

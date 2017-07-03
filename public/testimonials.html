@@ -25,9 +25,20 @@
 </head>
 <body>
     <div class="background no-gutters">
-        <div class="wave"></div>
-          
-    <section id="header" class="container-fluid">
+        
+    <div id="globe"></div>
+    <div class="wave hidden-md-down"></div>
+
+
+        
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="offcanvas"]').click(function () {
+            $('.row-offcanvas').toggleClass('active')
+            });
+        });
+    </script>
+    <section id="header" class="container top-level">
         
         <div class="row row-eq-height">
             <div class="col-12 col-md-6">
@@ -44,9 +55,8 @@
 
 
     </section>
-    <section id="content" class="container">
-        <div id="globe"></div>
-        <div class="row no-gutter  margin-100-bottom">
+    <section id="content" class="container top-level">
+        <div class="row no-gutters margin-100-bottom">
             <section id="navigation" class="col-md-4">
                 <ul id="nav">
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
@@ -55,20 +65,40 @@
                     <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
                     <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
-                    <li><a href="/blog.html">BLOG</a></li>
+                    <li><a href="blog.qccomputing.com">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
+                <nav class="navbar navbar-fixed-top navbar-inverse">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Project name</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse in" aria-expanded="true">
+                      <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                      </ul>
+                    </div><!-- /.nav-collapse -->
+                  </div><!-- /.container -->
+                </nav>
             </section>
             <section id="main-content" class="col-md-8 container">
                 
     <h2>Testimonials</h2>
-    <div id="main" class="row short">
-        <div class="col-12 blue-background">
+    <div id="main" class="row short blue-background">
+        <div class="col-12">
             <p>Our strict policy regarding client privacy is one of our core principles and highly coveted in the world of finance and technology. These clients have chosen to share their names and testimony with you.</p>
         </div>
     </div>
     <div id="secondary" class="row">
-        <div class="col-10 offset-2 blue-background">
+        <div class="col-11 offset-1 blue-background padding-25">
             <div class="row">
                 <div class="col-12">
                     <p><i>"Being a bookkeeper is a huge responsibility. It can be really scary. And because the previous accountant wasn't answering my questions, I was put into a position of second-guessing alot of my work in QuickBooks. My manager brought in Madeline as the new accountant. At one point during her first visit, she said, "Don't worry. You are my 150th client. I know exactly what to do." My manager looked at me and we both laughed, because we felt safe. Madeline involved us both in fixing the chart of accounts, so I really understood where to post transactions. She taught me how to create a filing system from scratch that was connected to the chart of accounts. Pretty soon I knew where a piece of paper was located before I got out of my chair, which saved me time and stress. Madeline worked with me until the A/P and A/R were perfect. Eventually, I was reconciling the bank &amp; credit card accounts. Madeline's teaching method was simple: She     listened to every question I had, and answered it with a smile."</i></p>
@@ -94,7 +124,7 @@
         <div class="row">
             <section id="more-content" class="col-12 container">
                 
-<div class="row margin-150-bottom testimonials blue-background">
+<div class="row margin-50-bottom testimonials blue-background">
     <div class="col-12">
         <div class="row">
             <div class="col-12">
@@ -162,13 +192,13 @@
             </section>
         </div>
     </section>
-    <section id="footer" class="container">
+    <section id="footer" class="container top-level">
         
         <div class="row no-gutters">
             <div class="col-12 col-md-3">
                 <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
             </div>
-            <div class="col-12 col-md-5 vcenter">
+            <div class="col-12 col-md-6 vcenter">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
             <div class="col-12 col-md-3">

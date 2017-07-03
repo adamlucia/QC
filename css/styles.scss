@@ -6,6 +6,9 @@ $light-green: #26723a;
 $dark-green: #18540c;
 $white: #f4f6f4;
 
+$img-width: 400px;
+$img-height: 315px;
+
 // dubugging css
 // * *:hover { border:2px solid #89A81E }                   /* Solid Green */
 // * * *:hover { border:2px solid #F34607 }                 /* Solid Orange */
@@ -37,16 +40,24 @@ $white: #f4f6f4;
     margin-bottom: auto;
 }
 
+.vertical-center {
+  // min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  // min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
 .center-text {
     text-align: center;
 }
 
 .margin-50-bottom {
-    margin-bottom: 50px;
+    margin-bottom: 50px !important;
 }
 
 .margin-100-bottom {
-    margin-bottom: 100px;
+    margin-bottom: 100px !important;
 }
 
 .margin-150-bottom {
@@ -56,6 +67,10 @@ $white: #f4f6f4;
 .margin-top-25 {
     margin-top: 25px;
 }
+
+.padding-25 {
+    padding: 25px;
+};
 
 .green-fill {
     background: $dark-green;
@@ -76,14 +91,26 @@ $white: #f4f6f4;
     z-index: 99;
 }
 
-
 .inline-block {
     display: inline-block;
 }
 
+.padding-25 {
+    padding:25px;
+}
+
+.color-white {
+    color: $white !important;
+}
+
+.color-green {
+    color: $light-green;
+}
+
 //PAGES
-body, html {
+html {
     height: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -105,9 +132,14 @@ body {
         }
     }
 
+    b {
+        font-weight: bold;
+    }
+
     h1 {
         font-size: 60px;
         font-weight: 100;
+        font-family: serif;
     }
 
     h2 {
@@ -136,6 +168,7 @@ hr {
     background-color: $background-color;
     min-height: 100vh;
     height: auto;
+    overflow: hidden;
 }
 
 .blue-background {
@@ -162,21 +195,6 @@ hr {
         height: 22px;
         margin-right: 5px;
         margin-bottom: -2px;
-    }
-}
-
-.social-media {
-    .facebook {
-        background: url('/images/facebook.png') no-repeat;
-        display: inline-block;
-        width: 21px;
-        height: 22px;
-    }
-    .linked-in {
-        background: url('/images/linked-in.png') no-repeat;
-        display: inline-block;
-        width: 21px;
-        height: 22px;
     }
 }
 
@@ -228,12 +246,72 @@ hr {
     background: url('/images/wave.png') no-repeat;
     background-position: center;
     width: 2700px;
+    height: 590px;
+    position: absolute;
+    top: 1200px;
+    left: -1160px;
+    z-index: 0;
+    padding: 0px;
+}
+
+.wave-blue {
+    background: url('/images/wave-blue.png') no-repeat;
+    background-position: center;
+    width: 2700px;
     height: 580px;
     position: absolute;
     top: 1110px;
     left: -1100px;
     z-index: 0;
     padding: 0px;
+}
+
+.slant {
+    background: url('/images/slant.png') no-repeat;
+    width: 2700px;
+    height: 1600px;
+    position: absolute;
+    top: 1600px;
+    left: -600px;
+    z-index: 0;
+    padding: 0px;
+}
+
+#globe {
+    background: url('/images/globe.png') no-repeat;
+    background-position: center;
+    min-width: 860px;
+    left: 28%;
+    top: 8%;
+    width: 900px;
+    height: 950px;
+    position: absolute;
+    z-index: 0;
+    padding: 0px;
+}
+
+.fb {
+    background: url('/images/facebook.png') no-repeat;
+    width: 21px;
+    height: 22px;
+    display: inline-block;
+
+    &:hover {
+        opacity: .8;
+        cursor: pointer;
+    }
+}
+
+.linked-in {
+    background: url('/images/linked-in.png') no-repeat;
+    width: 21px;
+    height: 22px;
+    display: inline-block;
+
+    &:hover {
+        opacity: .8;
+        cursor: pointer;
+    }
 }
 
 #header {
@@ -244,6 +322,7 @@ hr {
         width: 531px;
         height: 128px;
         margin-bottom: 25px;
+        margin-left: -115px;
     }
 
     #contact-text {
@@ -282,13 +361,13 @@ hr {
     }
     .notepad {
         background: url('/images/notepad.png') no-repeat;
-        width: 490px;
+        width: 440px;
         height: 325px;
     }
 
     .help {
         background: url('/images/analysis-help.png') no-repeat;
-        width: 490px;
+        width: 440px;
         height: 325px;
     }
 
@@ -302,9 +381,10 @@ hr {
     .quickbooks-logo {
         background: url('/images/quickbooks-logo.png') no-repeat;
         background-position: center;
-        width: 380px;
-        height: 238px;
+        width: 435px;
+        height: 290px;
         float: right;
+        margin-right: -50px;
     }
 
     .qc {
@@ -326,135 +406,131 @@ hr {
         top: -205px;
         left: -45px;
     }
+    .book-collection-small {
+        background: url('/images/book-collection.png') no-repeat;
+        background-size: 400px;
+        position: absolute;
+        z-index: 1;
+        height:400px;
+        width: 400px;
+        top: -30px;
+    }
     .lock {
         background: url('/images/lock.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
+
     .pointer {
         background: url('/images/pointer.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .writing {
         background: url('/images/writing.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .graph {
         background: url('/images/graph.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .pen {
         background: url('/images/pen.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
+
     }
     .shake {
         background: url('/images/shake.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
 
     .pointinggraph {
         background: url('/images/shutterstock1.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .meeting {
         background: url('/images/shutterstockmeeting.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .accounting-book{
         background: url('/images/shutterstockbook.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .meeting-dude {
         background: url('/images/shutterstockdude.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .comparison {
         background: url('/images/shutterstockpaper.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .collab {
         background: url('/images/shutterstockcollab.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .review {
         background: url('/images/shutterstockreview.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .laptop {
         background: url('/images/shutterstocklaptop.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .shake {
         background: url('/images/shutterstockshake.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .thinking {
         background: url('/images/shutterstockthinking.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .glasses {
         background: url('/images/shutterstockglasses.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .calculator {
         background: url('/images/shutterstockcalculator.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .double {
         background: url('/images/shutterstockdouble.png') no-repeat;
-        width: 435px;
-        height: 290px;
-        background-position: center;
+        width: $img-width;
+        height: $img-height;
     }
     .relaxing {
         background: url('/images/shutterstockrelaxing.png') no-repeat;
-        width: 435px;
-        height: 435px;
-        background-position: center;
+        width: 500px;
+        height: 450px;
     }
     .bliss {
         background: url('/images/shutterstockbliss.png') no-repeat;
-        width: 435px;
-        height: 200px;
-        background-position: center;
+        width: $img-width;
+        height: 250px;
     }
 
     .shelly {
+        background: url('/images/shelly.png') no-repeat;
+        width: 400px;
+        height: 325px;
+    }
+
+    .madeline {
         background: url('/images/shelly.png') no-repeat;
         width: 400px;
         height: 325px;
@@ -478,9 +554,10 @@ hr {
     .qb-background-border {
         //display: inline-block;
         background: $med-blue;
-        width: 300px;
+        width: 350px;
         height: 300px;
-        border: 25px solid $dark-green;
+        border: 15px solid $dark-green;
+        margin: 25px;
         float:left;
         position: relative;
 
@@ -516,10 +593,11 @@ hr {
     }
 
     .profile-crop {
-        width: 300px;
-        height:300px;
+        width: 400px;
+        height: 325px;
         overflow: hidden;
         position: relative;
+        margin: 25px;
         img {
             position: absolute;
             top: 0; bottom:0; left: 0; right:0;
@@ -591,22 +669,9 @@ hr {
         }
     }
 
-    #globe {
-        background: url('/images/globe.png') no-repeat;
-        background-position: center;
-        min-width: 860px;
-        top: -120px;
-        left: 65px;
-        width: 100%;
-        height: 950px;
-        position: absolute;
-        z-index: 0;
-        padding: 0px;
-    }
-
     #navigation {
         position: relative;
-        z-index: 1;
+        z-index: 50;
         #nav {
             padding: 0px;
             float:right;
@@ -657,16 +722,22 @@ hr {
             height: 745px;
         }
 
+        h2 {
+            margin: 25px 50px;
+
+        }
+
         #main {
             min-height: inherit;
+            padding-left: 50px;
 
             &.short {
                 min-height: 20px;
             }
 
             .book-collection {
-                margin-left: -50px;
-                margin-top: -100px;
+                top:-60px;
+                left: 0px;
                 background-position: center;
             }
 
@@ -721,16 +792,20 @@ hr {
     }
 
     #more-content {
-        margin-bottom: 100px;
 
         .testimonials {
             text-align: center;
+            padding: 25px;
+
+            h5 {
+
+            }
 
             .name {
 
             }
-            .company {
-
+            .business {
+                color: $light-green;
             }
             .website {
                 position: absolute;
@@ -739,6 +814,26 @@ hr {
             }
         }
 
+        .contact-info {
+            padding: 70px;
+            font-size: 25px;
+
+            .row {
+                margin-bottom: 25px;
+            }
+
+            .phone {
+                font-family: serif;
+            }
+
+            .email {
+                font-family: serif;
+            }
+
+            .follow-us {
+                margin-bottom: 25px;
+            }
+        };
 
         .news {
             h4 {
@@ -776,10 +871,19 @@ hr {
                 z-index: 100 !important;
             }
         }
+
+        .sample {
+            .read-more {
+                color: $light-green;
+                position: absolute;
+                bottom: 25px;
+            }
+        }
     }
 }
 
 #footer {
+    height: 75px;
 
     .footer-text {
         font-size: 14px;
@@ -791,28 +895,49 @@ hr {
     .phone {
         font-size: 20px;
     }
+}
 
-    .fb {
-        background: url('/images/facebook.png') no-repeat;
-        width: 21px;
-        height: 22px;
-        display: inline-block;
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
 
-        &:hover {
-            opacity: .8;
-            cursor: pointer;
-        }
-    }
+  .row-offcanvas-right {
+    right: 0;
+  }
 
-    .linked-in {
-        background: url('/images/linked-in.png') no-repeat;
-        width: 21px;
-        height: 22px;
-        display: inline-block;
+  .row-offcanvas-left {
+    left: 0;
+  }
 
-        &:hover {
-            opacity: .8;
-            cursor: pointer;
-        }
-    }
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
 }
