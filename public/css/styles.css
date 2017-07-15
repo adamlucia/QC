@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "cochin";
+  src: url("/fonts/cochin.ttf"), url("/fonts/cochin.ttc"); }
+
 * {
   z-index: 1; }
 
@@ -12,8 +16,14 @@
   display: flex; }
 
 .vcenter {
-  margin-top: auto;
-  margin-bottom: auto; }
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.vbottom {
+  position: relative;
+  top: 100%;
+  transform: translateY(-100%); }
 
 .vertical-center {
   display: flex;
@@ -38,7 +48,7 @@
   padding: 25px; }
 
 .green-fill {
-  background: #18540c; }
+  background: #213418; }
 
 .full-width-bar {
   margin: 0 -9999rem;
@@ -46,7 +56,7 @@
   padding: 0.25rem 9999rem; }
 
 .font-serif {
-  font-family: serif !important; }
+  font-family: 'cochin', serif !important; }
 
 .font-sans-serif {
   font-family: sans-serif !important; }
@@ -60,6 +70,9 @@
 .padding-25 {
   padding: 25px; }
 
+.padding-left-50 {
+  padding-left: 50px; }
+
 .color-white {
   color: #f4f6f4 !important; }
 
@@ -72,7 +85,8 @@ html {
 
 body {
   overflow-x: hidden;
-  color: #f4f6f4; }
+  color: #f4f6f4;
+  font-family: 'Dosis', sans-serif; }
   body p {
     font-size: 17px;
     margin: 1.5em 0px;
@@ -84,21 +98,25 @@ body {
     text-decoration: underline; }
     body a:hover {
       color: #f4f6f4; }
+    body a:focus, body a:visited {
+      color: #f4f6f4; }
   body b {
     font-weight: bold; }
   body h1 {
     font-size: 60px;
     font-weight: 100;
-    font-family: serif; }
+    font-family: 'cochin', serif; }
   body h2 {
-    font-family: serif;
+    font-family: 'cochin', serif;
     font-weight: 100; }
   body h3 {
-    font-family: serif;
+    font-family: 'cochin', serif;
     font-weight: 100; }
   body h4 {
-    font-family: serif;
+    font-family: 'cochin', serif;
     font-weight: 100; }
+  body h5 {
+    font-family: 'cochin', serif; }
 
 hr {
   background-color: #26723a;
@@ -109,13 +127,14 @@ hr {
   background-color: #1c5996;
   min-height: 100vh;
   height: auto;
+  position: relative;
   overflow: hidden; }
 
 .blue-background {
   background-color: #294865; }
 
 .green-background {
-  background-color: #18540c; }
+  background-color: #213418; }
   .green-background .border {
     border: 3px solid #294865;
     display: inline-block; }
@@ -129,7 +148,8 @@ hr {
     width: 21px;
     height: 22px;
     margin-right: 5px;
-    margin-bottom: -2px; }
+    margin-bottom: -2px;
+    background-size: 100%; }
 
 .contact {
   padding: 50px;
@@ -205,7 +225,7 @@ hr {
   background-position: center;
   min-width: 860px;
   left: 28%;
-  top: 8%;
+  top: 1%;
   width: 900px;
   height: 950px;
   position: absolute;
@@ -230,6 +250,59 @@ hr {
     opacity: .8;
     cursor: pointer; }
 
+.buy-book {
+  width: 170px;
+  height: 150px;
+  background-color: #26723a;
+  margin-top: 50px;
+  padding: 15px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center; }
+  .buy-book .title {
+    align-self: flex-start; }
+    .buy-book .title.pdf:before {
+      content: '';
+      background: url("/images/bookmark.png") no-repeat;
+      display: inline-block;
+      width: 10px;
+      height: 11px;
+      margin-right: 5px; }
+    .buy-book .title.audio:before {
+      content: '';
+      background: url("/images/audiotrack.png") no-repeat;
+      display: inline-block;
+      width: 10px;
+      height: 11px;
+      margin-right: 5px; }
+    .buy-book .title.book:before {
+      content: '';
+      background: url("/images/book.png") no-repeat;
+      display: inline-block;
+      width: 10px;
+      height: 11px;
+      margin-right: 5px; }
+  .buy-book .price {
+    font-size: 16px;
+    align-self: center; }
+  .buy-book a {
+    align-self: flex-end;
+    border: 2px solid #f4f6f4;
+    padding: 10px 15px;
+    text-decoration: none; }
+    .buy-book a:before {
+      content: '';
+      display: inline-block;
+      background: url("/images/arrow-white.png") no-repeat;
+      margin-left: 5px;
+      width: 20px;
+      height: 10px;
+      position: absolute;
+      right: 15px;
+      top: 18px; }
+    .buy-book a:hover {
+      text-decoration: underline; }
+
 #header #logo {
   position: relative;
   z-index: 1;
@@ -248,7 +321,8 @@ hr {
 
 #header .phone {
   font-size: 30px;
-  font-family: serif; }
+  line-height: 25px;
+  font-family: 'cochin', serif; }
 
 #content {
   overflow: visible;
@@ -262,7 +336,7 @@ hr {
   #content .blue-backdrop {
     border: 25px solid #25405b; }
   #content .green-backdrop {
-    border: 25px solid #18540c; }
+    border: 25px solid #213418; }
   #content .notepad {
     background: url("/images/notepad.png") no-repeat;
     width: 440px;
@@ -319,7 +393,9 @@ hr {
   #content .writing {
     background: url("/images/writing.png") no-repeat;
     width: 400px;
-    height: 315px; }
+    height: 315px;
+    background-position: center;
+    background-size: 113%; }
   #content .graph {
     background: url("/images/graph.png") no-repeat;
     width: 400px;
@@ -392,6 +468,11 @@ hr {
     background: url("/images/shutterstockbliss.png") no-repeat;
     width: 400px;
     height: 250px; }
+  #content .seattle {
+    background: url("/images/seattle.jpg") no-repeat;
+    width: 400px;
+    height: 315px;
+    background-position: center; }
   #content .shelly {
     background: url("/images/shelly.png") no-repeat;
     width: 400px;
@@ -405,11 +486,17 @@ hr {
     width: 400px;
     height: 325px;
     background-position: center; }
+  #content .certs {
+    background: url("/images/certs.png") no-repeat;
+    background-size: 100%;
+    height: 215px;
+    max-width: 1000px;
+    margin: 0px auto; }
   #content .qb-background-border {
     background: #294865;
     width: 350px;
     height: 300px;
-    border: 15px solid #18540c;
+    border: 15px solid #213418;
     margin: 25px;
     float: left;
     position: relative; }
@@ -474,7 +561,7 @@ hr {
     width: 245px;
     font-size: 10px;
     position: relative;
-    background-color: #205993;
+    background-color: #294865;
     height: 50px;
     line-height: 10px;
     text-align: center;
@@ -525,6 +612,8 @@ hr {
         padding: 30px 50px;
         display: block;
         text-decoration: none; }
+        #content #navigation #nav a :hover {
+          text-decoration: underline; }
   #content #main-content .full {
     height: 745px; }
   #content #main-content h2 {
@@ -541,6 +630,8 @@ hr {
   #content #main-content #secondary {
     margin-top: 50px;
     min-height: 20px; }
+    #content #main-content #secondary .business {
+      color: #26723a; }
   #content #main-content #tagline {
     position: absolute;
     top: 40%;
@@ -585,8 +676,21 @@ hr {
       margin-bottom: 25px; }
     #content #more-content .contact-info .phone {
       font-family: serif; }
+      #content #more-content .contact-info .phone:before {
+        content: '';
+        background: url("/images/phone-white.png") no-repeat;
+        background-size: 100%; }
     #content #more-content .contact-info .email {
       font-family: serif; }
+      #content #more-content .contact-info .email:before {
+        content: '';
+        background: url("/images/mail.png") no-repeat;
+        display: inline-block;
+        width: 21px;
+        height: 22px;
+        margin-right: 5px;
+        background-size: 100%;
+        margin-bottom: -2px; }
     #content #more-content .contact-info .follow-us {
       margin-bottom: 25px; }
   #content #more-content .news h4 {
@@ -595,23 +699,35 @@ hr {
     text-align: center;
     margin-bottom: 35px;
     text-align: center; }
-  #content #more-content .news .item h5 {
-    font-weight: 400;
-    font-family: sans-serif; }
-  #content #more-content .news .item .read-more {
-    padding: 5px 10px;
-    background-color: #18540c;
-    font-size: 13px;
-    text-decoration: none; }
-    #content #more-content .news .item .read-more:hover {
-      opacity: .8; }
-  #content #more-content .news .date {
-    font-size: 13px;
-    margin: 1em 0px;
-    padding-top: 5px;
-    font-weight: 100;
-    position: relative;
-    z-index: 100 !important; }
+  #content #more-content .news .news-list .item {
+    position: relative; }
+    #content #more-content .news .news-list .item h5 {
+      font-weight: 400;
+      font-family: sans-serif; }
+    #content #more-content .news .news-list .item img {
+      display: none; }
+    #content #more-content .news .news-list .item .content {
+      overflow: hidden;
+      height: 130px; }
+    #content #more-content .news .news-list .item .bottom {
+      position: absolute;
+      bottom: 0px; }
+      #content #more-content .news .news-list .item .bottom .read-more {
+        padding: 5px 10px;
+        background-color: #213418;
+        font-size: 13px;
+        text-decoration: none;
+        position: absolute;
+        right: 65px; }
+        #content #more-content .news .news-list .item .bottom .read-more:hover {
+          opacity: .8; }
+      #content #more-content .news .news-list .item .bottom .date {
+        font-size: 13px;
+        margin: 1em 0px;
+        padding-top: 5px;
+        font-weight: 100;
+        position: relative;
+        z-index: 100 !important; }
   #content #more-content .sample .read-more {
     color: #26723a;
     position: absolute;
@@ -622,10 +738,10 @@ hr {
   #footer .footer-text {
     font-size: 14px;
     line-height: 14px;
-    font-weight: 200;
-    width: 240px; }
+    font-weight: 200; }
   #footer .phone {
-    font-size: 20px; }
+    font-family: 'cochin', serif;
+    font-size: 25px; }
 
 /*
  * Off Canvas
@@ -660,3 +776,26 @@ hr {
     top: 0;
     width: 50%;
     /* 6 columns */ } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  #content .quickbooks-logo {
+    float: none; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  #globe {
+    left: 0%;
+    top: 5%; }
+  #content .quickbooks-logo {
+    float: none;
+    margin-left: -15px; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  #globe {
+    left: 0%;
+    top: 1%; } }
+
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */

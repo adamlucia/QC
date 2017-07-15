@@ -32,5 +32,5 @@ gulp.task('nunjucks', function() {
 });
 
 gulp.task('nunjucks:watch', function () {
-    gulp.watch('./public/templates/pages/*.+(nj)', ['nunjucks']);
+    gulp.watch(['./public/templates/pages/*.+(nj)','./public/templates/*.+(nj)'], ['nunjucks']);
 });

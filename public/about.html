@@ -13,11 +13,94 @@
 
     <meta name="author" content="STAYKool Productions">
 
+    <link rel='shortcut icon' type='image/x-icon' href='favico.png'/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        // $.get('https://qccomputing.blogspot.com/feeds/posts/default', {
+        //     dataType: 'xml',
+        //     cors: true ,
+        //     contentType:'application/json',
+        //     secure: true,
+        //     headers: {
+        //         'Access-Control-Allow-Origin': '*',
+        //     }},
+        //     function (data, error) {
+        //         console.log('data', data);
+        //         $(data).find("entry").each(function () { // or "item" or whatever suits your feed
+        //             var el = $(this);
+        //
+        //             console.log("------------------------");
+        //             console.log("title      : " + el.find("title").text());
+        //             console.log("author     : " + el.find("author").text());
+        //             console.log("description: " + el.find("description").text());
+        //         });
+        // });
+
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        $.ajax({
+          url: 'https://qccomputing.blogspot.com/feeds/posts/default',
+          dataType: 'jsonp',
+          success: function (data, error) {
+              $( document ).ready(function() {
+                 var count = 0;
+                  $(data).find("entry").each(function () {
+
+                      if(count < 3){
+
+                          //loop variable
+                          title = $(this).find("title").html();
+                          author = $(this).find("author").html();
+                          link = $(this).find('[rel="alternate"]').attr("href");
+                          content = $(this).find("content").text();
+                          updated = new Date(Date.parse($(this).find("updated").text()));
+
+
+                          console.log('before', link);
+
+                          //template element
+                          var newDiv = $("#item-template").clone();
+
+
+                          //add another element
+                          newDiv.attr("id",`news-item-${count}`).appendTo(".news-list");
+                          newDiv.find(".title").html(title);
+                          newDiv.find(".date").html(`${monthNames[updated.getMonth()]} ${updated.getDate()} ${updated.getFullYear()}`);
+                          newDiv.find(".content").html(content);
+                          newDiv.find(".read-more").attr("href", link);
+                          newDiv.find(".read-more").attr("target", "_blank");
+
+                          console.log('after', newDiv.find("content").text());
+
+
+
+                          newDiv.show();
+
+                          count++;
+                      }else{
+                          return false;
+                      }
+                  });
+              });
+          },
+          error: function(xhr, status, error) {
+              var err = eval("(" + xhr.responseText + ")");
+              alert(err.Message);
+          }
+        });
+    </script>
+
+
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -33,7 +116,7 @@
     <script>
         $(document).ready(function () {
             $('[data-toggle="offcanvas"]').click(function () {
-            $('.row-offcanvas').toggleClass('active')
+                $('.row-offcanvas').toggleClass('active')
             });
         });
     </script>
@@ -44,11 +127,11 @@
                 <a href="/"><div id="logo"></div></a>
                 <!--<a href="/"><img src="images/logo.png" id="logo"></a>-->
             </div>
-            <div class="col-12 col-md-6 vcenter text-right">
-                <div id="contact-text">
+            <div class="col-12 col-md-6 text-right">
+                <div id="contact-text" class="vcenter">
                     <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
                 </div>
-                <div class="phone">206-832-5485</div>
+                <div class="phone vcenter">206-832-5485</div>
             </div>
         </div>
 
@@ -61,13 +144,13 @@
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
                     <li><a href="/analysis.html">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
                     <li><a href="/testimonials.html">CLIENT TESTIMONIALS</a></li>
-                    <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
+                    <li><a href="/book.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
                     <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
                     <li><a href="blog.qccomputing.com">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
-                <nav class="navbar navbar-fixed-top navbar-inverse">
+                <!--<nav class="navbar navbar-fixed-top navbar-inverse">
                   <div class="container">
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
@@ -84,19 +167,19 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                       </ul>
-                    </div><!-- /.nav-collapse -->
-                  </div><!-- /.container -->
-                </nav>
+                    </div>
+                  </div>
+                </nav>-->
             </section>
             <section id="main-content" class="col-md-8 container">
                 
     <h2>About Us</h2>
     <div id="main" class="row blue-background">
         <div class="col-12">
-            <div class="wrap-text-right up-and-right green-backdrop">
-                <img src="/images/seattle.png" width="350" height="250" align="right">
+            <div class="wrap-text-right up-and-right green-backdrop hidden-lg-down">
+                <div class="seattle"></div>
             </div>
-            <p>Madeline Bailey consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.  Madeline Bailey consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.</p>
+            <p><u>Madeline Bailey</u> consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.  Madeline Bailey consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.</p>
             <p><b>We bring our services to your place of business!</b> For clients who live out of state, we offer remote consulting services and/or we travel. We ask for four hours minimum for new clients so that we can get to know you and your business. Our policy is to be paid on retainer or in full at time of service. We accept cash, checks, paypal, bitcoin, silver, gold, credit cards (+fees), and intuit payment plan (+fees).</p>
             <p><b>Our goal is to empower private business owners to make more profit!</b></p>
         </div>
@@ -142,7 +225,7 @@
                 </div>
             </div>
             <div class="col-8">
-                <form class="contact" action="/action_page.php">
+                <form class="contact" action="/action_page.php" method=”post”>
                     <div class="row">
                         <div class="col-6">
                             <label for="fname">First Name</label>
@@ -194,40 +277,45 @@
                     <img src="/images/madeline.png" width="350" align="left">
                 </div>
                 <h2>Madeline Bailey</h2>
-                <p>A premier private business analyst with 22 years of PC expertise, Madeline began her financial career as a computer programmer for SSG Accounting Software (a Peachtree competitor). She next worked as a software developer creating the world's leading cancer-research software, and then as a manager for a government IT department, managing programmers, hardware techs, a call center staff, and statisticians. It wasn't until 1991 that Madeline joined her husband as managing partner of their own software publishing company. Frustrated with the lack of financial visibility offered by the company's manual income &amp; expense tracking system, Madeline implemented <u>QuickBooks Accounting software</u> for DOS and profitability soared!</p>
+                <p>A premier private business analyst with 22 years of PC expertise, Madeline began her financial career as a computer programmer for SSG Accounting Software (a Peachtree competitor). She next worked as a software developer creating the world's leading cancer-research software, and then as a manager for a government IT department, managing programmers, hardware techs, a call center staff, and statisticians. It wasn't until 1991 that Madeline joined her husband as managing partner of their own software publishing company. Frustrated with the lack of financial visibility offered by the company's manual income &amp; expense tracking system, Madeline implemented <u><a href="products.html">QuickBooks Accounting software</a></u> for DOS and profitability soared!</p>
 
-                <p>Word of her success spread and soon the SBA and entrepreneurs were asking if she could do the same for them? This opened the door to starting <b>QC Computing LLC</b> in 1997, a consulting firm specializing in QuickBooks for businesses in a wide variety of industries. While working as a <u>QuickBooks expert</u> for CPA's and Fortune-1000 firms, and as a <u>private accountant</u> and business analyst to some of Silicon Valley's wealthiest individuals, Madeline noticed a communication gap between some accountants and their clients.</p>
-                <p>To empower business people financially, Madeline developed an entirely new, more intuitive approach to teaching accounting. Now in its second printing, and with a new audiobook release, <b><u>Radically Simple Accounting</b></u> is popular with entrepreneurs and their bookkeepers.
+                <p>Word of her success spread and soon the SBA and entrepreneurs were asking if she could do the same for them? This opened the door to starting <b>QC Computing LLC</b> in 1997, a consulting firm specializing in QuickBooks for businesses in a wide variety of industries. While working as a <u><a href="/accounting.html">QuickBooks expert</a></u> for CPA's and Fortune-1000 firms, and as a <u><a href="/accounting.html">private accountant</a></u> and business analyst to some of Silicon Valley's wealthiest individuals, Madeline noticed a communication gap between some accountants and their clients.</p>
+                <p>To empower business people financially, Madeline developed an entirely new, more intuitive approach to teaching accounting. Now in its second printing, and with a new audiobook release, <b><u><a href="/book.html">Radically Simple Accounting</a></b></u> is popular with entrepreneurs and their bookkeepers.
 
                 <p>Madeline holds a B.A. in Management and is a <u>frequent speaker</u>.</p>
-                <p>Ms. Bailey belongs to the professional organization Accounting &amp; <u>Financial Women's Alliance</u> A deeply spiritual person, Madeline is a light worker who tithes.</p>
+                <p>Ms. Bailey belongs to the professional organization <u>Accounting &amp; Financial Women's Alliance</u> A deeply spiritual person, Madeline is a light worker who tithes.</p>
             </div>
             <div class="col-12">
                 <a href="/quickbooks" class="square-button">View Ms. Bailey's Resume (.pdf)</a>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-lg-7">
                 <h2>Shelly Tutt</h2>
-                <h5s>BOOKKEEPER</h5>
+                <h6>BOOKKEEPER</h6>
                 <p>Shelly Tutt is certified in QuickBooks Online Edition. A self-motivated person, she started out as the bookkeeper for her family business. She enjoyed it so much that she decided to obtain her AAS Degree in Accounting from Bellevue College. While at college, she was referred by a professor to a bookkeeping job for a contractor, who raves about her work. After graduation, Shelly decided that bookkeeping was going to be her new path and came to work for QC Computing. In her private life, Shelly likes Yoga class and horseback riding, so she brings a healthy glow to your office along with her many professional talents. Familiar with all versions of QuickBooks, Shelly is the perfect addition to your small business team.</p>
             </div>
-            <div class="col-12 col-md-5 float-right">
+            <div class="col-12 col-lg-5 float-right">
                 <div class="wrap-text-left profile-crop green-backdrop">
                     <img src="/images/shelly.png" width="350" align="left">
                 </div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-5 float-left">
+            <div class="col-12 col-lg-5 float-left">
                 <div class="wrap-text-left profile-crop green-backdrop">
                     <img src="/images/dana.png" width="350" align="left">
                 </div>
             </div>
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-lg-7">
                 <h2>Dana Johnson</h2>
-                <h5>BOOKKEEPER</h5>
+                <h6>BOOKKEEPER</6>
                 <p>Dana Johnson has been keeping the books for her family owned small business, A.J. Hauling Inc., for the last 20 years. Her passion is children, especially her own but now that they are in college, she's happy to share her gift for detail, organization, and bookkeeping with other small busines owners. Dana's value system of honesty and loyalty are an inspiration to all around her, including our clients. In her spare time, she and her husband like to go boating on Lake Sammamish, and camping at Mt. Ranier. A lovely woman, with stellar references; she's the perfect addition to your small business team.</p>
+            </div>
+        </div>
+        <div class="row margin-100-bottom">
+            <div class="col-12 center-block">
+                <div class="certs"></div>
             </div>
         </div>
 
@@ -238,17 +326,21 @@
         
         <div class="row no-gutters">
             <div class="col-12 col-md-3">
-                <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                <div class="row vcenter">
+                    <div class="col-12">
+                        <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 vcenter">
+            <div class="col-12 col-md-5">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
-            <div class="col-12 col-md-3">
-                <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="row vcenter">
                     <div class="col-8">
                         <div class="footer-text">or send email to: bailey@qccomputing.com</div>
                     </div>
-                    <div class="col-4 vcenter">
+                    <div class="col-4">
                         <div class="float-right"><div class="fb"></div><div class="linked-in"></div></div>
                     </div>
                 </div>
@@ -260,5 +352,15 @@
 
 
     </div>
+
+    <script src="node_modules/slick-carousel/slick/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+            var temp = $('.testimonial-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
 </body>
 </html>

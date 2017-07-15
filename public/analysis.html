@@ -13,11 +13,94 @@
 
     <meta name="author" content="STAYKool Productions">
 
+    <link rel='shortcut icon' type='image/x-icon' href='favico.png'/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        // $.get('https://qccomputing.blogspot.com/feeds/posts/default', {
+        //     dataType: 'xml',
+        //     cors: true ,
+        //     contentType:'application/json',
+        //     secure: true,
+        //     headers: {
+        //         'Access-Control-Allow-Origin': '*',
+        //     }},
+        //     function (data, error) {
+        //         console.log('data', data);
+        //         $(data).find("entry").each(function () { // or "item" or whatever suits your feed
+        //             var el = $(this);
+        //
+        //             console.log("------------------------");
+        //             console.log("title      : " + el.find("title").text());
+        //             console.log("author     : " + el.find("author").text());
+        //             console.log("description: " + el.find("description").text());
+        //         });
+        // });
+
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        $.ajax({
+          url: 'https://qccomputing.blogspot.com/feeds/posts/default',
+          dataType: 'jsonp',
+          success: function (data, error) {
+              $( document ).ready(function() {
+                 var count = 0;
+                  $(data).find("entry").each(function () {
+
+                      if(count < 3){
+
+                          //loop variable
+                          title = $(this).find("title").html();
+                          author = $(this).find("author").html();
+                          link = $(this).find('[rel="alternate"]').attr("href");
+                          content = $(this).find("content").text();
+                          updated = new Date(Date.parse($(this).find("updated").text()));
+
+
+                          console.log('before', link);
+
+                          //template element
+                          var newDiv = $("#item-template").clone();
+
+
+                          //add another element
+                          newDiv.attr("id",`news-item-${count}`).appendTo(".news-list");
+                          newDiv.find(".title").html(title);
+                          newDiv.find(".date").html(`${monthNames[updated.getMonth()]} ${updated.getDate()} ${updated.getFullYear()}`);
+                          newDiv.find(".content").html(content);
+                          newDiv.find(".read-more").attr("href", link);
+                          newDiv.find(".read-more").attr("target", "_blank");
+
+                          console.log('after', newDiv.find("content").text());
+
+
+
+                          newDiv.show();
+
+                          count++;
+                      }else{
+                          return false;
+                      }
+                  });
+              });
+          },
+          error: function(xhr, status, error) {
+              var err = eval("(" + xhr.responseText + ")");
+              alert(err.Message);
+          }
+        });
+    </script>
+
+
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -34,7 +117,7 @@
     <script>
         $(document).ready(function () {
             $('[data-toggle="offcanvas"]').click(function () {
-            $('.row-offcanvas').toggleClass('active')
+                $('.row-offcanvas').toggleClass('active')
             });
         });
     </script>
@@ -45,11 +128,11 @@
                 <a href="/"><div id="logo"></div></a>
                 <!--<a href="/"><img src="images/logo.png" id="logo"></a>-->
             </div>
-            <div class="col-12 col-md-6 vcenter text-right">
-                <div id="contact-text">
+            <div class="col-12 col-md-6 text-right">
+                <div id="contact-text" class="vcenter">
                     <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
                 </div>
-                <div class="phone">206-832-5485</div>
+                <div class="phone vcenter">206-832-5485</div>
             </div>
         </div>
 
@@ -62,13 +145,13 @@
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
                     <li><a href="/analysis.html">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
                     <li><a href="/testimonials.html">CLIENT TESTIMONIALS</a></li>
-                    <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
+                    <li><a href="/book.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
                     <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
                     <li><a href="blog.qccomputing.com">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
-                <nav class="navbar navbar-fixed-top navbar-inverse">
+                <!--<nav class="navbar navbar-fixed-top navbar-inverse">
                   <div class="container">
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
@@ -85,16 +168,16 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                       </ul>
-                    </div><!-- /.nav-collapse -->
-                  </div><!-- /.container -->
-                </nav>
+                    </div>
+                  </div>
+                </nav>-->
             </section>
             <section id="main-content" class="col-md-8 container">
                 
     <h2>Business Analyst</h2>
     <div id="main" class="row short blue-background">
         <div class="col-12 padding-25">
-            <h4>Benefits of a Business Analyst?</h4>
+            <h4><b>Benefits of a Business Analyst?</b></h4>
             <p>We are all in business together. We work overtime to make our businesses the best they can be. While providing first-rate packages for your customers and services for your clients is demanding, running a profitable business can be even more so. Every day it seems as if there's a new challenge that tests your problem-solving skills. Naturally your problem solving skills are well developed or your business wouldn't be as successful as it is. But one day you will face a problem for which you have no ready solution. If that day has come with your accounting system that's the problem, contact Madeline Bailey for help.</p>
         </div>
     </div>
@@ -116,10 +199,10 @@
             <section id="more-content" class="col-12 container">
                 
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="pointinggraph green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Business Analyst</h2>
             <p>You may be brilliant at what you do, but even the most successful entrepreneur does not have skills to solve every problem. That's where a business analyst like Madeline Bailey comes in to play. Ms. Bailey has a B.A. in Management, plus 28 years of business management practice and expertise. She can provide you with the following:</p>
             <ul>
@@ -133,58 +216,58 @@
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Even business owners who are business experts benefit from having an accountant who's a business analyst</h2>
             <p>Most CPA's provide accounting and tax filing services, but rarely enlighten you about the hundreds of ways you could improve your business profitability. It simply isn't their focus. Big accounting firms offer services comparable to ours but individual clients are assigned to the junior staff. Madeline Bailey is the "missing link", answering the call for a creative approach to improving profitability and preserving wealth.</p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="meeting green-backdrop float-right"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="accounting-book green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>You'll benefit from an Architecta of Accounting Systems</h2>
             <p>An accounting system is both a structure, and a series of transactions. People constantly remark to Madeline, "No matter what accounting problem I throw at you, you know how to solve it". That's because a business analyst sees how your business model can be mapped into an accounting system structure. Do you want your accounting system cobbled together or designed? You want it designed. Once Madeline creates a design, any and all transactions fit (or don't fit) into that structure. No matter what's gone on before, no matter how many bookkeepers you've had masticate your business, or how much you obfuscate your business model, Madeline can design an accounting system that works for your business model.</p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Business analysts create efficient, top-down structural systems.</h2>
             <p>As a private accountant, Madeline Bailey does anything and everything. Whether it's rolling out a new filing system structure or fixing back tax problems, her holistic talents come into play. You can focus on your business expertise and trust her & her team to manage your business accounting.</p>
             <p><span>Madeline says, <i>As retainer clients become familiar with her services, they jokingly tell Madeline, "You're working yourself out of a job!"</i></span></p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="meeting-dude green-backdrop float-right"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="comparison green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Business analysts know business terminology.</h2>
-            <p>A business analyst is more familiar with the world of business than your typical accountant. Whether you want to understand how the IRS "thinks", negotiate with vendors, write your first dunning letter to collect on customer debt, not get overcharged by financial or taxing insituation, or discuss a myrid of problems, Madeline is uniquely qualified to help you find ways to save money without changing the way you conduct business. She will even call for you to negotiate a better deal. Accounting alone saves you thousands of dollars in taxes. Beyond that, Madeline has helped clients make thousands of dollars more in profit as a business analyst. To learn more about business terminology, here is a list of books that Madeline recommends on business, accounting, money, success, and investments. Many books did not make the cut, and every book title includes a short review, so that you can select the ones of interest to you. To download to PDF, click on this link. <a href="/radicallysimple.html">Radically Simple Accounting Recommended Business Books.</a></p>
+            <p>A business analyst is more familiar with the world of business than your typical accountant. Whether you want to understand how the IRS "thinks", negotiate with vendors, write your first dunning letter to collect on customer debt, not get overcharged by financial or taxing insituation, or discuss a myrid of problems, Madeline is uniquely qualified to help you find ways to save money without changing the way you conduct business. She will even call for you to negotiate a better deal. Accounting alone saves you thousands of dollars in taxes. Beyond that, Madeline has helped clients make thousands of dollars more in profit as a business analyst. To learn more about business terminology, here is a list of books that Madeline recommends on business, accounting, money, success, and investments. Many books did not make the cut, and every book title includes a short review, so that you can select the ones of interest to you. To download to PDF, click on this link. <a href="/book.html">Radically Simple Accounting Recommended Business Books.</a></p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>A business analysts provides expert collaboration.</h2>
             <p>One client complained about her lack of profit. After creating more accurate financials, Madeline noticed that her Accounts Receivables were inordinately high. A/R affects cash flow which affects profit. So Madeline focused on the "Open Invoice Report" and showed the client how to get ratios for A/R to Income, Income to Profit, and A/R to Profit. The client came up with the idea of accepting credit cards. Madeline helped her get a merchant account with Intuit so that payments could be processed within QuickBooks for faster bookkeeping. Customers started paying faster, A/R was greatly reduced, and profitability improved. While the client told everyone that, "Madeline is brilliant", clearly, the problem was solved collaboratively.</p>
 
             <p>Another client (a couple) complained about an extraordinarily profitable year (or rather the stiff taxes they would face as a result of that profit). Further listening proved that was was originally posed as a business problem was in fact a personal problem between the husband & wife. One partner wanted to relocate the business and incur more expenses that way, while the other partner wanted to stay put even if it meant paying more taxes. It's not possible to separate your private life from being an entrepreneur, so Madeline continued to listen actively until the couple came to an agreement to stay put. At that point, Madeline suggested that they could protect some of their profit from taxes by funding a retirement account. They loved this idea and knew of an investment advisor. The following year, they thanked Madeline profusely. They were both so happy with their decision. Because these clients are famous people, you won't see any mention of their name or a testimonial, but clearly, the problem was solved collaboratively.</p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="collab green-backdrop float-right"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="review green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Madeline knows how to leverage small business technology.</h2>
             <p>As technology is at the core of every successful business, Madeline routinely helps clients with a variety of technical problems:</p>
             <ul>
@@ -198,19 +281,19 @@
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Would you benefit from "Cloud" computing?</h2>
             <p>Cloud computing is location-independent computing. Intuit is marketing that as QuickBooks Online, but there are other cloud solutions. A business analyst is well-equipped to work with clients all over the US, plus clients who live overseas but have a nexus in WA state. For more information on how you can make cloud computing work for your business, read this 30-page white paper, writing by Madeline Bailey. Remote Access Options for QuickBooks. Best of all, it's 100% Free!</p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="laptop green-backdrop float-right"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="shake green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Let's create a better future for your business.</h2>
             <p>Many business owners neglect installing a backup system for critical data. This is a common oversight, but a dangerous one. What would happen if overnight all the data you've been maintaining became inaccessible? It happens more often than you imagine.</p>
             <ul>
@@ -223,12 +306,17 @@
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Your concerns are our concerns.</h2>
             <p>If you want, Madeline Bailey will work with you to analyze the total health of your infrastructure and make strategic suggestions for improvement. If an ounce of prevention is worth a pound of cure, then your business can become 93.75% more profitable in certain areas, and first rate in <b>every way!</b></p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="thinking green-backdrop float-right"></div>
+        </div>
+    </div>
+    <div class="row margin-100-bottom">
+        <div class="col-12 center-block">
+            <div class="certs"></div>
         </div>
     </div>
 
@@ -239,17 +327,21 @@
         
         <div class="row no-gutters">
             <div class="col-12 col-md-3">
-                <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                <div class="row vcenter">
+                    <div class="col-12">
+                        <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 vcenter">
+            <div class="col-12 col-md-5">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
-            <div class="col-12 col-md-3">
-                <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="row vcenter">
                     <div class="col-8">
                         <div class="footer-text">or send email to: bailey@qccomputing.com</div>
                     </div>
-                    <div class="col-4 vcenter">
+                    <div class="col-4">
                         <div class="float-right"><div class="fb"></div><div class="linked-in"></div></div>
                     </div>
                 </div>
@@ -261,5 +353,15 @@
 
 
     </div>
+
+    <script src="node_modules/slick-carousel/slick/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+            var temp = $('.testimonial-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
 </body>
 </html>

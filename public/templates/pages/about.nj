@@ -6,10 +6,10 @@
     <h2>About Us</h2>
     <div id="main" class="row blue-background">
         <div class="col-12">
-            <div class="wrap-text-right up-and-right green-backdrop">
-                <img src="/images/seattle.png" width="350" height="250" align="right">
+            <div class="wrap-text-right up-and-right green-backdrop hidden-lg-down">
+                <div class="seattle"></div>
             </div>
-            <p>Madeline Bailey consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.  Madeline Bailey consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.</p>
+            <p><u>Madeline Bailey</u> consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.  Madeline Bailey consistently ranks as one of Intuit's top-rated Advanced, Enterprise, Online, and POS QuickBooks Certified Professional Advisors in the greater Seattle, WA area.</p>
             <p><b>We bring our services to your place of business!</b> For clients who live out of state, we offer remote consulting services and/or we travel. We ask for four hours minimum for new clients so that we can get to know you and your business. Our policy is to be paid on retainer or in full at time of service. We accept cash, checks, paypal, bitcoin, silver, gold, credit cards (+fees), and intuit payment plan (+fees).</p>
             <p><b>Our goal is to empower private business owners to make more profit!</b></p>
         </div>
@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="col-8">
-                <form class="contact" action="/action_page.php">
+                <form class="contact" action="/action_page.php" method=”post”>
                     <div class="row">
                         <div class="col-6">
                             <label for="fname">First Name</label>
@@ -104,40 +104,45 @@
                     <img src="/images/madeline.png" width="350" align="left">
                 </div>
                 <h2>Madeline Bailey</h2>
-                <p>A premier private business analyst with 22 years of PC expertise, Madeline began her financial career as a computer programmer for SSG Accounting Software (a Peachtree competitor). She next worked as a software developer creating the world's leading cancer-research software, and then as a manager for a government IT department, managing programmers, hardware techs, a call center staff, and statisticians. It wasn't until 1991 that Madeline joined her husband as managing partner of their own software publishing company. Frustrated with the lack of financial visibility offered by the company's manual income &amp; expense tracking system, Madeline implemented <u>QuickBooks Accounting software</u> for DOS and profitability soared!</p>
+                <p>A premier private business analyst with 22 years of PC expertise, Madeline began her financial career as a computer programmer for SSG Accounting Software (a Peachtree competitor). She next worked as a software developer creating the world's leading cancer-research software, and then as a manager for a government IT department, managing programmers, hardware techs, a call center staff, and statisticians. It wasn't until 1991 that Madeline joined her husband as managing partner of their own software publishing company. Frustrated with the lack of financial visibility offered by the company's manual income &amp; expense tracking system, Madeline implemented <u><a href="products.html">QuickBooks Accounting software</a></u> for DOS and profitability soared!</p>
 
-                <p>Word of her success spread and soon the SBA and entrepreneurs were asking if she could do the same for them? This opened the door to starting <b>QC Computing LLC</b> in 1997, a consulting firm specializing in QuickBooks for businesses in a wide variety of industries. While working as a <u>QuickBooks expert</u> for CPA's and Fortune-1000 firms, and as a <u>private accountant</u> and business analyst to some of Silicon Valley's wealthiest individuals, Madeline noticed a communication gap between some accountants and their clients.</p>
-                <p>To empower business people financially, Madeline developed an entirely new, more intuitive approach to teaching accounting. Now in its second printing, and with a new audiobook release, <b><u>Radically Simple Accounting</b></u> is popular with entrepreneurs and their bookkeepers.
+                <p>Word of her success spread and soon the SBA and entrepreneurs were asking if she could do the same for them? This opened the door to starting <b>QC Computing LLC</b> in 1997, a consulting firm specializing in QuickBooks for businesses in a wide variety of industries. While working as a <u><a href="/accounting.html">QuickBooks expert</a></u> for CPA's and Fortune-1000 firms, and as a <u><a href="/accounting.html">private accountant</a></u> and business analyst to some of Silicon Valley's wealthiest individuals, Madeline noticed a communication gap between some accountants and their clients.</p>
+                <p>To empower business people financially, Madeline developed an entirely new, more intuitive approach to teaching accounting. Now in its second printing, and with a new audiobook release, <b><u><a href="/book.html">Radically Simple Accounting</a></b></u> is popular with entrepreneurs and their bookkeepers.
 
                 <p>Madeline holds a B.A. in Management and is a <u>frequent speaker</u>.</p>
-                <p>Ms. Bailey belongs to the professional organization Accounting &amp; <u>Financial Women's Alliance</u> A deeply spiritual person, Madeline is a light worker who tithes.</p>
+                <p>Ms. Bailey belongs to the professional organization <u>Accounting &amp; Financial Women's Alliance</u> A deeply spiritual person, Madeline is a light worker who tithes.</p>
             </div>
             <div class="col-12">
                 <a href="/quickbooks" class="square-button">View Ms. Bailey's Resume (.pdf)</a>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-lg-7">
                 <h2>Shelly Tutt</h2>
-                <h5s>BOOKKEEPER</h5>
+                <h6>BOOKKEEPER</h6>
                 <p>Shelly Tutt is certified in QuickBooks Online Edition. A self-motivated person, she started out as the bookkeeper for her family business. She enjoyed it so much that she decided to obtain her AAS Degree in Accounting from Bellevue College. While at college, she was referred by a professor to a bookkeeping job for a contractor, who raves about her work. After graduation, Shelly decided that bookkeeping was going to be her new path and came to work for QC Computing. In her private life, Shelly likes Yoga class and horseback riding, so she brings a healthy glow to your office along with her many professional talents. Familiar with all versions of QuickBooks, Shelly is the perfect addition to your small business team.</p>
             </div>
-            <div class="col-12 col-md-5 float-right">
+            <div class="col-12 col-lg-5 float-right">
                 <div class="wrap-text-left profile-crop green-backdrop">
                     <img src="/images/shelly.png" width="350" align="left">
                 </div>
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-md-5 float-left">
+            <div class="col-12 col-lg-5 float-left">
                 <div class="wrap-text-left profile-crop green-backdrop">
                     <img src="/images/dana.png" width="350" align="left">
                 </div>
             </div>
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-lg-7">
                 <h2>Dana Johnson</h2>
-                <h5>BOOKKEEPER</h5>
+                <h6>BOOKKEEPER</6>
                 <p>Dana Johnson has been keeping the books for her family owned small business, A.J. Hauling Inc., for the last 20 years. Her passion is children, especially her own but now that they are in college, she's happy to share her gift for detail, organization, and bookkeeping with other small busines owners. Dana's value system of honesty and loyalty are an inspiration to all around her, including our clients. In her spare time, she and her husband like to go boating on Lake Sammamish, and camping at Mt. Ranier. A lovely woman, with stellar references; she's the perfect addition to your small business team.</p>
+            </div>
+        </div>
+        <div class="row margin-100-bottom">
+            <div class="col-12 center-block">
+                <div class="certs"></div>
             </div>
         </div>
 {% endblock %}

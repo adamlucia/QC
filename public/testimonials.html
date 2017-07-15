@@ -13,11 +13,94 @@
 
     <meta name="author" content="STAYKool Productions">
 
+    <link rel='shortcut icon' type='image/x-icon' href='favico.png'/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        // $.get('https://qccomputing.blogspot.com/feeds/posts/default', {
+        //     dataType: 'xml',
+        //     cors: true ,
+        //     contentType:'application/json',
+        //     secure: true,
+        //     headers: {
+        //         'Access-Control-Allow-Origin': '*',
+        //     }},
+        //     function (data, error) {
+        //         console.log('data', data);
+        //         $(data).find("entry").each(function () { // or "item" or whatever suits your feed
+        //             var el = $(this);
+        //
+        //             console.log("------------------------");
+        //             console.log("title      : " + el.find("title").text());
+        //             console.log("author     : " + el.find("author").text());
+        //             console.log("description: " + el.find("description").text());
+        //         });
+        // });
+
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        $.ajax({
+          url: 'https://qccomputing.blogspot.com/feeds/posts/default',
+          dataType: 'jsonp',
+          success: function (data, error) {
+              $( document ).ready(function() {
+                 var count = 0;
+                  $(data).find("entry").each(function () {
+
+                      if(count < 3){
+
+                          //loop variable
+                          title = $(this).find("title").html();
+                          author = $(this).find("author").html();
+                          link = $(this).find('[rel="alternate"]').attr("href");
+                          content = $(this).find("content").text();
+                          updated = new Date(Date.parse($(this).find("updated").text()));
+
+
+                          console.log('before', link);
+
+                          //template element
+                          var newDiv = $("#item-template").clone();
+
+
+                          //add another element
+                          newDiv.attr("id",`news-item-${count}`).appendTo(".news-list");
+                          newDiv.find(".title").html(title);
+                          newDiv.find(".date").html(`${monthNames[updated.getMonth()]} ${updated.getDate()} ${updated.getFullYear()}`);
+                          newDiv.find(".content").html(content);
+                          newDiv.find(".read-more").attr("href", link);
+                          newDiv.find(".read-more").attr("target", "_blank");
+
+                          console.log('after', newDiv.find("content").text());
+
+
+
+                          newDiv.show();
+
+                          count++;
+                      }else{
+                          return false;
+                      }
+                  });
+              });
+          },
+          error: function(xhr, status, error) {
+              var err = eval("(" + xhr.responseText + ")");
+              alert(err.Message);
+          }
+        });
+    </script>
+
+
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -34,7 +117,7 @@
     <script>
         $(document).ready(function () {
             $('[data-toggle="offcanvas"]').click(function () {
-            $('.row-offcanvas').toggleClass('active')
+                $('.row-offcanvas').toggleClass('active')
             });
         });
     </script>
@@ -45,11 +128,11 @@
                 <a href="/"><div id="logo"></div></a>
                 <!--<a href="/"><img src="images/logo.png" id="logo"></a>-->
             </div>
-            <div class="col-12 col-md-6 vcenter text-right">
-                <div id="contact-text">
+            <div class="col-12 col-md-6 text-right">
+                <div id="contact-text" class="vcenter">
                     <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
                 </div>
-                <div class="phone">206-832-5485</div>
+                <div class="phone vcenter">206-832-5485</div>
             </div>
         </div>
 
@@ -62,13 +145,13 @@
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
                     <li><a href="/analysis.html">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
                     <li><a href="/testimonials.html">CLIENT TESTIMONIALS</a></li>
-                    <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
+                    <li><a href="/book.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
                     <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
                     <li><a href="blog.qccomputing.com">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
-                <nav class="navbar navbar-fixed-top navbar-inverse">
+                <!--<nav class="navbar navbar-fixed-top navbar-inverse">
                   <div class="container">
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
@@ -85,9 +168,9 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                       </ul>
-                    </div><!-- /.nav-collapse -->
-                  </div><!-- /.container -->
-                </nav>
+                    </div>
+                  </div>
+                </nav>-->
             </section>
             <section id="main-content" class="col-md-8 container">
                 
@@ -124,70 +207,75 @@
         <div class="row">
             <section id="more-content" class="col-12 container">
                 
-<div class="row margin-50-bottom testimonials blue-background">
-    <div class="col-12">
-        <div class="row">
+        <div class="row margin-50-bottom testimonials blue-background">
             <div class="col-12">
-                <p><i>"When Madeline started, I was shifting my business from paper &amp; pencil to computerized accounting. Madeline was never dismissive of my previous efforts. She was very professional even though we were working at the kitchen table while my showroom was being built. I felt confident and comfortable discussing my business options with her. I want my accounting to be perfect, plus perfect government compliance so I didn't mind Madelines rates getting it setup, but I like saving money with having Shelly doing the bookkeeping. Shelly is so friendly & competent; she's part of my team now. The two of them cover a broader spectrum with me being able to bring in Madeline when I have financial analytical concerns. I feel very organized. I've had the opportunity to grow the business plus now take weekends and vacations off to be with my family. I highly recommend Madeline &amp; Shelly for your small business accounting solution."</i></p>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"When Madeline started, I was shifting my business from paper &amp; pencil to computerized accounting. Madeline was never dismissive of my previous efforts. She was very professional even though we were working at the kitchen table while my showroom was being built. I felt confident and comfortable discussing my business options with her. I want my accounting to be perfect, plus perfect government compliance so I didn't mind Madelines rates getting it setup, but I like saving money with having Shelly doing the bookkeeping. Shelly is so friendly & competent; she's part of my team now. The two of them cover a broader spectrum with me being able to bring in Madeline when I have financial analytical concerns. I feel very organized. I've had the opportunity to grow the business plus now take weekends and vacations off to be with my family. I highly recommend Madeline &amp; Shelly for your small business accounting solution."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="name">Petr Gvozd,</span></br>
+                        <span class="business">Window Fella's Windows & Doors</span>
+                        <span class="website"><a href="www.windowfellas.com">www.windowfellas.com</a></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row margin-50-bottom testimonials blue-background">
             <div class="col-12">
-                <span class="name">Petr Gvozd,</span></br>
-                <span class="business">Window Fella's Windows & Doors</span>
-                <span class="website"><a href="www.windowfellas.com">www.windowfellas.com</a></span>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"Madeline has been helping us with our accounting for a couple of months now and I can truly say she is worth the money we've spent aquiring her services. She is detailed and knowledgeable about accounting practices, especially the use of Quickbooks. She has helped us with getting our Profit/Loss &amp; Balance sheets accurate so that we can make better business decisions in the future. Madeline has also provided me with one on one training so that I know what tools and shortcuts to use in Quickbooks, which in turn has given me the confidence to get our books accurate. I am looking forward to working with her further since I learn something new about Quickbooks and accounting every time she shows up. I am confident that our company will be even more profitable with her help."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="name">Tania Delbrune,</span></br>
+                        <span class="business">Beeline Tours, Seattle's Finest Charter Bus Rental Company</span>
+                        <span class="website"><a href="www.beelinetours.com">www.beelinetours.com</a></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="row margin-50-bottom testimonials blue-background">
-    <div class="col-12">
-        <div class="row">
+        <div class="row margin-50-bottom testimonials blue-background">
             <div class="col-12">
-                <p><i>"Madeline has been helping us with our accounting for a couple of months now and I can truly say she is worth the money we've spent aquiring her services. She is detailed and knowledgeable about accounting practices, especially the use of Quickbooks. She has helped us with getting our Profit/Loss &amp; Balance sheets accurate so that we can make better business decisions in the future. Madeline has also provided me with one on one training so that I know what tools and shortcuts to use in Quickbooks, which in turn has given me the confidence to get our books accurate. I am looking forward to working with her further since I learn something new about Quickbooks and accounting every time she shows up. I am confident that our company will be even more profitable with her help."</i></p>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"Maybe if I didn't know Madeline I'd think she was expensive, but she is worth way more than she's charging me. She makes it all look so simple, while getting the exact results I'm looking for. She puts my mind at ease, which allows me to focus on the business. A++ QuickBooks consultant."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="name">Sam Ararat,</span></br>
+                        <span class="business">Ararat Insurance Services</span>
+                        <span class="website"><a href="www.araratinsurance.com">www.araratinsurance.com</a></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row margin-50-bottom testimonials blue-background">
             <div class="col-12">
-                <span class="name">Tania Delbrune,</span></br>
-                <span class="business">Beeline Tours, Seattle's Finest Charter Bus Rental Company</span>
-                <span class="website"><a href="www.beelinetours.com">www.beelinetours.com</a></span>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"Within our successful marketing company, there was a lot of frustration with our bookkeeping and record management. We attended seminars, hired a QuickBooks consultant who was unable to help us, then hired a C.P.A. who rejected us apologetically because he was also not able to help us. Thank God! I received a mailer from QC Computing. Madeline came out to our company and during the first hour made a drastic improvement! It was a breeze for her to assist us with our nightmare. QC Computing will always be our choice when it come to QuickBooks assistance."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="name">Lorinda Marie Farfan,</span></br>
+                        <span class="business">CastleRock Productions</span>
+                        <span class="website"></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="row margin-50-bottom testimonials blue-background">
-    <div class="col-12">
-        <div class="row">
-            <div class="col-12">
-                <p><i>"Maybe if I didn't know Madeline I'd think she was expensive, but she is worth way more than she's charging me. She makes it all look so simple, while getting the exact results I'm looking for. She puts my mind at ease, which allows me to focus on the business. A++ QuickBooks consultant."</i></p>
+        <div class="row margin-100-bottom">
+            <div class="col-12 center-block">
+                <div class="certs"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <span class="name">Sam Ararat,</span></br>
-                <span class="business">Ararat Insurance Services</span>
-                <span class="website"><a href="www.araratinsurance.com">www.araratinsurance.com</a></span>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row margin-50-bottom testimonials blue-background">
-    <div class="col-12">
-        <div class="row">
-            <div class="col-12">
-                <p><i>"Within our successful marketing company, there was a lot of frustration with our bookkeeping and record management. We attended seminars, hired a QuickBooks consultant who was unable to help us, then hired a C.P.A. who rejected us apologetically because he was also not able to help us. Thank God! I received a mailer from QC Computing. Madeline came out to our company and during the first hour made a drastic improvement! It was a breeze for her to assist us with our nightmare. QC Computing will always be our choice when it come to QuickBooks assistance."</i></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <span class="name">Lorinda Marie Farfan,</span></br>
-                <span class="business">CastleRock Productions</span>
-                <span class="website"></span>
-            </div>
-        </div>
-    </div>
-</div>
 
             </section>
         </div>
@@ -196,17 +284,21 @@
         
         <div class="row no-gutters">
             <div class="col-12 col-md-3">
-                <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                <div class="row vcenter">
+                    <div class="col-12">
+                        <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 vcenter">
+            <div class="col-12 col-md-5">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
-            <div class="col-12 col-md-3">
-                <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="row vcenter">
                     <div class="col-8">
                         <div class="footer-text">or send email to: bailey@qccomputing.com</div>
                     </div>
-                    <div class="col-4 vcenter">
+                    <div class="col-4">
                         <div class="float-right"><div class="fb"></div><div class="linked-in"></div></div>
                     </div>
                 </div>
@@ -218,5 +310,15 @@
 
 
     </div>
+
+    <script src="node_modules/slick-carousel/slick/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+            var temp = $('.testimonial-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
 </body>
 </html>

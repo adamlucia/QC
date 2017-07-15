@@ -1,13 +1,20 @@
 $background-color: #1c5996;
 $dark-blue: #25405b;
 $med-blue: #294865;
-$light-blue: #205993;
+//$light-blue: #205993;
+$light-blue: #aadce7;
 $light-green: #26723a;
-$dark-green: #18540c;
+//$dark-green: #18540c;
+$dark-green: #213418;
 $white: #f4f6f4;
 
 $img-width: 400px;
 $img-height: 315px;
+
+@font-face {
+    font-family:"cochin";
+    src: url("/fonts/cochin.ttf"), url("/fonts/cochin.ttc");
+}
 
 // dubugging css
 // * *:hover { border:2px solid #89A81E }                   /* Solid Green */
@@ -36,8 +43,14 @@ $img-height: 315px;
 }
 
 .vcenter {
-    margin-top: auto;
-    margin-bottom: auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.vbottom{
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
 }
 
 .vertical-center {
@@ -70,7 +83,7 @@ $img-height: 315px;
 
 .padding-25 {
     padding: 25px;
-};
+}
 
 .green-fill {
     background: $dark-green;
@@ -82,7 +95,7 @@ $img-height: 315px;
 }
 
 .font-serif {
-    font-family: serif !important;
+    font-family: 'cochin', serif !important;
 }
 .font-sans-serif {
     font-family: sans-serif !important;
@@ -97,6 +110,10 @@ $img-height: 315px;
 
 .padding-25 {
     padding:25px;
+}
+
+.padding-left-50 {
+    padding-left: 50px;
 }
 
 .color-white {
@@ -116,6 +133,8 @@ html {
 body {
     overflow-x: hidden;
     color: $white;
+    font-family: 'Dosis', sans-serif;
+
     p {
         font-size: 17px;
         margin: 1.5em 0px;
@@ -130,8 +149,12 @@ body {
         &:hover {
             color: $white;
         }
-    }
 
+        &:focus, &:visited {
+            color: $white;
+        }
+
+    }
     b {
         font-weight: bold;
     }
@@ -139,22 +162,27 @@ body {
     h1 {
         font-size: 60px;
         font-weight: 100;
-        font-family: serif;
+        font-family: 'cochin', serif;
+
     }
 
     h2 {
-        font-family: serif;
+        font-family: 'cochin', serif;
         font-weight: 100;
     }
 
     h3 {
-        font-family: serif;
+        font-family: 'cochin', serif;
         font-weight: 100;
     }
 
     h4 {
-        font-family: serif;
+        font-family: 'cochin', serif;
         font-weight: 100;
+    }
+
+    h5 {
+        font-family: 'cochin', serif;
     }
 }
 
@@ -168,6 +196,7 @@ hr {
     background-color: $background-color;
     min-height: 100vh;
     height: auto;
+    position: relative;
     overflow: hidden;
 }
 
@@ -195,6 +224,7 @@ hr {
         height: 22px;
         margin-right: 5px;
         margin-bottom: -2px;
+        background-size: 100%;
     }
 }
 
@@ -282,7 +312,7 @@ hr {
     background-position: center;
     min-width: 860px;
     left: 28%;
-    top: 8%;
+    top: 1%;
     width: 900px;
     height: 950px;
     position: absolute;
@@ -314,6 +344,82 @@ hr {
     }
 }
 
+.buy-book {
+    width: 170px;
+    height: 150px;
+    background-color: $light-green;
+    margin-top: 50px;
+    padding: 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+
+    .title {
+
+        align-self: flex-start;
+
+        &.pdf {
+            &:before {
+                content:'';
+                background: url('/images/bookmark.png') no-repeat;
+                display: inline-block;
+                width: 10px;
+                height: 11px;
+                margin-right: 5px;
+            }
+        }
+        &.audio {
+            &:before {
+                content:'';
+                background: url('/images/audiotrack.png') no-repeat;
+                display: inline-block;
+                width: 10px;
+                height: 11px;
+                margin-right: 5px;
+            }
+        }
+        &.book {
+            &:before {
+                content:'';
+                background: url('/images/book.png') no-repeat;
+                display: inline-block;
+                width: 10px;
+                height: 11px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .price {
+        font-size: 16px;
+        align-self: center;
+    }
+
+    a {
+        align-self: flex-end;
+        border: 2px solid $white;
+        padding: 10px 15px;
+        text-decoration: none;
+        &:before {
+            content:'';
+            display: inline-block;
+            background: url('/images/arrow-white.png')  no-repeat;
+            margin-left: 5px;
+            width: 20px;
+            height: 10px;
+            position: absolute;
+            right: 15px;
+            top: 18px;
+
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+}
+
 #header {
     #logo {
         position: relative;
@@ -334,7 +440,9 @@ hr {
     }
     .phone {
         font-size: 30px;
-        font-family: serif;
+        line-height: 25px;
+        font-family: 'cochin', serif;
+
     }
 }
 
@@ -419,109 +527,189 @@ hr {
         background: url('/images/lock.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
 
     .pointer {
         background: url('/images/pointer.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .writing {
         background: url('/images/writing.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        background-position: center;
+        background-size: 113%;
+            
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .graph {
         background: url('/images/graph.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .pen {
         background: url('/images/pen.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
 
     }
     .shake {
         background: url('/images/shake.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
 
     .pointinggraph {
         background: url('/images/shutterstock1.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .meeting {
         background: url('/images/shutterstockmeeting.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .accounting-book{
         background: url('/images/shutterstockbook.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .meeting-dude {
         background: url('/images/shutterstockdude.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .comparison {
         background: url('/images/shutterstockpaper.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .collab {
         background: url('/images/shutterstockcollab.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .review {
         background: url('/images/shutterstockreview.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .laptop {
         background: url('/images/shutterstocklaptop.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .shake {
         background: url('/images/shutterstockshake.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .thinking {
         background: url('/images/shutterstockthinking.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .glasses {
         background: url('/images/shutterstockglasses.png') no-repeat;
         width: $img-width;
         height: $img-height;
+
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .calculator {
         background: url('/images/shutterstockcalculator.png') no-repeat;
         width: $img-width;
         height: $img-height;
+
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .double {
         background: url('/images/shutterstockdouble.png') no-repeat;
         width: $img-width;
         height: $img-height;
+
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .relaxing {
         background: url('/images/shutterstockrelaxing.png') no-repeat;
         width: 500px;
         height: 450px;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
     .bliss {
         background: url('/images/shutterstockbliss.png') no-repeat;
         width: $img-width;
         height: 250px;
+        @media only screen and (max-width : 992px) {
+
+        }
+    }
+
+    .seattle {
+        background: url('/images/seattle.jpg') no-repeat;
+        width: $img-width;
+        height: $img-height;
+
+        background-position: center;
+        @media only screen and (max-width : 992px) {
+
+        }
     }
 
     .shelly {
@@ -541,6 +729,15 @@ hr {
         width: 400px;
         height: 325px;
         background-position: center;
+    }
+
+    .certs {
+        background: url('/images/certs.png') no-repeat;
+        background-size: 100%;
+        height: 215px;
+        max-width: 1000px;
+        margin: 0px auto;
+
     }
 
     // .enterprise {
@@ -642,7 +839,7 @@ hr {
         width: 245px;
         font-size: 10px;
         position: relative;
-        background-color: $light-blue;
+        background-color: $med-blue;
         height: 50px;
         line-height: 10px;
         text-align: center;
@@ -710,6 +907,10 @@ hr {
                 padding: 30px 50px;
                 display: block;
                 text-decoration: none;
+
+                :hover {
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -748,6 +949,14 @@ hr {
         #secondary {
             margin-top: 50px;
             min-height: 20px;
+
+            .name {
+
+            }
+
+            .business {
+                color: $light-green;
+            }
         }
 
         #tagline {
@@ -824,17 +1033,32 @@ hr {
 
             .phone {
                 font-family: serif;
+                &:before {
+                    content:'';
+                    background: url('/images/phone-white.png') no-repeat;
+                    background-size: 100%;
+                }
             }
 
             .email {
                 font-family: serif;
+
+                &:before {
+                    content:'';
+                    background: url('/images/mail.png') no-repeat;
+                    display: inline-block;
+                    width: 21px;
+                    height: 22px;
+                    margin-right: 5px;
+                    background-size: 100%;
+                    margin-bottom: -2px;
+                }
             }
 
             .follow-us {
                 margin-bottom: 25px;
             }
         };
-
         .news {
             h4 {
                 font-weight: 400;
@@ -844,33 +1068,52 @@ hr {
                 text-align: center;
             }
 
-            .item {
+            .news-list {
 
-                h5 {
-                    font-weight: 400;
-                    font-family: sans-serif;
-                }
+                .item {
+                    position: relative;
+                    h5 {
+                        font-weight: 400;
+                        font-family: sans-serif;
+                    }
 
-                .read-more {
-                    padding:5px 10px;
-                    background-color: $dark-green;
-                    font-size: 13px;
-                    text-decoration: none;
-                    &:hover {
-                        opacity: .8;
+                    img {
+                        display: none;
+                    }
+
+                    .content {
+                        overflow: hidden;
+                        height: 130px;
+                    }
+
+                    .bottom {
+                        position: absolute;
+                        bottom: 0px;
+                        .read-more {
+                            padding:5px 10px;
+                            background-color: $dark-green;
+                            font-size: 13px;
+                            text-decoration: none;
+                            position: absolute;
+                            right: 65px;
+                            &:hover {
+                                opacity: .8;
+                            }
+                        }
+
+                        .date {
+                            font-size: 13px;
+                            margin: 1em 0px;
+                            padding-top: 5px;
+                            font-weight: 100;
+                            position: relative;
+                            z-index: 100 !important;
+                        }
                     }
                 }
             }
-
-            .date {
-                font-size: 13px;
-                margin: 1em 0px;
-                padding-top: 5px;
-                font-weight: 100;
-                position: relative;
-                z-index: 100 !important;
-            }
         }
+
 
         .sample {
             .read-more {
@@ -889,11 +1132,11 @@ hr {
         font-size: 14px;
         line-height: 14px;
         font-weight: 200;
-        width: 240px;
     }
 
     .phone {
-        font-size: 20px;
+        font-family: 'cochin', serif;
+        font-size: 25px;
     }
 }
 
@@ -940,4 +1183,43 @@ hr {
     top: 0;
     width: 50%; /* 6 columns */
   }
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+    #content .quickbooks-logo {
+        float: none;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #globe {
+        left: 0%;
+        top: 5%;
+    }
+
+    #content .quickbooks-logo {
+        float: none;
+        margin-left: -15px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    #globe {
+        left: 0%;
+        top: 1%;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
 }

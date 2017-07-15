@@ -1,17 +1,21 @@
 {% block footer %}
         <div class="row no-gutters">
             <div class="col-12 col-md-3">
-                <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                <div class="row vcenter">
+                    <div class="col-12">
+                        <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 vcenter">
+            <div class="col-12 col-md-5">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
-            <div class="col-12 col-md-3">
-                <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="row vcenter">
                     <div class="col-8">
                         <div class="footer-text">or send email to: bailey@qccomputing.com</div>
                     </div>
-                    <div class="col-4 vcenter">
+                    <div class="col-4">
                         <div class="float-right"><div class="fb"></div><div class="linked-in"></div></div>
                     </div>
                 </div>

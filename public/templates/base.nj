@@ -13,11 +13,94 @@
 
     <meta name="author" content="STAYKool Productions">
 
+    <link rel='shortcut icon' type='image/x-icon' href='favico.png'/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        // $.get('https://qccomputing.blogspot.com/feeds/posts/default', {
+        //     dataType: 'xml',
+        //     cors: true ,
+        //     contentType:'application/json',
+        //     secure: true,
+        //     headers: {
+        //         'Access-Control-Allow-Origin': '*',
+        //     }},
+        //     function (data, error) {
+        //         console.log('data', data);
+        //         $(data).find("entry").each(function () { // or "item" or whatever suits your feed
+        //             var el = $(this);
+        //
+        //             console.log("------------------------");
+        //             console.log("title      : " + el.find("title").text());
+        //             console.log("author     : " + el.find("author").text());
+        //             console.log("description: " + el.find("description").text());
+        //         });
+        // });
+
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        $.ajax({
+          url: 'https://qccomputing.blogspot.com/feeds/posts/default',
+          dataType: 'jsonp',
+          success: function (data, error) {
+              $( document ).ready(function() {
+                 var count = 0;
+                  $(data).find("entry").each(function () {
+
+                      if(count < 3){
+
+                          //loop variable
+                          title = $(this).find("title").html();
+                          author = $(this).find("author").html();
+                          link = $(this).find('[rel="alternate"]').attr("href");
+                          content = $(this).find("content").text();
+                          updated = new Date(Date.parse($(this).find("updated").text()));
+
+
+                          console.log('before', link);
+
+                          //template element
+                          var newDiv = $("#item-template").clone();
+
+
+                          //add another element
+                          newDiv.attr("id",`news-item-${count}`).appendTo(".news-list");
+                          newDiv.find(".title").html(title);
+                          newDiv.find(".date").html(`${monthNames[updated.getMonth()]} ${updated.getDate()} ${updated.getFullYear()}`);
+                          newDiv.find(".content").html(content);
+                          newDiv.find(".read-more").attr("href", link);
+                          newDiv.find(".read-more").attr("target", "_blank");
+
+                          console.log('after', newDiv.find("content").text());
+
+
+
+                          newDiv.show();
+
+                          count++;
+                      }else{
+                          return false;
+                      }
+                  });
+              });
+          },
+          error: function(xhr, status, error) {
+              var err = eval("(" + xhr.responseText + ")");
+              alert(err.Message);
+          }
+        });
+    </script>
+
+
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -31,5 +114,15 @@
         {% block content %}
         {% endblock %}
     </div>
+
+    <script src="node_modules/slick-carousel/slick/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+            var temp = $('.testimonial-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
 </body>
 </html>

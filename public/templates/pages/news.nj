@@ -5,11 +5,11 @@
 {% block main %}
     <h2>Latest News</h2>
     <div id="main" class="row ">
-        <div class="col-11 offset-1 blue-background">
+        <div class="col-12 blue-background">
             <p>Shows you a simpler way to learn private business accounting,  gain control of your finances, and make more profit!</p>
             <p>As an experienced business analyst, Madeline Bailey saves business owners from making the same accounting mistakes over and over again, helping them gain control of their finances in the process. That's why she wrote, Radically Simple Accounting, to help business owners who don't quite"connect" with traditional accounting books. She can help you make your businesses more profitable!</p>
         </div>
-        <div class="col-11 offset-1 blue-background">
+        <div class="col-12 blue-background">
             <p>Shows you a simpler way to learn private business accounting,  gain control of your finances, and make more profit!</p>
             <p>As an experienced business analyst, Madeline Bailey saves business owners from making the same accounting mistakes over and over again, helping them gain control of their finances in the process. That's why she wrote, Radically Simple Accounting, to help business owners who don't quite"connect" with traditional accounting books. She can help you make your businesses more profitable!</p>
         </div>
@@ -24,7 +24,7 @@
 
 {% block more %}
         <div class="row margin-50-bottom full-width-bar green-background">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
                 <h2>Business Analyst</h2>
                 <p>You may be brilliant at what you do, but even the most successful entrepreneur does not have skills to solve every problem. That's where a business analyst like Madeline Bailey comes in to play. Ms. Bailey has a B.A. in Management, plus 28 years of business management practice and expertise. She can provide you with the following:</p>
                 <ul>
@@ -41,7 +41,7 @@
             <div class="col-12 margin-100-bottom">
                 <center><h2>Past News & Events</h2></center>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-lg-4">
                 <!--repeat 4 times-->
                 <div class="container item">
                     <div class="col-12 item">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-lg-4">
                 <!--repeat 4 times-->
                 <div class="container item">
                     <div class="col-12 item">
@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-lg-4">
                 <!--repeat 4 times-->
                 <div class="container item">
                     <div class="col-12 item">
@@ -70,6 +70,11 @@
                         <div><span class="date">April 4 2017</span><a href="/more" class="float-right read-more">Read More</a></div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row margin-100-bottom">
+            <div class="col-12 center-block">
+                <div class="certs"></div>
             </div>
         </div>
 {% endblock %}

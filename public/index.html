@@ -13,11 +13,94 @@
 
     <meta name="author" content="STAYKool Productions">
 
+    <link rel='shortcut icon' type='image/x-icon' href='favico.png'/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        // $.get('https://qccomputing.blogspot.com/feeds/posts/default', {
+        //     dataType: 'xml',
+        //     cors: true ,
+        //     contentType:'application/json',
+        //     secure: true,
+        //     headers: {
+        //         'Access-Control-Allow-Origin': '*',
+        //     }},
+        //     function (data, error) {
+        //         console.log('data', data);
+        //         $(data).find("entry").each(function () { // or "item" or whatever suits your feed
+        //             var el = $(this);
+        //
+        //             console.log("------------------------");
+        //             console.log("title      : " + el.find("title").text());
+        //             console.log("author     : " + el.find("author").text());
+        //             console.log("description: " + el.find("description").text());
+        //         });
+        // });
+
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        $.ajax({
+          url: 'https://qccomputing.blogspot.com/feeds/posts/default',
+          dataType: 'jsonp',
+          success: function (data, error) {
+              $( document ).ready(function() {
+                 var count = 0;
+                  $(data).find("entry").each(function () {
+
+                      if(count < 3){
+
+                          //loop variable
+                          title = $(this).find("title").html();
+                          author = $(this).find("author").html();
+                          link = $(this).find('[rel="alternate"]').attr("href");
+                          content = $(this).find("content").text();
+                          updated = new Date(Date.parse($(this).find("updated").text()));
+
+
+                          console.log('before', link);
+
+                          //template element
+                          var newDiv = $("#item-template").clone();
+
+
+                          //add another element
+                          newDiv.attr("id",`news-item-${count}`).appendTo(".news-list");
+                          newDiv.find(".title").html(title);
+                          newDiv.find(".date").html(`${monthNames[updated.getMonth()]} ${updated.getDate()} ${updated.getFullYear()}`);
+                          newDiv.find(".content").html(content);
+                          newDiv.find(".read-more").attr("href", link);
+                          newDiv.find(".read-more").attr("target", "_blank");
+
+                          console.log('after', newDiv.find("content").text());
+
+
+
+                          newDiv.show();
+
+                          count++;
+                      }else{
+                          return false;
+                      }
+                  });
+              });
+          },
+          error: function(xhr, status, error) {
+              var err = eval("(" + xhr.responseText + ")");
+              alert(err.Message);
+          }
+        });
+    </script>
+
+
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -34,7 +117,7 @@
     <script>
         $(document).ready(function () {
             $('[data-toggle="offcanvas"]').click(function () {
-            $('.row-offcanvas').toggleClass('active')
+                $('.row-offcanvas').toggleClass('active')
             });
         });
     </script>
@@ -45,11 +128,11 @@
                 <a href="/"><div id="logo"></div></a>
                 <!--<a href="/"><img src="images/logo.png" id="logo"></a>-->
             </div>
-            <div class="col-12 col-md-6 vcenter text-right">
-                <div id="contact-text">
+            <div class="col-12 col-md-6 text-right">
+                <div id="contact-text" class="vcenter">
                     <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
                 </div>
-                <div class="phone">206-832-5485</div>
+                <div class="phone vcenter">206-832-5485</div>
             </div>
         </div>
 
@@ -62,13 +145,13 @@
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
                     <li><a href="/analysis.html">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
                     <li><a href="/testimonials.html">CLIENT TESTIMONIALS</a></li>
-                    <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
+                    <li><a href="/book.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
                     <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
                     <li><a href="blog.qccomputing.com">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
-                <nav class="navbar navbar-fixed-top navbar-inverse">
+                <!--<nav class="navbar navbar-fixed-top navbar-inverse">
                   <div class="container">
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
@@ -85,9 +168,9 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                       </ul>
-                    </div><!-- /.nav-collapse -->
-                  </div><!-- /.container -->
-                </nav>
+                    </div>
+                  </div>
+                </nav>-->
             </section>
             <section id="main-content" class="col-md-8 container">
                 
@@ -110,93 +193,137 @@
             <section id="more-content" class="col-12 container">
                 
         <div class="row margin-150-bottom">
-            <div class="col-12 col-md-5">
+            <div class="col-12 col-lg-5">
                 <div class="quickbooks"></div>
             </div>
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-lg-7">
                 <h2>QUICKBOOKS SOFTWARE EXPERT</h2>
                 <p>Ms. Bailey offers software consultation, including setup, training and problem-solving, for every year, every version, and every edition of QuickBooks software.  A relationship-driven firm, Ms. Bailey works with one client per day.</p>
-                <a href="/quickbooks" class="square-button double-line">MORE DETAILS ABOUT QUICK BOOKS CONSULTING</a>
+                <a href="/quickbooks.html" class="square-button double-line">MORE DETAILS ABOUT QUICK BOOKS CONSULTING</a>
             </div>
         </div>
 
         <div class="row margin-150-bottom">
-            <div class="col-12 col-md-7">
+            <div class="col-12 col-lg-7">
                 <h2>SENIOR ACCOUNTANT</h2>
                 <p>You are a successful business person with hundreds of concerns. If one of them is your accounting, you've come to the right place. Ms Bailey is an accounting fixer. She turns disasters into GAAP financial reporting. Beyond that, she can offer you support with every aspect of financial management and office systems. With many clients this involves active financial consultation.</p>
-                <a href="/#" class="square-button">MORE ABOUT OUR WORK</a>
+                <a href="/quickbooks.html" class="square-button">MORE ABOUT OUR WORK</a>
             </div>
-            <div class="col-12 col-md-5">
-                <div class="notepad blue-backdrop float-right"></div>
+            <div class="col-12 col-lg-5">
+                <div class="notepad blue-backdrop"></div>
             </div>
         </div>
         <div class="row margin-150-bottom">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
                 <div class="help green-backdrop"></div>
             </div>
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
                 <h2>SMALL BUSINESS FINANCIAL ANALYSIS</h2>
                 <p>You didnt go into business to manage a business, nor were you born with those skills. You may be brilliant at what you do, but even the most successful entrepreneur does not have the skills to solve every problem. That's where a Small Business Financial Analyst comes into play.</p>
-                <a href="/analysis" class="square-button double-line">MORE DETAILS HOW WE CAN HELP YOU</a>
+                <a href="/analysis.html" class="square-button double-line">MORE DETAILS HOW WE CAN HELP YOU</a>
             </div>
         </div>
         <hr/>
-        <div class="row margin-150-bottom testimonials">
+        <div class="row">
             <div class="col-12">
-                <h2>CLIENTS TESTIMONIALS</h2>
+                <h2><center>CLIENTS TESTIMONIALS</center></h2>
+            </div>
+        </div>
+        <div class="testimonial-slider margin-150-bottom">
+            <div>
                 <div class="row">
                     <div class="col-12">
-                        <p><i>"You didnt go into business to manage a business, nor were you born with those skills. You may be brilliant at what you do, but even the most successful entrepreneur does not have the skills to solve every problem. That's where a Small Business Financial Analyst comes into play."</i></p>
+                        <p><i>"Madeline has been providing first-class business and technical consulting services to small businesses for years, making them profitable and efficient."</i></p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <center><span class="name">Petr Gvozd,</span></center>
-                        <center><span class="business">Window Fella's Windows & Doors</span></center>
+                        <center><span class="name">Elsa Minor, PhD, Director</span></center>
+                        <center><span class="business">SBDC (Small Business Development Center), Silicon Valley, CA</span></center>
+                        <a href="/testimonials.html" class="see-more">SEE MORE ABOUT WHAT OUR CLIENTS SAY</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"Maybe if I didn’t know Madeline I’d think she was expensive, but she is worth way more than she’s charging me. She makes it all look so simple, while getting the exact results I’m looking for. She puts my mind at ease, which allows me to focus on the business. A++ QuickBooks Consultant."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <center><span class="name">Sam Ararat, Owner</span></center>
+                        <center><span class="business">Ararat Insurance Services</span></center>
+                        <a href="/testimonials.html" class="see-more">SEE MORE ABOUT WHAT OUR CLIENTS SAY</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"My system was crap. I was doing the bookkeeping myself and not sure whether to use Quickbooks Desktop or QuickBooks Online edition. I needed some advising and some guidance so I tried a couple of QuickBooks consultants and a CPA who didn’t help me the way I wanted to be helped. I brought in Madeline and she’s been perfect. She helped me get my inventory accurate, showed me QuickBooks tools, and created professional reports. With her advice and guidance, I’ve successfully taken my business to a new level."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <center><span class="name">Alexksey Mulyugin, Owner</span></center>
+                        <center><span class="business">Wholesale Gate Opener</span></center>
                         <a href="/testimonials.html" class="see-more">SEE MORE ABOUT WHAT OUR CLIENTS SAY</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <h2>RADICALLY SIMPLE ACCOUNTING</h2>
                 <p>Shows you a simpler way to learn private business accounting,  gain control of your finances, and make more profit!</p>
             </div>
         </div>
         <div class="row margin-150-bottom no-gutter full-width-bar green-fill">
-            <div class="col-12 col-md-7 top-level">
+            <div class="col-12 col-lg-7 top-level">
                 <p>As an experienced business analyst, Madeline Bailey saves business owners from making the same accounting mistakes over and over again, helping them gain control of their finances in the process. That's why she wrote, Radically Simple Accounting, to help business owners who don't quite"connect" with traditional accounting books. She can help you make your businesses more profitable!</p>
             </div>
-            <div class="col-12 col-md-5">
+            <div class="col-12 hidden-lg-down col-lg-5">
                 <div class="qc"></div>
                 <div class="book-collection"></div>
             </div>
         </div>
         <div class="row margin-150-bottom">
             <div class="col-12">
-                <a href="/analysis" class="square-button double-line margin-top-25">BOOK PURCHASE OPTIONS AND MORE DETAILS</a>
+                <a href="/book.html" class="square-button double-line margin-top-25">BOOK PURCHASE OPTIONS AND MORE DETAILS</a>
             </div>
         </div>
-        <div class="row news">
+        <div class="row margin-100-bottom news">
             <div class="col-12">
                 <h4>LATEST NEWS</h4>
             </div>
             <!-- dynamically pull in content-->
-            <div class="col-12 col-md-4 item">
-                <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                <p>Vivamus quis laoreet arcu. Suspendisse condimentum lacus vitae risus dapibus, quis feugiat lectus venenatis. Praesent mattis, orci nec ornare tempor, nunc lectus viverra massa, nec pharetra tellus neque eu neque.</p>
-                <div><span class="date">April 4 2017</span><a href="/more" class="float-right read-more">Read More</a></div>
+            <div class="container">
+                <div class="row row-eq-height news-list">
+                    <div id="item-template" class="col-12 col-lg-4 item" style="display:none">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="title">QuickBooks ProAdvisor of the Year.</h5>
+                                    <p class="content">Please vote for me. This is the first year I've had time to apply and I'd love to win. Voting closes on April 30th at midnight.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                         <div class="container bottom">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span class="date">16 April 2017</span><a href="/more" class="float-right read-more">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-4 item">
-                <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                <p>Vivamus quis laoreet arcu. Suspendisse condimentum lacus vitae risus dapibus, quis feugiat lectus venenatis. Praesent mattis, orci nec ornare tempor, nunc lectus viverra massa, nec pharetra tellus neque eu neque.</p>
-                <div><span class="date">April 4 2017</span><a href="/more" class="float-right read-more">Read More</a></div>
-            </div>
-            <div class="col-12 col-md-4 item">
-                <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                <p>Vivamus quis laoreet arcu. Suspendisse condimentum lacus vitae risus dapibus, quis feugiat lectus venenatis. Praesent mattis, orci nec ornare tempor, nunc lectus viverra massa, nec pharetra tellus neque eu neque.</p>
-                <div><span class="date">April 4 2017</span><a href="/more" class="float-right read-more">Read More</a></div>
+        </div>
+        <div class="row margin-100-bottom">
+            <div class="col-12 center-block">
+                <div class="certs"></div>
             </div>
         </div>
 
@@ -207,17 +334,21 @@
         
         <div class="row no-gutters">
             <div class="col-12 col-md-3">
-                <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                <div class="row vcenter">
+                    <div class="col-12">
+                        <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 vcenter">
+            <div class="col-12 col-md-5">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
-            <div class="col-12 col-md-3">
-                <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="row vcenter">
                     <div class="col-8">
                         <div class="footer-text">or send email to: bailey@qccomputing.com</div>
                     </div>
-                    <div class="col-4 vcenter">
+                    <div class="col-4">
                         <div class="float-right"><div class="fb"></div><div class="linked-in"></div></div>
                     </div>
                 </div>
@@ -229,5 +360,15 @@
 
 
     </div>
+
+    <script src="node_modules/slick-carousel/slick/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+            var temp = $('.testimonial-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
 </body>
 </html>

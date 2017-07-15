@@ -13,11 +13,94 @@
 
     <meta name="author" content="STAYKool Productions">
 
+    <link rel='shortcut icon' type='image/x-icon' href='favico.png'/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        // $.get('https://qccomputing.blogspot.com/feeds/posts/default', {
+        //     dataType: 'xml',
+        //     cors: true ,
+        //     contentType:'application/json',
+        //     secure: true,
+        //     headers: {
+        //         'Access-Control-Allow-Origin': '*',
+        //     }},
+        //     function (data, error) {
+        //         console.log('data', data);
+        //         $(data).find("entry").each(function () { // or "item" or whatever suits your feed
+        //             var el = $(this);
+        //
+        //             console.log("------------------------");
+        //             console.log("title      : " + el.find("title").text());
+        //             console.log("author     : " + el.find("author").text());
+        //             console.log("description: " + el.find("description").text());
+        //         });
+        // });
+
+        var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        $.ajax({
+          url: 'https://qccomputing.blogspot.com/feeds/posts/default',
+          dataType: 'jsonp',
+          success: function (data, error) {
+              $( document ).ready(function() {
+                 var count = 0;
+                  $(data).find("entry").each(function () {
+
+                      if(count < 3){
+
+                          //loop variable
+                          title = $(this).find("title").html();
+                          author = $(this).find("author").html();
+                          link = $(this).find('[rel="alternate"]').attr("href");
+                          content = $(this).find("content").text();
+                          updated = new Date(Date.parse($(this).find("updated").text()));
+
+
+                          console.log('before', link);
+
+                          //template element
+                          var newDiv = $("#item-template").clone();
+
+
+                          //add another element
+                          newDiv.attr("id",`news-item-${count}`).appendTo(".news-list");
+                          newDiv.find(".title").html(title);
+                          newDiv.find(".date").html(`${monthNames[updated.getMonth()]} ${updated.getDate()} ${updated.getFullYear()}`);
+                          newDiv.find(".content").html(content);
+                          newDiv.find(".read-more").attr("href", link);
+                          newDiv.find(".read-more").attr("target", "_blank");
+
+                          console.log('after', newDiv.find("content").text());
+
+
+
+                          newDiv.show();
+
+                          count++;
+                      }else{
+                          return false;
+                      }
+                  });
+              });
+          },
+          error: function(xhr, status, error) {
+              var err = eval("(" + xhr.responseText + ")");
+              alert(err.Message);
+          }
+        });
+    </script>
+
+
 
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -34,7 +117,7 @@
     <script>
         $(document).ready(function () {
             $('[data-toggle="offcanvas"]').click(function () {
-            $('.row-offcanvas').toggleClass('active')
+                $('.row-offcanvas').toggleClass('active')
             });
         });
     </script>
@@ -45,11 +128,11 @@
                 <a href="/"><div id="logo"></div></a>
                 <!--<a href="/"><img src="images/logo.png" id="logo"></a>-->
             </div>
-            <div class="col-12 col-md-6 vcenter text-right">
-                <div id="contact-text">
+            <div class="col-12 col-md-6 text-right">
+                <div id="contact-text" class="vcenter">
                     <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
                 </div>
-                <div class="phone">206-832-5485</div>
+                <div class="phone vcenter">206-832-5485</div>
             </div>
         </div>
 
@@ -62,13 +145,13 @@
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
                     <li><a href="/analysis.html">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
                     <li><a href="/testimonials.html">CLIENT TESTIMONIALS</a></li>
-                    <li><a href="/radicallysimple.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
+                    <li><a href="/book.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
                     <li><a href="/news.html">NEWS AND PUBLICATIONS</a></li>
                     <li><a href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
                     <li><a href="blog.qccomputing.com">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
-                <nav class="navbar navbar-fixed-top navbar-inverse">
+                <!--<nav class="navbar navbar-fixed-top navbar-inverse">
                   <div class="container">
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
@@ -85,13 +168,13 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                       </ul>
-                    </div><!-- /.nav-collapse -->
-                  </div><!-- /.container -->
-                </nav>
+                    </div>
+                  </div>
+                </nav>-->
             </section>
             <section id="main-content" class="col-md-8 container">
                 
-    <h2>QuickBooks Consulting</h2>
+    <h2>QuickBooks Consulting & Accounting</h2>
     <div id="main" class="row blue-background">
         <div class="col-12 short">
             <p><b>You are a successful business person with hundreds of concerns...</b></p>
@@ -137,58 +220,63 @@
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="lock green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>You want to be protected from fraud.</h2>
             <p>You have invested your money and good name into capitalizing your business. You expect the people you hire to be well-qualified, and treat you with respect. But based on the report from the ACFE 2008 Report to the Nation on Occupational Fraud and Abuse, www.acfe.com, small businesses defined as those with less than 100 employees suffered both a greater percentage of frauds (38%) and a higher median loss ($200,000) than their larger counterparts. A good first step to understanding why fraud is committed is to study the fraud triangle, created by famed criminologist Donald Cressey. Each side of the triangle is an element of fraud opportunity, motivation, and rationalization. The fraud triangle explains why fraud occurs more often with high income earners and their bookkeepers.</p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>You want financial reports at the touch of a button.</h2>
             <p>Instead of waiting for your CPA to return financials you don't understand, you can create meaningful professional reports instantly. Your reports will satisfy you, as well as every financial advisor and institution. A reconciliation of your income and expenses creates a Profit and Loss Report the indispensable bottom line. Recording what you own, what you owe, and your investment into the business produces a Balance Sheet a statement of the net worth. In addition, we can setup and memorize many reports in QuickBooks: Open Invoices, Income by Sales Rep, Sales by Customer, Aging Receivables, Expenses by Vendor, and so on. You can compare reports from past periods or years to give you the clearest picture of your company's growth and future.</p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="pointer green-backdrop"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="writing green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>How can you improve profitability?</h2>
             <p>How much money are you spending in different areas? Which income streams are generating the most revenue? How much are your assets worth? What is your best and worst debt? What financial issues concern you most sales growth, inventory, or how you can improve profit? Madeline will go through your financial reports with you so that you can address these and any other financial issues you want in a consulting session.</p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Are you interested in a new roadmap to profitability?</h2>
             <p>Ms. Bailey is excited to offer clients a new service Profit Guard Financial Analysis. Designed by the people who teach the famous Profit Mastery Seminar , Profit Guard is a 5-page monthly assessment of how your business is doing now, historically, and relative to your competition (based on your NAICS code). QC Computing can provide your business with a subscription. To see a sample of what you'll receive, download this PDF file, ProfitGuard Road Map (.pdf). In the Roadmap for your business, you'll see areas highlighted in red where you are losing money. That is always enlightening!</p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="graph green-backdrop"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="pen green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>How can you systematically improve  profitability?</h2>
             <p>Ms. Bailey can provide your business with monthly or quarterly auditing, QuickBooks clean up, B&O tax preparation, and financial report analysis. Ms. Bailey can provide you with a clear interpretation of the financial ratios, as well as a quarterly support system for moving towards your financial goals. Together we can systematically improve your business profitability until you beat the pants off your competition, as well as meet your own expectations for financial success!</p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Do you need other financial advisors?</h2>
             <p>Financial advisors are indispensable. With sterling financial reports, your advisors can work at their top level of expertise offering you the best advice possible advice in tax preparation, loans, business structuring, business plan writing, the sale of your business, and overall financial planning. The essence of successful business management is knowing precisely where you stand and how far you can extend yourself. You've done well with the information access you've had so far, but Ms. Bailey can enhance your success. You will be able to leverage knowledge into profit.</p>
             <p>It pays to know exactly what is going on and have power over every aspect of your business.</p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="shake green-backdrop"></div>
+        </div>
+    </div>
+    <div class="row margin-100-bottom">
+        <div class="col-12 center-block">
+            <div class="certs"></div>
         </div>
     </div>
 
@@ -199,17 +287,21 @@
         
         <div class="row no-gutters">
             <div class="col-12 col-md-3">
-                <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                <div class="row vcenter">
+                    <div class="col-12">
+                        <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 vcenter">
+            <div class="col-12 col-md-5">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
-            <div class="col-12 col-md-3">
-                <div class="row">
+            <div class="col-12 col-md-4">
+                <div class="row vcenter">
                     <div class="col-8">
                         <div class="footer-text">or send email to: bailey@qccomputing.com</div>
                     </div>
-                    <div class="col-4 vcenter">
+                    <div class="col-4">
                         <div class="float-right"><div class="fb"></div><div class="linked-in"></div></div>
                     </div>
                 </div>
@@ -221,5 +313,15 @@
 
 
     </div>
+
+    <script src="node_modules/slick-carousel/slick/slick.js"></script>
+    <script>
+        $(document).ready(function(){
+            var temp = $('.testimonial-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
 </body>
 </html>

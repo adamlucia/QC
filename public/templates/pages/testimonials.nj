@@ -34,68 +34,73 @@
 {% endblock %}
 
 {% block more %}
-<div class="row margin-50-bottom testimonials blue-background">
-    <div class="col-12">
-        <div class="row">
+        <div class="row margin-50-bottom testimonials blue-background">
             <div class="col-12">
-                <p><i>"When Madeline started, I was shifting my business from paper &amp; pencil to computerized accounting. Madeline was never dismissive of my previous efforts. She was very professional even though we were working at the kitchen table while my showroom was being built. I felt confident and comfortable discussing my business options with her. I want my accounting to be perfect, plus perfect government compliance so I didn't mind Madelines rates getting it setup, but I like saving money with having Shelly doing the bookkeeping. Shelly is so friendly & competent; she's part of my team now. The two of them cover a broader spectrum with me being able to bring in Madeline when I have financial analytical concerns. I feel very organized. I've had the opportunity to grow the business plus now take weekends and vacations off to be with my family. I highly recommend Madeline &amp; Shelly for your small business accounting solution."</i></p>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"When Madeline started, I was shifting my business from paper &amp; pencil to computerized accounting. Madeline was never dismissive of my previous efforts. She was very professional even though we were working at the kitchen table while my showroom was being built. I felt confident and comfortable discussing my business options with her. I want my accounting to be perfect, plus perfect government compliance so I didn't mind Madelines rates getting it setup, but I like saving money with having Shelly doing the bookkeeping. Shelly is so friendly & competent; she's part of my team now. The two of them cover a broader spectrum with me being able to bring in Madeline when I have financial analytical concerns. I feel very organized. I've had the opportunity to grow the business plus now take weekends and vacations off to be with my family. I highly recommend Madeline &amp; Shelly for your small business accounting solution."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="name">Petr Gvozd,</span></br>
+                        <span class="business">Window Fella's Windows & Doors</span>
+                        <span class="website"><a href="www.windowfellas.com">www.windowfellas.com</a></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row margin-50-bottom testimonials blue-background">
             <div class="col-12">
-                <span class="name">Petr Gvozd,</span></br>
-                <span class="business">Window Fella's Windows & Doors</span>
-                <span class="website"><a href="www.windowfellas.com">www.windowfellas.com</a></span>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"Madeline has been helping us with our accounting for a couple of months now and I can truly say she is worth the money we've spent aquiring her services. She is detailed and knowledgeable about accounting practices, especially the use of Quickbooks. She has helped us with getting our Profit/Loss &amp; Balance sheets accurate so that we can make better business decisions in the future. Madeline has also provided me with one on one training so that I know what tools and shortcuts to use in Quickbooks, which in turn has given me the confidence to get our books accurate. I am looking forward to working with her further since I learn something new about Quickbooks and accounting every time she shows up. I am confident that our company will be even more profitable with her help."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="name">Tania Delbrune,</span></br>
+                        <span class="business">Beeline Tours, Seattle's Finest Charter Bus Rental Company</span>
+                        <span class="website"><a href="www.beelinetours.com">www.beelinetours.com</a></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="row margin-50-bottom testimonials blue-background">
-    <div class="col-12">
-        <div class="row">
+        <div class="row margin-50-bottom testimonials blue-background">
             <div class="col-12">
-                <p><i>"Madeline has been helping us with our accounting for a couple of months now and I can truly say she is worth the money we've spent aquiring her services. She is detailed and knowledgeable about accounting practices, especially the use of Quickbooks. She has helped us with getting our Profit/Loss &amp; Balance sheets accurate so that we can make better business decisions in the future. Madeline has also provided me with one on one training so that I know what tools and shortcuts to use in Quickbooks, which in turn has given me the confidence to get our books accurate. I am looking forward to working with her further since I learn something new about Quickbooks and accounting every time she shows up. I am confident that our company will be even more profitable with her help."</i></p>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"Maybe if I didn't know Madeline I'd think she was expensive, but she is worth way more than she's charging me. She makes it all look so simple, while getting the exact results I'm looking for. She puts my mind at ease, which allows me to focus on the business. A++ QuickBooks consultant."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="name">Sam Ararat,</span></br>
+                        <span class="business">Ararat Insurance Services</span>
+                        <span class="website"><a href="www.araratinsurance.com">www.araratinsurance.com</a></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row margin-50-bottom testimonials blue-background">
             <div class="col-12">
-                <span class="name">Tania Delbrune,</span></br>
-                <span class="business">Beeline Tours, Seattle's Finest Charter Bus Rental Company</span>
-                <span class="website"><a href="www.beelinetours.com">www.beelinetours.com</a></span>
+                <div class="row">
+                    <div class="col-12">
+                        <p><i>"Within our successful marketing company, there was a lot of frustration with our bookkeeping and record management. We attended seminars, hired a QuickBooks consultant who was unable to help us, then hired a C.P.A. who rejected us apologetically because he was also not able to help us. Thank God! I received a mailer from QC Computing. Madeline came out to our company and during the first hour made a drastic improvement! It was a breeze for her to assist us with our nightmare. QC Computing will always be our choice when it come to QuickBooks assistance."</i></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="name">Lorinda Marie Farfan,</span></br>
+                        <span class="business">CastleRock Productions</span>
+                        <span class="website"></span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
-<div class="row margin-50-bottom testimonials blue-background">
-    <div class="col-12">
-        <div class="row">
-            <div class="col-12">
-                <p><i>"Maybe if I didn't know Madeline I'd think she was expensive, but she is worth way more than she's charging me. She makes it all look so simple, while getting the exact results I'm looking for. She puts my mind at ease, which allows me to focus on the business. A++ QuickBooks consultant."</i></p>
+        <div class="row margin-100-bottom">
+            <div class="col-12 center-block">
+                <div class="certs"></div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <span class="name">Sam Ararat,</span></br>
-                <span class="business">Ararat Insurance Services</span>
-                <span class="website"><a href="www.araratinsurance.com">www.araratinsurance.com</a></span>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row margin-50-bottom testimonials blue-background">
-    <div class="col-12">
-        <div class="row">
-            <div class="col-12">
-                <p><i>"Within our successful marketing company, there was a lot of frustration with our bookkeeping and record management. We attended seminars, hired a QuickBooks consultant who was unable to help us, then hired a C.P.A. who rejected us apologetically because he was also not able to help us. Thank God! I received a mailer from QC Computing. Madeline came out to our company and during the first hour made a drastic improvement! It was a breeze for her to assist us with our nightmare. QC Computing will always be our choice when it come to QuickBooks assistance."</i></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <span class="name">Lorinda Marie Farfan,</span></br>
-                <span class="business">CastleRock Productions</span>
-                <span class="website"></span>
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}

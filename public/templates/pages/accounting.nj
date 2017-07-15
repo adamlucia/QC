@@ -4,7 +4,7 @@
     <div class="wave-blue"></div>
 {% endblock %}
 {% block main %}
-    <h2>QuickBooks Consulting</h2>
+    <h2>QuickBooks Consulting & Accounting</h2>
     <div id="main" class="row blue-background">
         <div class="col-12 short">
             <p><b>You are a successful business person with hundreds of concerns...</b></p>
@@ -47,58 +47,63 @@
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="lock green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>You want to be protected from fraud.</h2>
             <p>You have invested your money and good name into capitalizing your business. You expect the people you hire to be well-qualified, and treat you with respect. But based on the report from the ACFE 2008 Report to the Nation on Occupational Fraud and Abuse, www.acfe.com, small businesses defined as those with less than 100 employees suffered both a greater percentage of frauds (38%) and a higher median loss ($200,000) than their larger counterparts. A good first step to understanding why fraud is committed is to study the fraud triangle, created by famed criminologist Donald Cressey. Each side of the triangle is an element of fraud opportunity, motivation, and rationalization. The fraud triangle explains why fraud occurs more often with high income earners and their bookkeepers.</p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>You want financial reports at the touch of a button.</h2>
             <p>Instead of waiting for your CPA to return financials you don't understand, you can create meaningful professional reports instantly. Your reports will satisfy you, as well as every financial advisor and institution. A reconciliation of your income and expenses creates a Profit and Loss Report the indispensable bottom line. Recording what you own, what you owe, and your investment into the business produces a Balance Sheet a statement of the net worth. In addition, we can setup and memorize many reports in QuickBooks: Open Invoices, Income by Sales Rep, Sales by Customer, Aging Receivables, Expenses by Vendor, and so on. You can compare reports from past periods or years to give you the clearest picture of your company's growth and future.</p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="pointer green-backdrop"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="writing green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>How can you improve profitability?</h2>
             <p>How much money are you spending in different areas? Which income streams are generating the most revenue? How much are your assets worth? What is your best and worst debt? What financial issues concern you most sales growth, inventory, or how you can improve profit? Madeline will go through your financial reports with you so that you can address these and any other financial issues you want in a consulting session.</p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Are you interested in a new roadmap to profitability?</h2>
             <p>Ms. Bailey is excited to offer clients a new service Profit Guard Financial Analysis. Designed by the people who teach the famous Profit Mastery Seminar , Profit Guard is a 5-page monthly assessment of how your business is doing now, historically, and relative to your competition (based on your NAICS code). QC Computing can provide your business with a subscription. To see a sample of what you'll receive, download this PDF file, ProfitGuard Road Map (.pdf). In the Roadmap for your business, you'll see areas highlighted in red where you are losing money. That is always enlightening!</p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="graph green-backdrop"></div>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="pen green-backdrop"></div>
         </div>
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>How can you systematically improve  profitability?</h2>
             <p>Ms. Bailey can provide your business with monthly or quarterly auditing, QuickBooks clean up, B&O tax preparation, and financial report analysis. Ms. Bailey can provide you with a clear interpretation of the financial ratios, as well as a quarterly support system for moving towards your financial goals. Together we can systematically improve your business profitability until you beat the pants off your competition, as well as meet your own expectations for financial success!</p>
         </div>
     </div>
     <div class="row margin-50-bottom">
-        <div class="col-12 col-md-7">
+        <div class="col-12 col-lg-7">
             <h2>Do you need other financial advisors?</h2>
             <p>Financial advisors are indispensable. With sterling financial reports, your advisors can work at their top level of expertise offering you the best advice possible advice in tax preparation, loans, business structuring, business plan writing, the sale of your business, and overall financial planning. The essence of successful business management is knowing precisely where you stand and how far you can extend yourself. You've done well with the information access you've had so far, but Ms. Bailey can enhance your success. You will be able to leverage knowledge into profit.</p>
             <p>It pays to know exactly what is going on and have power over every aspect of your business.</p>
         </div>
-        <div class="col-12 col-md-5">
+        <div class="col-12 col-lg-5">
             <div class="shake green-backdrop"></div>
+        </div>
+    </div>
+    <div class="row margin-100-bottom">
+        <div class="col-12 center-block">
+            <div class="certs"></div>
         </div>
     </div>
 {% endblock %}
