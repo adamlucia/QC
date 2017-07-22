@@ -19,9 +19,9 @@
             </div.
             <div class="row">
                 <div class="col-12">
-                    <span class="name">Renee DiBello</span></br>
+                    <span class="name">Renee DiBello</span>
                     <span class="business">The DiBello Real Estate Group Keller Williams Realty</span>
-                    <a class="float-right" href="www.igotsmart.com">www.igotsmart.com</a>
+                    <a class="website" href="www.igotsmart.com">www.igotsmart.com</a>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="name">Petr Gvozd,</span></br>
+                        <span class="name">Petr Gvozd,</span>
                         <span class="business">Window Fella's Windows & Doors</span>
                         <span class="website"><a href="www.windowfellas.com">www.windowfellas.com</a></span>
                     </div>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="name">Tania Delbrune,</span></br>
+                        <span class="name">Tania Delbrune,</span>
                         <span class="business">Beeline Tours, Seattle's Finest Charter Bus Rental Company</span>
                         <span class="website"><a href="www.beelinetours.com">www.beelinetours.com</a></span>
                     </div>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="name">Sam Ararat,</span></br>
+                        <span class="name">Sam Ararat,</span>
                         <span class="business">Ararat Insurance Services</span>
                         <span class="website"><a href="www.araratinsurance.com">www.araratinsurance.com</a></span>
                     </div>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="name">Lorinda Marie Farfan,</span></br>
+                        <span class="name">Lorinda Marie Farfan,</span>
                         <span class="business">CastleRock Productions</span>
                         <span class="website"></span>
                     </div>

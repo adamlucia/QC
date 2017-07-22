@@ -27,7 +27,8 @@
 
 .vertical-center {
   display: flex;
-  align-items: center; }
+  align-self: center;
+  flex-direction: column; }
 
 .center-text {
   text-align: center; }
@@ -48,7 +49,7 @@
   padding: 25px; }
 
 .green-fill {
-  background: #213418; }
+  background: #18540c; }
 
 .full-width-bar {
   margin: 0 -9999rem;
@@ -108,7 +109,8 @@ body {
     font-family: 'cochin', serif; }
   body h2 {
     font-family: 'cochin', serif;
-    font-weight: 100; }
+    font-weight: 100;
+    margin-top: 1rem; }
   body h3 {
     font-family: 'cochin', serif;
     font-weight: 100; }
@@ -134,7 +136,7 @@ hr {
   background-color: #294865; }
 
 .green-background {
-  background-color: #213418; }
+  background-color: #18540c; }
   .green-background .border {
     border: 3px solid #294865;
     display: inline-block; }
@@ -277,7 +279,7 @@ hr {
       margin-right: 5px; }
     .buy-book .title.book:before {
       content: '';
-      background: url("/images/book.png") no-repeat;
+      background: url("/images/book-collection.png") no-repeat;
       display: inline-block;
       width: 10px;
       height: 11px;
@@ -336,22 +338,24 @@ hr {
   #content .blue-backdrop {
     border: 25px solid #25405b; }
   #content .green-backdrop {
-    border: 25px solid #213418; }
-  #content .notepad {
-    background: url("/images/notepad.png") no-repeat;
-    width: 440px;
-    height: 325px; }
-  #content .help {
-    background: url("/images/analysis-help.png") no-repeat;
-    width: 440px;
-    height: 325px; }
+    border: 25px solid #18540c; }
+  #content .Senior-Accountant {
+    background: url("/images/Senior-Accountant.png") no-repeat;
+    width: 400px;
+    height: 315px; }
+  #content .Business-Analyst {
+    background: url("/images/Business-Analyst.jpg") no-repeat;
+    width: 400px;
+    height: 315px;
+    background-size: 130%;
+    background-position: center; }
   #content .quickbooks {
     background: url("/images/quickbooks.png") no-repeat;
     background-position: center;
     width: 325px;
     height: 65px; }
-  #content .quickbooks-logo {
-    background: url("/images/quickbooks-logo.png") no-repeat;
+  #content .QBecosystem {
+    background: url("/images/QBecosystem.png") no-repeat;
     background-position: center;
     width: 435px;
     height: 290px;
@@ -376,98 +380,124 @@ hr {
     left: -45px; }
   #content .book-collection-small {
     background: url("/images/book-collection.png") no-repeat;
-    background-size: 400px;
+    background-size: 100%;
     position: absolute;
     z-index: 1;
     height: 400px;
     width: 400px;
     top: -30px; }
-  #content .lock {
-    background: url("/images/lock.png") no-repeat;
+    @media only screen and (max-width: 992px) {
+      #content .book-collection-small {
+        position: relative; } }
+  #content .fraud {
+    background: url("/images/fraud.jpg") no-repeat;
     width: 400px;
-    height: 315px; }
+    height: 315px;
+    background-size: 110%; }
   #content .pointer {
     background: url("/images/pointer.png") no-repeat;
     width: 400px;
     height: 315px; }
-  #content .writing {
-    background: url("/images/writing.png") no-repeat;
+  #content .Improve {
+    background: url("/images/Improve.png") no-repeat;
     width: 400px;
     height: 315px;
     background-position: center;
     background-size: 113%; }
-  #content .graph {
-    background: url("/images/graph.png") no-repeat;
+  #content .Roadmap {
+    background: url("/images/Roadmap.png") no-repeat;
     width: 400px;
     height: 315px; }
-  #content .pen {
-    background: url("/images/pen.png") no-repeat;
+  #content .Systematically {
+    background: url("/images/Systematically.png") no-repeat;
     width: 400px;
     height: 315px; }
-  #content .shake {
-    background: url("/images/shake.png") no-repeat;
+  #content .Advisors {
+    background: url("/images/Advisors.png") no-repeat;
     width: 400px;
     height: 315px; }
   #content .pointinggraph {
     background: url("/images/shutterstock1.png") no-repeat;
     width: 400px;
     height: 315px; }
-  #content .meeting {
-    background: url("/images/shutterstockmeeting.png") no-repeat;
+  #content .Benefit {
+    background: url("/images/Benefit.jpg") no-repeat;
     width: 400px;
     height: 315px; }
-  #content .accounting-book {
-    background: url("/images/shutterstockbook.png") no-repeat;
+  #content .Architect {
+    background: url("/images/Architect.jpg") no-repeat;
+    width: 400px;
+    height: 315px;
+    background-size: 140%;
+    background-position: center; }
+  #content .Top-Down {
+    background: url("/images/Top-Down.jpg") no-repeat;
+    width: 400px;
+    height: 315px;
+    background-size: 170%;
+    background-position: center; }
+  #content .Terminology {
+    background: url("/images/Terminology.jpg") no-repeat;
+    width: 400px;
+    height: 315px;
+    background-size: 170%;
+    background-position: center; }
+  #content .Collaboration {
+    background: url("/images/Collaboration.jpg") no-repeat;
     width: 400px;
     height: 315px; }
-  #content .meeting-dude {
-    background: url("/images/shutterstockdude.png") no-repeat;
+  #content .Leverage {
+    background: url("/images/Leverage.jpg") no-repeat;
     width: 400px;
     height: 315px; }
-  #content .comparison {
-    background: url("/images/shutterstockpaper.png") no-repeat;
+  #content .Cloud {
+    background: url("/images/Cloud.jpg") no-repeat;
     width: 400px;
     height: 315px; }
-  #content .collab {
-    background: url("/images/shutterstockcollab.png") no-repeat;
+  #content .Future {
+    background: url("/images/Future.jpg") no-repeat;
     width: 400px;
-    height: 315px; }
-  #content .review {
-    background: url("/images/shutterstockreview.png") no-repeat;
+    height: 315px;
+    background-size: 170%;
+    background-position: center; }
+  #content .Concerns {
+    background: url("/images/Concerns.jpg") no-repeat;
     width: 400px;
-    height: 315px; }
-  #content .laptop {
-    background: url("/images/shutterstocklaptop.png") no-repeat;
+    height: 315px;
+    background-size: 170%;
+    background-position: center; }
+  #content .Language {
+    background: url("/images/Language.jpg") no-repeat;
     width: 400px;
-    height: 315px; }
-  #content .shake {
-    background: url("/images/shutterstockshake.png") no-repeat;
+    height: 315px;
+    background-size: 170%;
+    background-position: center; }
+  #content .Way {
+    background: url("/images/Way.jpg") no-repeat;
     width: 400px;
-    height: 315px; }
-  #content .thinking {
-    background: url("/images/shutterstockthinking.png") no-repeat;
+    height: 315px;
+    background-size: 170%;
+    background-position: center; }
+  #content .Radical {
+    background: url("/images/Radical.jpg") no-repeat;
     width: 400px;
-    height: 315px; }
-  #content .glasses {
-    background: url("/images/shutterstockglasses.png") no-repeat;
+    height: 315px;
+    background-size: 170%;
+    background-position: center; }
+  #content .Buy {
+    background: url("/images/Buy.jpg") no-repeat;
     width: 400px;
-    height: 315px; }
-  #content .calculator {
-    background: url("/images/shutterstockcalculator.png") no-repeat;
-    width: 400px;
-    height: 315px; }
-  #content .double {
-    background: url("/images/shutterstockdouble.png") no-repeat;
-    width: 400px;
-    height: 315px; }
-  #content .relaxing {
-    background: url("/images/shutterstockrelaxing.png") no-repeat;
+    height: 315px;
+    background-size: 170%;
+    background-position: center; }
+  #content .Listen {
+    background: url("/images/Listen.jpg") no-repeat;
     width: 500px;
     height: 450px; }
-  #content .bliss {
-    background: url("/images/shutterstockbliss.png") no-repeat;
-    width: 400px;
-    height: 250px; }
+  #content .Audiobook {
+    background: url("/images/Audiobook.jpg") no-repeat;
+    width: 500px;
+    height: 450px; }
   #content .seattle {
     background: url("/images/seattle.jpg") no-repeat;
     width: 400px;
@@ -477,6 +507,12 @@ hr {
     background: url("/images/shelly.png") no-repeat;
     width: 400px;
     height: 325px; }
+  #content .proadvisor {
+    background: url("/images/Certified-ProAdvisor.png") no-repeat;
+    width: 100px;
+    height: 135px;
+    background-size: 100%;
+    margin: 15px; }
   #content .madeline {
     background: url("/images/shelly.png") no-repeat;
     width: 400px;
@@ -486,8 +522,8 @@ hr {
     width: 400px;
     height: 325px;
     background-position: center; }
-  #content .certs {
-    background: url("/images/certs.png") no-repeat;
+  #content .certification-logos {
+    background: url("/images/certification-logos.png") no-repeat;
     background-size: 100%;
     height: 215px;
     max-width: 1000px;
@@ -496,7 +532,7 @@ hr {
     background: #294865;
     width: 350px;
     height: 300px;
-    border: 15px solid #213418;
+    border: 15px solid #18540c;
     margin: 25px;
     float: left;
     position: relative; }
@@ -524,7 +560,7 @@ hr {
     height: 325px;
     overflow: hidden;
     position: relative;
-    margin: 25px; }
+    margin: 0px 25px 25px 0px; }
     #content .profile-crop img {
       position: absolute;
       top: 0;
@@ -630,8 +666,12 @@ hr {
   #content #main-content #secondary {
     margin-top: 50px;
     min-height: 20px; }
+    #content #main-content #secondary .name {
+      display: block; }
     #content #main-content #secondary .business {
-      color: #26723a; }
+      display: block; }
+    #content #main-content #secondary .website {
+      display: block; }
   #content #main-content #tagline {
     position: absolute;
     top: 40%;
@@ -661,16 +701,16 @@ hr {
       opacity: .8;
       cursor: pointer; }
   #content #more-content .testimonials {
-    text-align: center;
     padding: 25px; }
+    #content #more-content .testimonials .name {
+      display: block; }
     #content #more-content .testimonials .business {
-      color: #26723a; }
+      display: block; }
     #content #more-content .testimonials .website {
-      position: absolute;
-      float: right;
-      right: 5px; }
+      display: block; }
   #content #more-content .contact-info {
-    padding: 70px;
+    -webkit-align-items: center;
+    align-items: center;
     font-size: 25px; }
     #content #more-content .contact-info .row {
       margin-bottom: 25px; }
@@ -693,6 +733,10 @@ hr {
         margin-bottom: -2px; }
     #content #more-content .contact-info .follow-us {
       margin-bottom: 25px; }
+  #content #more-content .book .book-collection {
+    position: relative;
+    top: 0;
+    left: 0; }
   #content #more-content .news h4 {
     font-weight: 400;
     font-family: sans-serif;
@@ -700,7 +744,9 @@ hr {
     margin-bottom: 35px;
     text-align: center; }
   #content #more-content .news .news-list .item {
-    position: relative; }
+    position: relative;
+    margin-top: 3rem;
+    margin-bottom: 3rem; }
     #content #more-content .news .news-list .item h5 {
       font-weight: 400;
       font-family: sans-serif; }
@@ -714,7 +760,7 @@ hr {
       bottom: 0px; }
       #content #more-content .news .news-list .item .bottom .read-more {
         padding: 5px 10px;
-        background-color: #213418;
+        background-color: #18540c;
         font-size: 13px;
         text-decoration: none;
         position: absolute;
@@ -779,15 +825,15 @@ hr {
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
-  #content .quickbooks-logo {
+  #content .QBecosystem {
     float: none; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   #globe {
     left: 0%;
-    top: 5%; }
-  #content .quickbooks-logo {
+    top: 2%; }
+  #content .QBecosystem {
     float: none;
     margin-left: -15px; } }
 
@@ -795,7 +841,12 @@ hr {
 @media only screen and (max-width: 768px) {
   #globe {
     left: 0%;
-    top: 1%; } }
+    top: 1%; }
+  .row {
+    display: flex;
+    flex-direction: column; }
+  .row > div:first-of-type {
+    order: 1; } }
 
 /* Extra Small Devices, Phones */
 /* Custom, iPhone Retina */

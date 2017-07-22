@@ -16,13 +16,13 @@
     <link rel='shortcut icon' type='image/x-icon' href='favico.png'/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
@@ -65,9 +65,6 @@
                           content = $(this).find("content").text();
                           updated = new Date(Date.parse($(this).find("updated").text()));
 
-
-                          console.log('before', link);
-
                           //template element
                           var newDiv = $("#item-template").clone();
 
@@ -79,10 +76,6 @@
                           newDiv.find(".content").html(content);
                           newDiv.find(".read-more").attr("href", link);
                           newDiv.find(".read-more").attr("target", "_blank");
-
-                          console.log('after', newDiv.find("content").text());
-
-
 
                           newDiv.show();
 
@@ -204,20 +197,20 @@
         </div>
 
         <div class="row margin-150-bottom">
-            <div class="col-12 col-lg-7">
+            <div class="col-lg-5 push-lg-7">
+                <div class="Senior-Accountant blue-backdrop"></div>
+            </div>
+            <div class="col-lg-7 pull-lg-5">
                 <h2>SENIOR ACCOUNTANT</h2>
                 <p>You are a successful business person with hundreds of concerns. If one of them is your accounting, you've come to the right place. Ms Bailey is an accounting fixer. She turns disasters into GAAP financial reporting. Beyond that, she can offer you support with every aspect of financial management and office systems. With many clients this involves active financial consultation.</p>
                 <a href="/quickbooks.html" class="square-button">MORE ABOUT OUR WORK</a>
             </div>
-            <div class="col-12 col-lg-5">
-                <div class="notepad blue-backdrop"></div>
-            </div>
         </div>
         <div class="row margin-150-bottom">
-            <div class="col-12 col-lg-6">
-                <div class="help green-backdrop"></div>
+            <div class="col-12 col-lg-5">
+                <div class="Business-Analyst green-backdrop"></div>
             </div>
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-7">
                 <h2>SMALL BUSINESS FINANCIAL ANALYSIS</h2>
                 <p>You didnt go into business to manage a business, nor were you born with those skills. You may be brilliant at what you do, but even the most successful entrepreneur does not have the skills to solve every problem. That's where a Small Business Financial Analyst comes into play.</p>
                 <a href="/analysis.html" class="square-button double-line">MORE DETAILS HOW WE CAN HELP YOU</a>
@@ -323,7 +316,7 @@
         </div>
         <div class="row margin-100-bottom">
             <div class="col-12 center-block">
-                <div class="certs"></div>
+                <div class="certification-logos"></div>
             </div>
         </div>
 

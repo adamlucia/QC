@@ -16,13 +16,13 @@
     <link rel='shortcut icon' type='image/x-icon' href='favico.png'/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
@@ -65,9 +65,6 @@
                           content = $(this).find("content").text();
                           updated = new Date(Date.parse($(this).find("updated").text()));
 
-
-                          console.log('before', link);
-
                           //template element
                           var newDiv = $("#item-template").clone();
 
@@ -79,10 +76,6 @@
                           newDiv.find(".content").html(content);
                           newDiv.find(".read-more").attr("href", link);
                           newDiv.find(".read-more").attr("target", "_blank");
-
-                          console.log('after', newDiv.find("content").text());
-
-
 
                           newDiv.show();
 
@@ -188,7 +181,7 @@
         <div class="col-6 col-md-6 col-lg-3">
             <div class="container">
                 <div class="buy-book row no-gutter text-center">
-                    <div class="title pdf col-12">Buy eBook format</div>
+                    <div class="title pdf col-12">Buy PDF format</div>
                     <div class="price col-12">$10.00</div>
                     <a class="col-12" href="https://sellfy.com/p/Gde1/" target="_blank">Buy now</a>
                 </div>
@@ -233,137 +226,156 @@
         <div class="row">
             <section id="more-content" class="col-12 container">
                 
-        <div class="row margin-50-bottom testimonials blue-background">
-            <div class="col-12">
+        <div class="testimonial-slider margin-50-bottom">
+            <div class="container testimonials blue-background">
                 <div class="row">
                     <div class="col-12">
-                        <p><i>"Madeline Baileys Radically Simple Accounting keeps its promise to make bookkeeping and accounting both enlightening and engaging, if not actually fun. Thanks to Radically Simple Accounting, I learned how to develop a chart of accounts - the backbone of bookkeeping and accounting - for my own business, and learned lessons that I can apply to personal finance as well. Madeline explains, in language clear enough for a financial illiterate like myself, the meaning of all the aspects of the chart of accounts and other accounting necessities with definitions, stories, and examples that educate while they entertain. Don't get me wrong this is not a lightweight book, but Madeline does what every good teacher does: she makes it possible to learn a traditionally tough subject with ease! Whether you want to do your own books, bring order to your personal finances, or simply understand what your bookkeeper is up to (an absolute must!), Radically Simple Accounting was a total bargain for what I learned....a great investment in both reading time and money. I keep Radically Simple Accounting handy on my closest bookshelf for review, and I refer to it often. Ill be the first in line to attend Madelines next presentation."</i></p>
+                        <div class="row">
+                            <div class="col-12">
+                                <p><i>"Of all the accounting textbooks or educational literature I've read or been subject to, this one may be the easiest to understand and apply in the real world. I think this book should be required reading for all entrepreneurs thinking of starting their own business or those who continuously have trouble communicating effectively with that highly paid accountant they use."</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="name">Scott D. Hayes,</span>
+                                <span class="business">Controller, Oregon Dept. of Fish & Wildlife</span>
+                                <span class="website"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="container testimonials blue-background">
                 <div class="row">
                     <div class="col-12">
-                        <span class="name">Hugh O'Donnel,</span></br>
-                        <span class="business">Director Mentor Learning LLC</span>
-                        <span class="website"><a href="www.mentorlearning.squarespace.com">www.mentorlearning.squarespace.com</a></span>
+                        <div class="row">
+                            <div class="col-12">
+                                <p><i>"Madeline Baileys Radically Simple Accounting keeps its promise to make bookkeeping and accounting both enlightening and engaging, if not actually fun. Thanks to Radically Simple Accounting, I learned how to develop a chart of accounts - the backbone of bookkeeping and accounting - for my own business, and learned lessons that I can apply to personal finance as well. Madeline explains, in language clear enough for a financial illiterate like myself, the meaning of all the aspects of the chart of accounts and other accounting necessities with definitions, stories, and examples that educate while they entertain. Don't get me wrong this is not a lightweight book, but Madeline does what every good teacher does: she makes it possible to learn a traditionally tough subject with ease! Whether you want to do your own books, bring order to your personal finances, or simply understand what your bookkeeper is up to (an absolute must!), Radically Simple Accounting was a total bargain for what I learned....a great investment in both reading time and money. I keep Radically Simple Accounting handy on my closest bookshelf for review, and I refer to it often. Ill be the first in line to attend Madelines next presentation."</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="name">Hugh O'Donnel,</span>
+                                <span class="business">Director Mentor Learning LLC</span>
+                                <span class="website"><a href="www.mentorlearning.squarespace.com">www.mentorlearning.squarespace.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container testimonials blue-background">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <p><i>"I think this is a great book. The writing is clear, clever and enjoyable. It should be of great benefit to the many "Small Time Operators" out there looking for some help making a success of their new businesses. Nice job."</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="name">Bernard Kamoroff,</span>
+                                <span class="business">C.P.A., Author Small Time Operator</span>
+                                <span class="website"><a href="www.bellsprings.com">www.bellsprings.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container testimonials blue-background">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <p><i>"Devoured your eBook over several sittings yesterday, finished up this morning. I was actually voluntarily sitting at my desk at 6:45 a.m. on a Sunday morning, reading about BOOKKEEPING of all things!! Am taking a break from setting up my first chart of accounts to send you this email. A quick read of your eBook has tremendously raised my comfort level with managing our family and small business bookkeeping tasks, and I wanted to share my appreciation."</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="name">Sam Ararat, Owner</span>
+                                <span class="business">Lotus Pond Press</span>
+                                <span class="website"><a href="http://www.fastfengshui.com">www.fastfengshui.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container testimonials blue-background">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <p><i>"I am so excited about Madeline's book, Radically Simple Accounting. I've read it cover to cover twice, marking it up with stickies and margin notes, and had it open on my lap when I sat down in front of a brand new QB account to create my Chart of Accounts from scratch. The day it all clicked - when I finally got it - when the P&amp;L became clear and it all made sense - I was jumping up and down. I've been self employed for 8 years and until I read her book I thought my Chart of Accounts was just something I kept for my tax preparer so she'd know how much to deduct from my Schedule C. I wanted to understand more about how the finances affect my businesses, but I didn't know where to go to learn. Now I recommend it to everyone who runs his or her own business. It's concise, to the point, and puts all the pieces together. THANK YOU for such an awesome resource and for explaining it so clearly."</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="name">Lara Eve Feltin,</span>
+                                <span class="business">Partner Biznik, Photographer and Graphic Designer</span>
+                                <span class="website"><a href="www.biznik.com">www.biznik.com</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container testimonials blue-background">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <p><i>"I couldn't put Radically Simple Accounting down. I wanted to stay home to read it, instead of going to work and managing the business, as I desperately wanted to improve our accounting procedures. I read the whole book twice. Meanwhile, my assistant implemented the color-coded filing system. We love it. It's working great. I highly recommend this book to other business owners."</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="name">Debbie Brittain,</span>
+                                <span class="business">Owner, Village Interiors, Inc.</span>
+                                <span class="website"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container testimonials blue-background">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <p><i>"This book makes accounting accessible to even the most ignorant bookkeeping novice. It is short, simple and to the point. "Self help" type books should be short enough that the reader does not feel bogged down with information. Radically Simple Accounting is a good example of a book that is just the right length. By using common analogies the author reduces complex information into concepts that are easy to understand. One of the highlights of the book is the way the author provides definitions in the text. It's so nice not to have to flip back and forth to the glossary and one's personal dictionary. The author's personal stories are both a pro and con. The author's professional background is important because it lends credibility to the book, but it could be removed from the main portion of the book and included in a biographical section. The glossary at the back of the book is a nice addition and makes the book easy to use as a reference at a later date."</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="name">Writers Digest Magazine,</span>
+                                <span class="business">5/2006</span>
+                                <span class="website"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container testimonials blue-background">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-12">
+                                <p><i>"As the software developer of open-source freeware accounting software, I can see that the success of my software would be greatly enhanced if the thousands of people downloading it used your book Radically Simple Accounting as a setup &amp; resource guide. This is exactly how I would teach a regular person to setup their accounting system. Your excellent ideas on how to organize a filing system show that you know business first-hand. I, personally, will cherish this book as a solid accounting reference guide."</i></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <span class="name">Ray Walker,</span></br>
+                                <span class="business">Software Developer, Delta60 Accounting Software</span>
+                                <span class="website"><a href="www.deltanet2.com">www.deltanet2.com</a></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row margin-50-bottom testimonials blue-background">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12">
-                        <p><i>"I think this is a great book. The writing is clear, clever and enjoyable. It should be of great benefit to the many "Small Time Operators" out there looking for some help making a success of their new businesses. Nice job."</i></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <span class="name">Bernard Kamoroff,</span></br>
-                        <span class="business">C.P.A., Author Small Time Operator</span>
-                        <span class="website"><a href="www.bellsprings.com">www.bellsprings.com</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row margin-50-bottom testimonials blue-background">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12">
-                        <p><i>"Of all the accounting textbooks or educational literature I've read or been subject to, this one may be the easiest to understand and apply in the real world. I think this book should be required reading for all entrepreneurs thinking of starting their own business or those who continuously have trouble communicating effectively with that highly paid accountant they use."</i></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <span class="name">Scott D. Hayes,</span></br>
-                        <span class="business">Controller, Oregon Dept. of Fish & Wildlife</span>
-                        <span class="website"><a href="www.beelinetours.com">www.beelinetours.com</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row margin-50-bottom testimonials blue-background">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12">
-                        <p><i>"Devoured your eBook over several sittings yesterday, finished up this morning. I was actually voluntarily sitting at my desk at 6:45 a.m. on a Sunday morning, reading about BOOKKEEPING of all things!! Am taking a break from setting up my first chart of accounts to send you this email. A quick read of your eBook has tremendously raised my comfort level with managing our family and small business bookkeeping tasks, and I wanted to share my appreciation."</i></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <span class="name">Sam Ararat,</span></br>
-                        <span class="business">Ararat Insurance Services</span>
-                        <span class="website"><a href="www.araratinsurance.com">www.araratinsurance.com</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row margin-50-bottom testimonials blue-background">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12">
-                        <p><i>"I am so excited about Madeline's book, Radically Simple Accounting. I've read it cover to cover twice, marking it up with stickies and margin notes, and had it open on my lap when I sat down in front of a brand new QB account to create my Chart of Accounts from scratch. The day it all clicked - when I finally got it - when the P&amp;L became clear and it all made sense - I was jumping up and down. I've been self employed for 8 years and until I read her book I thought my Chart of Accounts was just something I kept for my tax preparer so she'd know how much to deduct from my Schedule C. I wanted to understand more about how the finances affect my businesses, but I didn't know where to go to learn. Now I recommend it to everyone who runs his or her own business. It's concise, to the point, and puts all the pieces together. THANK YOU for such an awesome resource and for explaining it so clearly."</i></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <span class="name">Lara Eve Feltin,</span></br>
-                        <span class="business">Partner Biznik, Photographer and Graphic Designer</span>
-                        <span class="website"><a href="www.biznik.com">www.biznik.com</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row margin-50-bottom testimonials blue-background">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12">
-                        <p><i>"I couldn't put Radically Simple Accounting down. I wanted to stay home to read it, instead of going to work and managing the business, as I desperately wanted to improve our accounting procedures. I read the whole book twice. Meanwhile, my assistant implemented the color-coded filing system. We love it. It's working great. I highly recommend this book to other business owners."</i></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <span class="name">Debbie Brittain,</span></br>
-                        <span class="business">Owner, Village Interiors, Inc.</span>
-                        <span class="website"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row margin-50-bottom testimonials blue-background">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12">
-                        <p><i>"This book makes accounting accessible to even the most ignorant bookkeeping novice. It is short, simple and to the point. "Self help" type books should be short enough that the reader does not feel bogged down with information. Radically Simple Accounting is a good example of a book that is just the right length. By using common analogies the author reduces complex information into concepts that are easy to understand. One of the highlights of the book is the way the author provides definitions in the text. It's so nice not to have to flip back and forth to the glossary and one's personal dictionary. The author's personal stories are both a pro and con. The author's professional background is important because it lends credibility to the book, but it could be removed from the main portion of the book and included in a biographical section. The glossary at the back of the book is a nice addition and makes the book easy to use as a reference at a later date."</i></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <span class="name">Writers Digest Magazine,</span></br>
-                        <span class="business">5/2006</span>
-                        <span class="website"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row margin-50-bottom testimonials blue-background">
-            <div class="col-12">
-                <div class="row">
-                    <div class="col-12">
-                        <p><i>"As the software developer of open-source freeware accounting software, I can see that the success of my software would be greatly enhanced if the thousands of people downloading it used your book Radically Simple Accounting as a setup &amp; resource guide. This is exactly how I would teach a regular person to setup their accounting system. Your excellent ideas on how to organize a filing system show that you know business first-hand. I, personally, will cherish this book as a solid accounting reference guide."</i></p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <span class="name">Ray Walker,</span></br>
-                        <span class="business">Software Developer, Delta60 Accounting Software</span>
-                        <span class="website"><a href="www.deltanet2.com">www.deltanet2.com</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
+
         <div class="row margin-50-bottom">
             <div class="col-12 col-lg-5">
-                <div class="glasses green-backdrop"></div>
+                <div class="Language green-backdrop"></div>
             </div>
             <div class="col-12 col-lg-7">
                 <h2>Accounting is the Language of Business</h2>
@@ -371,17 +383,17 @@
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-lg-7">
+            <div class="col-lg-5 push-lg-7">
+                <div class="Way blue-backdrop"></div>
+            </div>
+            <div class="col-lg-7 pull-lg-5">
                 <h2>A Way out of the dark and into the Profit</h2>
                 <p>Dubbed the first user-friendly accounting book, Radically Simple Accounting introduces a simpler way to learn accounting that successful people from students to stars find engaging.  Whether you are doing your own bookkeeping, or managing a bookkeeper, this book will empower you financially.  This accounting primer works with ALL accounting software. (QuickBooks tips and tricks are included as side-notes.)  This accounting primer is useful for all types of private businesses, and for individuals who are a business of one. What is a business of one? If you receive a 1099 tax form, you're classified as a business by the IRS, even if you feel like an employee. Without a good accounting system, you'll grossly overpay taxes. On the other hand, it can be advantageous tax-wise to be classified as a business, but only if you learn how to take the proper write-off's against your income. Also, these days our private financial lives are so complicated that many individuals and families are in essence, a business of one.</p>
-            </div>
-            <div class="col-12 col-lg-5">
-                <div class="meeting blue-backdrop"></div>
             </div>
         </div>
         <div class="row margin-50-bottom">
             <div class="col-12 col-lg-5">
-                <div class="calculator green-backdrop"></div>
+                <div class="Radical green-backdrop"></div>
             </div>
             <div class="col-12 col-lg-7">
                 <h2>Is this right for me? I'm not the "Radical" type...</h2>
@@ -389,13 +401,13 @@
             </div>
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-lg-7">
+            <div class="col-lg-5 push-lg-7">
+                <div class="Buy blue-backdrop"></div>
+            </div>
+            <div class="col-lg-7 pull-lg-5">
                 <h2>I need Help, not another book that doesn't deliver</h2>
                 <p>Of course you do. That's why you're walked step by step through creating your own chart of accounts. A chart of accounts is a list of categories. Your chart of accounts is the backbone of your accounting system. Once your chart of accounts is correct, you will understand your GAAP financial reports, specifically your Profit and Loss Report, and Balance Sheet. Your financial reports are your business scorecards. Are you winning or losing when it comes to your business finances? Is your bookkeeper and financial advisor making sense, or are they talking nonsense? After you read this book, you'll know.</p>
                 <p>Whatever your numbers, GAAP financial reports prove to financial advisors such as venture capitalists, loan officers, CPAs, tax experts, angel investors, and portfolio investment advisors that you are "in the game", know the rules, and have what it takes to win.</p>
-            </div>
-            <div class="col-12 col-lg-5">
-                <div class="double blue-backdrop"></div>
             </div>
         </div>
         <div class="row margin-50-bottom blue-background">
@@ -419,7 +431,25 @@
             <div class="col-12">
                 <h1 class="margin-50-bottom"><center>Audiobook</center></h1>
             </div>
-            <div class="col-12 col-lg-7">
+            <div class="col-12 col-lg-6">
+                <div class="Audiobook green-backdrop"></div>
+            </div>
+            <div class="col-12 col-lg-6 vertical-center">
+                <h2>Radically Simple Accounting Audiobook</h2>
+                <p>Covers four key accounting concepts you must understand to run a profitable business</p>
+                <ul>
+                    <li>Setting up your chart of accounts</li>
+                    <li>Producing accurate financial reports</li>
+                    <li>How to manage accounting professionals</li>
+                    <li>Communicating with your financial advisors using business lingo.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row margin-50-bottom">
+            <div class="col-lg-5 push-lg-7">
+                <div class="Listen blue-backdrop"></div>
+            </div>
+            <div class="col-lg-7 pull-lg-5">
                 <h2 class="font-sans-serif">Listen to Learn Accounting - the language of business!</h2>
                 <p>If you haven't listened to this book yet, it may seem as if your accountant, CPA and tax expert are speaking a foreign language. Accrual Basis. Reconciliation. Equity Accounts. Performa Profit &amp; Loss Report. Do you really need to know what all these words mean? Yes, if you want your business to be successful!</p>
                 <h3 class="font-sans-serif">The easiest way to learn a language is by listening.</h3>
@@ -431,26 +461,13 @@
                 </ul>
                 <p>Listening to this book will give you the essence of what you need to know to become financially empowered.</p>
             </div>
-            <div class="col-12 col-lg-5">
-                <div class="relaxing blue-backdrop"></div>
-            </div>
+
         </div>
         <div class="row margin-50-bottom">
-            <div class="col-12 col-lg-5">
-                <div class="bliss green-backdrop"></div>
+            <div class="book col-lg-4 push-lg-8">
+                <div class="book-collection"></div>
             </div>
-            <div class="col-12 col-lg-7">
-                <h2>Radically Simple Accounting Audiobook</h2>
-                <p>Covers four key accounting concepts you must understand to run a profitable business</p>
-                <ul>
-                    <li>Setting up your chart of accounts Producing accurate financial reports</li>
-                    <li>How to manage accounting professionals</li>
-                    <li>Communicating with your financial advisors using business lingo.</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row margin-50-bottom">
-            <div class="col-12 col-lg-8">
+            <div class="col-lg-8 pull-lg-4 vertical-center">
                 <h2>Every minute you delay costs you.</h2>
                 <p>Order the audio version of Radically Simple Accounting today and start gaining control of your finances tomorrow. This is one time that it really does pay to listen.</p>
                 <h2>Technical Information:</h2>
@@ -460,9 +477,6 @@
                     <li>No special software needed to unzip the download file; 26 .mp3 files (one for each chapter);</li>
                     <li>4 hours, 40 minutes of valuable business information.</li>
                 </ul>
-            </div>
-            <div class="col-12 col-lg-4">
-                <div class="book-collection-small"></div>
             </div>
         </div>
         <div class="row margin-50-bottom">

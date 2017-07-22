@@ -16,13 +16,13 @@
     <link rel='shortcut icon' type='image/x-icon' href='favico.png'/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="node_modules/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="/node_modules/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick-theme.css"/>
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
 
-    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script>
@@ -65,9 +65,6 @@
                           content = $(this).find("content").text();
                           updated = new Date(Date.parse($(this).find("updated").text()));
 
-
-                          console.log('before', link);
-
                           //template element
                           var newDiv = $("#item-template").clone();
 
@@ -79,10 +76,6 @@
                           newDiv.find(".content").html(content);
                           newDiv.find(".read-more").attr("href", link);
                           newDiv.find(".read-more").attr("target", "_blank");
-
-                          console.log('after', newDiv.find("content").text());
-
-
 
                           newDiv.show();
 
@@ -189,9 +182,9 @@
             </div.
             <div class="row">
                 <div class="col-12">
-                    <span class="name">Renee DiBello</span></br>
+                    <span class="name">Renee DiBello</span>
                     <span class="business">The DiBello Real Estate Group Keller Williams Realty</span>
-                    <a class="float-right" href="www.igotsmart.com">www.igotsmart.com</a>
+                    <a class="website" href="www.igotsmart.com">www.igotsmart.com</a>
                 </div>
             </div>
         </div>
@@ -216,7 +209,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="name">Petr Gvozd,</span></br>
+                        <span class="name">Petr Gvozd,</span>
                         <span class="business">Window Fella's Windows & Doors</span>
                         <span class="website"><a href="www.windowfellas.com">www.windowfellas.com</a></span>
                     </div>
@@ -232,7 +225,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="name">Tania Delbrune,</span></br>
+                        <span class="name">Tania Delbrune,</span>
                         <span class="business">Beeline Tours, Seattle's Finest Charter Bus Rental Company</span>
                         <span class="website"><a href="www.beelinetours.com">www.beelinetours.com</a></span>
                     </div>
@@ -248,7 +241,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="name">Sam Ararat,</span></br>
+                        <span class="name">Sam Ararat,</span>
                         <span class="business">Ararat Insurance Services</span>
                         <span class="website"><a href="www.araratinsurance.com">www.araratinsurance.com</a></span>
                     </div>
@@ -264,7 +257,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <span class="name">Lorinda Marie Farfan,</span></br>
+                        <span class="name">Lorinda Marie Farfan,</span>
                         <span class="business">CastleRock Productions</span>
                         <span class="website"></span>
                     </div>

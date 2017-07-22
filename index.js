@@ -21,6 +21,7 @@ nunjucks.configure('public/templates', {
 //app.use(express.static('publc/*'))
 //app.use(express.static('public'));
 app.use('/images', express.static(path.join(__dirname, 'public/images')));
+app.use('/downloads', express.static(path.join(__dirname, 'public/downloads')));
 app.use('/fonts', express.static(path.join(__dirname, 'public/fonts')));
 app.use('/swf', express.static(path.join(__dirname, 'public/swf')));
 app.use('/node_modules', express.static(path.join(__dirname, '/node_modules/')));
