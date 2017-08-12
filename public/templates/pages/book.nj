@@ -4,6 +4,20 @@
     <div class="wave hidden-md-down"></div>
 {% endblock %}
 {% block main %}
+    <script type="text/javascript">
+            $(document).ready(function(){
+                var extra = $('.extra')[0];
+                console.log(extra);
+                $('.read-more').bind('click', function(){
+                    console.log('test', extra);
+                    if (extra.style.display === 'none') {
+                        extra.style.display = 'block';
+                    } else {
+                        extra.style.display = 'none';
+                    }
+                });
+            });
+    </script>
     <h2>Radically Simple Accounting</h2>
     <div id="main" class="row short blue-background">
         <div class="col-12 col-lg-6">
@@ -14,28 +28,27 @@
             <div class="book-collection"></div>
         </div>
     </div>
-    <div class="row padding-left-50 margin-50-bottom">
+    <div class="row margin-50-bottom no-gutter">
         <div class="col-6 col-md-6 col-lg-3">
             <div class="container">
-                <div class="buy-book row no-gutter text-center">
+                <div class="buy-book row no-gutter text-center float-md-right">
                     <div class="title pdf col-12">Buy PDF format</div>
                     <div class="price col-12">$10.00</div>
-                    <a class="col-12" href="https://sellfy.com/p/Gde1/" target="_blank">Buy now</a>
+                    <a href="https://sellfy.com/p/Gde1/" id="Gde1" class="sellfy-buy-button" style="overflow:visible;">Buy now</a><script type="text/javascript" src="https://sellfy.com/js/api_buttons.js"></script>
                 </div>
             </div>
         </div>
         <div class="col-6 col-md-6 col-lg-3">
             <div class="container">
                 <div class="buy-book row no-gutter text-center">
-                    <div class="title audio col-12">Buy audio format</div>
-                    <div class="price col-12">$20.00</div>
-                    <a class="col-12" href="https://www.amazon.com/Radically-Simple-Accounting-Dark-Profit/dp/B005NY3R30/ref=mt_audio_download?_encoding=UTF8&me=" target="_blank">Buy now</a>
+                    <div class="title audio col-12">AudioBook</div>
+                    <div class="col-12">Not sold here. Please buy from your favorite audiobook store.</div>
                 </div>
             </div>
         </div>
         <div class="col-6 col-md-6 col-lg-3">
             <div class="container">
-                <div class="buy-book row no-gutter text-center">
+                <div class="buy-book row no-gutter text-center float-md-right">
                     <div class="title book col-12">Buy Print Book</div>
                     <div class="price col-12">$9.99</div>
                     <a class="col-12" href="https://www.amazon.com/Radically-Simple-Accounting-Dark-Profit/dp/1419616722/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=" target="_blank">Buy now</a>
@@ -47,7 +60,7 @@
                 <div class="buy-book row text-center">
                     <div class="title book col-12">Kindle Edition</div>
                     <div class="price col-12">$11.00</div>
-                    <a class="col-12" href="">Buy now</a>
+                    <a class="col-12" href="https://www.amazon.com/Radically-Simple-Accounting-Dark-Profit/dp/1419616722/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=" target="_blank">Buy now</a>
                 </div>
             </div>
         </div>
@@ -61,7 +74,7 @@
 
 
 {% block more %}
-        <div class="testimonial-slider margin-50-bottom">
+        <div class="testimonial-slider margin-50-bottom blue-background =">
             <div class="container testimonials blue-background">
                 <div class="row">
                     <div class="col-12">
@@ -207,7 +220,6 @@
                 </div>
             </div>
         </div>
-
         <div class="row margin-50-bottom">
             <div class="col-12 col-lg-5">
                 <div class="Language green-backdrop"></div>
@@ -246,21 +258,50 @@
             </div>
         </div>
         <div class="row margin-50-bottom blue-background">
-                <div class="col-12 col-lg-8 padding-25 sample">
-                    <h2>Heres a sample of the kind of things that you will learn:</h2>
-                    <ul>
-                        <li>Tons of expenses you are allowed to take as deductions, including some you may not have known about; and some you may know how to take, like car expenses, whether you buy, lease, or use your own vehicle.</li>
-                        <li>Plus, the book itself is a tax-deductible expense you can write off against your income.</li>
-                        <li>A look at accounting basics, including calendar or fiscal year, cash or accrual basis, and other fundamentals...</li>
-                    </ul>
-                    <a href="" class="read-more">Read All</a>
+            <div class="col-12 col-lg-8 padding-25 sample">
+                <h2>Heres a sample of the kind of things that you will learn:</h2>
+                <ul class="read-more-list">
+                    <li>Tons of expenses you are allowed to take as deductions, including some you may not have known about; and some you may know how to take, like car expenses, whether you buy, lease, or use your own vehicle.</li>
+                    <li>Plus, the book itself is a tax-deductible expense you can write off against your income.</li>
+                    <li>A look at accounting basics, including calendar or fiscal year, cash or accrual basis, and other fundamentals.</li>
+                    <div class="extra" style="display:none;">
+                        <li>Why it is important to have a clear business model before designing your accounting system.</li>
+                        <li>What is profit? Where does it appear on the financial reports?</li>
+                        <li>A look at design rules for your chart of accounts, including account number schema, generating account names, grouping accounts in alphabetical order, and grouping accounts into functional areas of business management, such as grouping all payroll accounts under one total payroll account, so you can see your total payroll burden at a glance.</li>
+                        <li>Jokes and quotes by famous people.</li>
+                        <li>A discussion about creative accounting and when it borders on fraud.</li>
+                        <li>Tips on how to manage a bookkeeper, hire a financial advisor, and establish internal controls, similar to corporations even if you’re a sole proprietor.</li>
+                        <li>What private accountants to the rich & famous know about commingling funds and aren't telling you?</li>
+                        <li>How to setup your accounting when you mix business and personal monies, and still need accurate IRS reporting.</li>
+                        <li>Definitions inside the text, for easy reading. A glossary in the back, making the book useful as a reference guide.</li>
+                        <li>A detailed look at bank accounts, petty cash, credit cards, and debit cards.</li>
+                        <li>How to setup a fabulous color-coded filing system in one day flat, even if you’re surrounded by a disaster area leaning tower of files.</li>
+                        <li>How to classify active and passive income accounts.</li>
+                        <li>A clear explanation of Cost of Goods that you can understand, finally! Why using COGS correctly can save your business boatloads of money.</li>
+                        <li>A comprehensive look at the Profit and Loss Report and why it’s essential. Please don’t pay taxes without it.</li>
+                        <li>Fixed assets, like computers, and how to categorize them. How to set up your fixed assets so that you're happy, plus any and all CPA's will understand your financials, thereby minimizing what you pay in accounting fees.</li>
+                        <li>A spiritual approach to money. Or if not that, then how do you think about money? Why it can be profitable to give money charitably, even if you do so anonymously? 10% of the proceeds from this book are donated to charity.</li>
+                        <li>Demystifying your Balance Sheet Statement. A new way of teaching Balance Sheets that works better even for some accounting professionals. How does a Statement of Net Worth differ from a Balance Sheet?</li>
+                        <li>A check list that every good bookeeper will want to refer back to again and again for internal auditing of financial reports.</li>
+                        <li>How to do a financial analysis of your Profit & Loss Report and Balance Sheet, so that you can exponentially increase your profits.</li>
+                        <li>Determining the value of your business, analyzing your assets, and using your financials to find new business opportunities.</li>
+                        <li>How to create perform financial reports in order to gain financing for your new business idea.</li>
+                    </div>
+                </ul>
+                <div class="container center-text">
+                    <div class="row">
+                        <div class="col-12">
+                            <a class="read-more">Read All</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-12 col-lg-4 green-background padding-25">
-                    <span class="border padding-25">
-                        <h2>Gain control of your finances, Improve your profit tomorrow</h2>
-                        <p>Make your accounting Radically Simple!</p>
-                    </span>
-                </div>
+            </div>
+            <div class="col-12 col-lg-4 green-background padding-25">
+                <span class="border padding-25">
+                    <h2>Gain control of your finances, Improve your profit tomorrow</h2>
+                    <p>Make your accounting Radically Simple!</p>
+                </span>
+            </div>
         </div>
         <div class="row margin-50-bottom">
             <div class="col-12">
@@ -296,7 +337,6 @@
                 </ul>
                 <p>Listening to this book will give you the essence of what you need to know to become financially empowered.</p>
             </div>
-
         </div>
         <div class="row margin-50-bottom">
             <div class="book col-lg-4 push-lg-8">

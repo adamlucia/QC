@@ -134,7 +134,7 @@
             </div>
             <div class="row margin-50-bottom">
                 <div class="col-lg-5 push-lg-7">
-                    <div class="Concerns green-backdrop"></div>
+                    <div class="Concerns  green-backdrop"></div>
                 </div>
                 <div class="col-lg-7 pull-lg-5 vertical-center">
                     <h2>Your concerns are our concerns.</h2>
@@ -143,7 +143,7 @@
             </div>
             <div class="row margin-100-bottom">
                 <div class="col-12 center-block">
-                    <div class="certs"></div>
+                    <div class="certification-logos"></div>
                 </div>
             </div>
 {% endblock %}

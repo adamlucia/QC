@@ -54,21 +54,21 @@
             <div class="col-12 col-lg-8">
                 <form class="contact" action="/action_page.php" method=”post”>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <label for="fname">First Name</label>
                             <input type="text" id="fname" name="firstname" placeholder="FIRST NAME">
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <label for="lname">Last Name</label>
                             <input type="text" id="lname" name="lastname" placeholder="LAST NAME">
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <label for="email">Email</label>
                             <input type="text" id="email" name="email" placeholder="EMAIL">
                         </div>
-                        <div class="col-6">
+                        <div class="col-12 col-md-6">
                             <label for="phone">Last Name</label>
                             <input type="text" id="phone" name="phone" placeholder="PHONE NUMBER">
                         </div>
@@ -83,10 +83,10 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-12 col-md-6">
                                     <div class="g-recaptcha" data-sitekey="6Ldq_CYUAAAAACX8ZLWPNdRSf4SlBms0EbV3POFS"></div>
                                 </div>
-                                <div class="col-6 text-right">
+                                <div class="col-12 col-md-6 text-right">
                                     <div class="submit">
                                         <input type="submit" value="Submit">
                                     </div>
@@ -147,7 +147,7 @@
         </div>-->
         <div class="row margin-100-bottom">
             <div class="col-12 center-block">
-                <div class="certs"></div>
+                <div class="certification-logos"></div>
             </div>
         </div>
 {% endblock %}

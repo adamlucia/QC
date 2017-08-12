@@ -8,7 +8,9 @@
     <title>
          QC Computing 
     </title>
-    <!-- chnage description-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- change description-->
     <meta name="description" content="The HTML5 Herald">
 
     <meta name="author" content="STAYKool Productions">
@@ -100,28 +102,44 @@
     <![endif]-->
 </head>
 <body>
-    <div class="background no-gutters">
+    <div class="background">
         
     <div id="globe"></div>
     <div class="wave-blue"></div>
 
+        <section id="navigation" class="hidden-lg-up">
+            <div class="container">
+                <nav class="navbar navbar-toggleable-md navbar-inverse bg-blue fixed-top">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">QC Computing</a>
+
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a class="nav-link" href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/analysis.html">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/testimonials.html">CLIENT TESTIMONIALS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/book.html">RADICALLY SIMPLE ACCOUNTING BOOK</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/news.html">NEWS AND PUBLICATIONS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/products.html">SAVE ON SOFTWARE & SUPPLIES</a></li>
+                            <li class="nav-item"><a class="nav-link" href="blog.qccomputing.com">BLOG</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/about.html">ABOUT US</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </section>
 
         
-    <script>
-        $(document).ready(function () {
-            $('[data-toggle="offcanvas"]').click(function () {
-                $('.row-offcanvas').toggleClass('active')
-            });
-        });
-    </script>
-    <section id="header" class="container top-level">
+    <section id="header" class="container">
         
         <div class="row row-eq-height">
             <div class="col-12 col-md-6">
                 <a href="/"><div id="logo"></div></a>
                 <!--<a href="/"><img src="images/logo.png" id="logo"></a>-->
             </div>
-            <div class="col-12 col-md-6 text-right">
+            <div class="col-12 col-md-6 text-md-right">
                 <div id="contact-text" class="vcenter">
                     <span>NEED ASSISTANCE?</span></br><span>CALL NOW!</span>
                 </div>
@@ -131,9 +149,9 @@
 
 
     </section>
-    <section id="content" class="container top-level">
-        <div class="row no-gutters margin-100-bottom">
-            <section id="navigation" class="col-md-4">
+    <section id="content" class="container">
+        <div class="row margin-100-bottom">
+            <section id="navigation" class="hidden-md-down col-md-4">
                 <ul id="nav">
                     <li><a href="/accounting.html">QUICKBOOKS CONSULTING & ACCOUNTING</a></li>
                     <li><a href="/analysis.html">SMALL BUSINESS FINANCIAL ANALYSIS</a></li>
@@ -144,28 +162,8 @@
                     <li><a href="blog.qccomputing.com">BLOG</a></li>
                     <li><a href="/about.html">ABOUT US</a></li>
                 </ul>
-                <!--<nav class="navbar navbar-fixed-top navbar-inverse">
-                  <div class="container">
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="#">Project name</a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse in" aria-expanded="true">
-                      <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </nav>-->
             </section>
-            <section id="main-content" class="col-md-8 container">
+            <section id="main-content" class="col-12 col-lg-8 container">
                 
         <h2>QuickBooks Consulting & Accounting</h2>
         <div id="main" class="row blue-background">
@@ -269,33 +267,35 @@
             </div>
             <div class="row margin-100-bottom">
                 <div class="col-12 center-block">
-                    <div class="certs"></div>
+                    <div class="certification-logos"></div>
                 </div>
             </div>
 
             </section>
         </div>
     </section>
-    <section id="footer" class="container top-level">
+    <section id="footer" class="container">
         
         <div class="row no-gutters">
-            <div class="col-12 col-md-3">
-                <div class="row vcenter">
-                    <div class="col-12">
+            <div class="col-12 col-lg-3">
+                <div class="row">
+                    <div class="col-12 vertical-center">
                         <div class="footer-text">&copy2001 - 2017 QC Computing, LLC. All Rights Reserved.</div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-5">
+            <div class="col-12 col-lg-5">
                 <h4 class="inline-block">CONTACT US TODAY:&nbsp</h4><div class="phone">206-832-5485</div>
             </div>
-            <div class="col-12 col-md-4">
-                <div class="row vcenter">
-                    <div class="col-8">
-                        <div class="footer-text">or send email to: bailey@qccomputing.com</div>
-                    </div>
-                    <div class="col-4">
-                        <div class="float-right"><div class="fb"></div><div class="linked-in"></div></div>
+            <div class="col-12 col-lg-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-8 vertical-center">
+                            <div class="footer-text">or send email to: bailey@qccomputing.com</div>
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="social-icons"><div class="fb"></div><div class="linked-in"></div></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,10 +310,17 @@
     <script src="node_modules/slick-carousel/slick/slick.js"></script>
     <script>
         $(document).ready(function(){
+            console.log('ready');
             var temp = $('.testimonial-slider').slick({
                 autoplay: true,
-                autoplaySpeed: 2000
+                autoplaySpeed: 150000
             });
+
+            $('[data-toggle="collapse"]').click(function (){
+                console.log('fire');
+                $('.navbar-collapse').toggleClass('show');
+            });
+
         });
     </script>
 </body>

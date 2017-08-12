@@ -24,57 +24,113 @@
 
 {% block more %}
         <div class="row margin-50-bottom full-width-bar green-background">
-            <div class="col-12 col-lg-6">
-                <h2>Business Analyst</h2>
-                <p>You may be brilliant at what you do, but even the most successful entrepreneur does not have skills to solve every problem. That's where a business analyst like Madeline Bailey comes in to play. Ms. Bailey has a B.A. in Management, plus 28 years of business management practice and expertise. She can provide you with the following:</p>
-                <ul>
-                    <li>QuickBooks Software Expertise</li>
-                    <li>Financial Analysis Review</li>
-                    <li>Senior Accounting Services</li>
-                    <li>Organizational Workflow & Filing Systems</li>
-                    <li>PC Technology for Small Businesses</li>
-                    <li>Small Business Analysis</li>
-                </ul>
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-xl-3">
+                            <div class="book-cover"></div>
+                        </div>
+                        <div class="col-12 col-xl-5 vertical-center">
+                            <h3>Remote Access Options of QuickBooks - Free White Paper</h3>
+                            <p>Madeline Bailey releases a 30-page White Paper on <u><b>Remote Access Options for QuickBook</b></u></p>
+                        </div>
+                        <div class="col-12 col-xl-4 vertical-center">
+                            <form class="whitepaper" action="/action_page.php" method=”post”>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" id="fname" name="firstname" placeholder="FIRST NAME">
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" id="lname" name="lastname" placeholder="LAST NAME">
+                                        <button type="submit">Download your copy now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row margin-100-bottom news">
-            <div class="col-12 margin-100-bottom">
+            <div class="col-12 margin-50-bottom">
                 <center><h2>Past News & Events</h2></center>
             </div>
-            <div class="col-12 col-lg-4">
-                <!--repeat 4 times-->
+            <div class="col-12 col-lg-4 news-list">
                 <div class="container item">
-                    <div class="col-12 item">
-                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                        <p>Vivamus quis laoreet arcu. Suspendisse condimentum lacus vitae risus dapibus, quis feugiat lectus venenatis. Praesent mattis, orci nec ornare tempor, nunc lectus viverra massa, nec pharetra tellus neque eu neque.</p>
-                        <div><span class="date">April 4 2017</span><a href="/more" class="float-right read-more">Read More</a></div>
+                    <div class="col-12">
+                        <h4>"Making Peace with Your Finances , with Radically Simple Accounting"</h4><h4>East West Bookstore, 6500 Roosevelt Way NE  Seattle, WA 98115</h4>
+                        <p>"You helped me make peace with my finances by showing me the value and importance of having an accounting system to track income and expenses. To learn where I spend my money, I'm going to get a portable file box and make folders that work for me. I like the encouragement to create some additional sources of income. And I really appreciate your gracious, open, personal style."</p>
+                        <p>Participant, East West Bookstore Event</p>
+                        <p>East West Bookstore carries the trade paperback at the same price as Amazon.com.</p>
+                        <div><span class="date">2 April 2012</span></div>
+                    </div>
+                </div>
+                <div class="container item">
+                    <div class="col-12">
+                        <h4>"Teaching Accounting to Non- Accountants", Scaling New Heights,  Intuit Seminar for Advanced QuickBooks Consultants,  Atlanta,GA</h4>
+                        <p></p>
+                        <div><span class="date">May 2009</span></div>
+                    </div>
+                </div>
+                <div class="container item">
+                    <div class="col-12">
+                        <h4>"Getting Paid", NW Women's Journal</h4>
+                        <p></p>
+                        <div><span class="date">May 2009</span></div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
-                <!--repeat 4 times-->
+            <div class="col-12 col-lg-4 news-list">
                 <div class="container item">
-                    <div class="col-12 item">
-                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                        <p>Vivamus quis laoreet arcu. Suspendisse condimentum lacus vitae risus dapibus, quis feugiat lectus venenatis. Praesent mattis, orci nec ornare tempor, nunc lectus viverra massa, nec pharetra tellus neque eu neque.</p>
-                        <div><span class="date">April 4 2017</span><a href="/more" class="float-right read-more">Read More</a></div>
+                    <div class="col-12">
+                        <h4>"QuickBooks Accounting for Real Estate Investors" REIA of Washington, Bellevue, WA</h4>
+                        <p>"It's so refreshing to have a speaker who's not  giving a sales pitch."</p>
+                        <p>Participant, REIA Event</p>
+                        <div><span class="date">July 2010</span></div>
+                    </div>
+                </div>
+                <div class="container item">
+                    <div class="col-12">
+                        <h4>"Radical Accounting: Making Peace with your Finances"  New Renaissance Bookstore</h4>
+                        <p>Portland, OR</p>
+                        <div><span class="date">May 2009</span></div>
+                    </div>
+                </div>
+                <div class="container item">
+                    <div class="col-12">
+                        <h4>"Resource of the Month Radical Accounting"  Sage Corp Newsletter, Focused on Partner Success</h4>
+                        <p>Sage publishes the following software, and more: ACT!, MAS 90, Saleslogix, and MIP Fund Accounting</p>
+                        <div><span class="date">Jan 2007</span></div>
+                    </div>
+                </div>
+                <div class="container item">
+                    <div class="col-12">
+                        <h4>Intuit ProConnection Newsletter QuickBooks ProAdvisor Reaches Small Business with the Power of the Press</h4>
+                        <h4>Intuit ProAdvisor Newsletter Announces Book Release</h4>
+                        <div><span class="date">May 2006</span></div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-4">
-                <!--repeat 4 times-->
+            <div class="col-12 col-lg-4 news-list">
                 <div class="container item">
-                    <div class="col-12 item">
-                        <h5>Lorem ipsum dolor sit amet, consectetur</h5>
-                        <p>Vivamus quis laoreet arcu. Suspendisse condimentum lacus vitae risus dapibus, quis feugiat lectus venenatis. Praesent mattis, orci nec ornare tempor, nunc lectus viverra massa, nec pharetra tellus neque eu neque.</p>
-                        <div><span class="date">April 4 2017</span><a href="/more" class="float-right read-more">Read More</a></div>
+                    <div class="col-12">
+                        <h4>"Start-up Steps",  Ladies Who Launch Organization</h4>
+                        <p>"You have a fabulous product and great anecdotes to share."</br> Linda Synder, Executive Director, Western WA</p>
+                        <div><span class="date">July 2009</span></div>
+                    </div>
+                </div>
+                <div class="container item">
+                    <div class="col-12">
+                        <h4>"Radical Accounting Presentation",  BizJam, Seattle</h4>
+                        <h4>The Seattle networking event  for bootstrapping entrepreneurs.</h4>
+                        <p>"I am so excited about Madeline's book, Radical Accounting. I've read it cover to cover twice, marking it up with stickies and margin notes, and had it open on my lap when I sat down in front of a brand new QB account to create my Chart of Accounts from scratch. The day it all clicked - when I finally got it - when the P&amp;L became clear and it all made sense - I was jumping up and down. I've been self employed for 8 years and until I read her book I thought my Chart of Accounts was just something I kept for my tax preparer so she'd know how much to deduct from my Schedule C. I wanted to understand more about how the finances affect my businesses, but I didn't know where to go to learn. Now I recommend it to everyone who runs his or her own business. It's concise, to the point, and puts all the pieces together. THANK YOU for such an awesome resource and for explaining it so clearly."</p>
+                        <div><span class="date">Jun 2007</span></div>
                     </div>
                 </div>
             </div>
-        </div>
         <div class="row margin-100-bottom">
             <div class="col-12 center-block">
-                <div class="certs"></div>
+                <div class="certification-logos"></div>
             </div>
         </div>
 {% endblock %}

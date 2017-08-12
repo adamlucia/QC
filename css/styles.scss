@@ -151,11 +151,13 @@ body {
         text-decoration: underline;
         &:hover {
             color: $white;
+            opacity: .8;
         }
 
         &:focus, &:visited {
             color: $white;
         }
+
 
     }
     b {
@@ -190,6 +192,13 @@ body {
     }
 }
 
+.container {
+    z-index: auto;
+}
+
+.navbar-brand {
+    width: 200px;
+}
 hr {
     background-color: $light-green;
     height: 2px;
@@ -276,6 +285,46 @@ hr {
     }
 }
 
+.whitepaper {
+    input[type=text], select, textarea {
+        width: 100%; /* Full width */
+        padding: 12px; /* Some padding */
+        border: 1px solid #ccc; /* Gray border */
+        box-sizing: border-box; /* Make sure that padding and width stays in place */
+        margin-top: 6px; /* Add a top margin */
+        margin-bottom: 16px; /* Bottom margin */
+        resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    }
+
+    button {
+        background-color: $med-blue;
+        color: $white;
+        padding: 15px 70px;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        position: relative;
+        border: 1px solid $white;
+        display: inline-block;
+
+        &:after {
+            content:'';
+            display: inline-block;
+            background: url('/images/arrow.png')  no-repeat;
+            margin-left: 5px;
+            width: 20px;
+            height: 10px;
+            position: absolute;
+            right: 35px;
+            top: 22px;
+        }
+    }
+
+    label {
+        display: none;
+    }
+}
+
 .wave {
     background: url('/images/wave.png') no-repeat;
     background-position: center;
@@ -314,6 +363,7 @@ hr {
 #globe {
     background: url('/images/globe.png') no-repeat;
     background-position: center;
+    background-size: 100%;
     min-width: 860px;
     left: 28%;
     top: 1%;
@@ -328,6 +378,7 @@ hr {
     background: url('/images/facebook.png') no-repeat;
     width: 21px;
     height: 22px;
+    margin: 5px 0px;
     display: inline-block;
 
     &:hover {
@@ -341,6 +392,7 @@ hr {
     width: 21px;
     height: 22px;
     display: inline-block;
+    margin: 5px 0px;
 
     &:hover {
         opacity: .8;
@@ -353,6 +405,7 @@ hr {
     height: 150px;
     background-color: $light-green;
     margin-top: 50px;
+    margin-left: 0px;
     padding: 15px;
     font-size: 14px;
     display: flex;
@@ -398,6 +451,16 @@ hr {
         font-size: 16px;
         align-self: center;
     }
+    #Gde1 {
+        padding: 0px;
+        border: 0px;
+        overflow: visible !important;
+        &:before {
+            content:none;
+        }
+    }
+
+
 
     a {
         align-self: flex-end;
@@ -417,6 +480,7 @@ hr {
 
         }
 
+
         &:hover {
             text-decoration: underline;
         }
@@ -425,11 +489,14 @@ hr {
 }
 
 #header {
+
     #logo {
         position: relative;
         z-index: 1;
         background: url('/images/logo.png') no-repeat;
-        width: 531px;
+        max-width: 531px;
+        width: auto;
+        background-size: 100%;
         height: 128px;
         margin-bottom: 25px;
         margin-left: -115px;
@@ -450,10 +517,15 @@ hr {
     }
 }
 
+.navbar {
+    &.bg-blue {
+        background: $med-blue;
+    }
+}
+
 #content {
     overflow: visible;
     min-height: inherit;
-    padding: 0px;
 
     .contact-text {
         display: inline-block;
@@ -475,7 +547,12 @@ hr {
         background: url('/images/Senior-Accountant.png') no-repeat;
         width: $img-width;
         height: $img-height;
+        background-position: center;
 
+        @media only screen and (max-width : 992px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .Business-Analyst {
@@ -485,6 +562,11 @@ hr {
         background-size: 130%;
         background-position: center;
 
+        @media only screen and (max-width : 992px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
     }
 
     .quickbooks {
@@ -492,6 +574,11 @@ hr {
         background-position: center;
         width: 325px;
         height: 65px;
+        @media only screen and (max-width : 992px) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
     }
 
     .QBecosystem {
@@ -501,6 +588,7 @@ hr {
         height: 290px;
         float: right;
         margin-right: -50px;
+        background-size: 100%;
     }
 
     .qc {
@@ -535,13 +623,20 @@ hr {
         }
 
     }
+    .book-cover {
+        background: url('/images/book-cover.png') no-repeat;
+        height:360px;
+        width: 300px;
+
+    }
     .fraud {
         background: url('/images/fraud.jpg') no-repeat;
         width: $img-width;
         height: $img-height;
         background-size: 110%;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -550,7 +645,8 @@ hr {
         width: $img-width;
         height: $img-height;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Improve {
@@ -561,7 +657,8 @@ hr {
         background-size: 113%;
 
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Roadmap {
@@ -569,7 +666,8 @@ hr {
         width: $img-width;
         height: $img-height;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Systematically {
@@ -577,7 +675,8 @@ hr {
         width: $img-width;
         height: $img-height;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
 
     }
@@ -586,7 +685,8 @@ hr {
         width: $img-width;
         height: $img-height;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -595,7 +695,8 @@ hr {
         width: $img-width;
         height: $img-height;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Benefit {
@@ -603,7 +704,8 @@ hr {
         width: $img-width;
         height: $img-height;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Architect {
@@ -614,7 +716,8 @@ hr {
         background-position: center;
 
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Top-Down {
@@ -624,7 +727,8 @@ hr {
         background-size: 170%;
         background-position: center;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Terminology  {
@@ -634,7 +738,8 @@ hr {
         background-size: 170%;
         background-position: center;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Collaboration {
@@ -642,7 +747,8 @@ hr {
         width: $img-width;
         height: $img-height;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Leverage {
@@ -650,7 +756,8 @@ hr {
         width: $img-width;
         height: $img-height;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Cloud {
@@ -658,7 +765,8 @@ hr {
         width: $img-width;
         height: $img-height;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Future {
@@ -668,7 +776,8 @@ hr {
         background-size: 170%;
         background-position: center;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Concerns {
@@ -678,7 +787,8 @@ hr {
         background-size: 170%;
         background-position: center;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Language {
@@ -688,7 +798,8 @@ hr {
         background-size: 170%;
         background-position: center;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -699,7 +810,8 @@ hr {
         background-size: 170%;
         background-position: center;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -710,7 +822,8 @@ hr {
         background-size: 170%;
         background-position: center;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Buy {
@@ -720,7 +833,8 @@ hr {
         background-size: 170%;
         background-position: center;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Listen {
@@ -728,7 +842,8 @@ hr {
         width: 500px;
         height: 450px;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
     .Audiobook {
@@ -736,7 +851,8 @@ hr {
         width: 500px;
         height: 450px;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -747,7 +863,8 @@ hr {
 
         background-position: center;
         @media only screen and (max-width : 992px) {
-
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 
@@ -884,10 +1001,9 @@ hr {
         text-decoration: none;
         padding: 18px 40px;
         border: 2px solid $white;
-        width: 245px;
+        width: 230px;
         font-size: 10px;
         position: relative;
-        background-color: $med-blue;
         height: 50px;
         line-height: 10px;
         text-align: center;
@@ -916,8 +1032,9 @@ hr {
 
     #navigation {
         position: relative;
-        z-index: 50;
+
         #nav {
+
             padding: 0px;
             float:right;
             background-color: #1c5312;
@@ -967,6 +1084,7 @@ hr {
         // *[class^='col-*'] {
         //         height: 800px;
         // }
+        padding-left: 50px;
         .full {
             height: 745px;
         }
@@ -978,7 +1096,6 @@ hr {
 
         #main {
             min-height: inherit;
-            padding-left: 50px;
 
             &.short {
                 min-height: 20px;
@@ -1032,6 +1149,7 @@ hr {
             width: 150px;
             text-align: right;
             padding-right: 35px;
+            margin-bottom: 10px;
 
             &:before {
                 content:'';
@@ -1121,23 +1239,37 @@ hr {
         }
 
         .news {
-            h4 {
-                font-weight: 400;
+            h5 {
+                font-weight: 300;
                 font-family: sans-serif;
-                text-align: center;
                 margin-bottom: 35px;
-                text-align: center;
+
             }
 
             .news-list {
 
                 .item {
                     position: relative;
-                    margin-top: 3rem;
-                    margin-bottom: 3rem;
-                    h5 {
-                        font-weight: 400;
+                    padding-bottom: 1.5rem;
+                    padding-top: 1.5rem;
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        width: 90%;
+                        margin: 1px auto 0;
+                        padding-top: 25px;
+                        border-bottom: 1px solid $dark-blue;
+                    }
+
+                    &:last-child:after {
+                        border-bottom: 0px;
+                    }
+
+
+                    h6 {
                         font-family: sans-serif;
+                        font-weight: bold;
                     }
 
                     img {
@@ -1149,9 +1281,14 @@ hr {
                         height: 130px;
                     }
 
+                    .date {
+                        font-size: 13px;
+                    }
+
                     .bottom {
                         position: absolute;
                         bottom: 0px;
+                        width: 100%;
                         .read-more {
                             padding:5px 10px;
                             background-color: $dark-green;
@@ -1174,7 +1311,18 @@ hr {
                         }
                     }
                 }
+
+                &.frontpage {
+                    .item {
+                        &:after {
+                            content: "";
+                            border-bottom: 0px;
+                        }
+                    }
+                }
             }
+
+
         }
 
 
@@ -1189,7 +1337,12 @@ hr {
 }
 
 #footer {
-    height: 75px;
+    margin-bottom: 25px;
+    .row {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
     .footer-text {
         font-size: 14px;
@@ -1201,59 +1354,47 @@ hr {
         font-family: 'cochin', serif;
         font-size: 25px;
     }
-}
 
-/*
- * Off Canvas
- * --------------------------------------------------
- */
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-         -o-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-  }
-
-  .row-offcanvas-right {
-    right: 0;
-  }
-
-  .row-offcanvas-left {
-    left: 0;
-  }
-
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
-  }
+    .social-icons {
+        float:right;
+    }
 }
 
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-    #content .QBecosystem {
-        float: none;
+    #content {
+        .QBecosystem {
+            float: none;
+        }
+        #navigation {
+            #nav {
+                width: 350px;
+            }
+        }
+
+        .book-cover {
+            margin-top: -100px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .whitepaper {
+            padding-bottom: 50px;
+        }
+
+        .qb-background-border {
+            float: none;
+
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
     }
+
+
+
 }
 
 /* Medium Devices, Desktops */
@@ -1263,32 +1404,257 @@ hr {
         top: 2%;
     }
 
-    #content .QBecosystem {
-        float: none;
-        margin-left: -15px;
+    body {
+        #content {
+            .QBecosystem {
+                float: none;
+                margin-left: -15px;
+            }
+            .book-collection {
+                position: relative;
+            }
+
+            .certification-logos {
+                height: 200px !important;
+            }
+
+            .profile-crop {
+                margin-left: auto;
+                margin-right: auto;
+                float: none;
+            }
+
+            #main-content {
+                #main {
+                    padding-bottom: 50px;
+                    .book-collection {
+                        margin-left: auto;
+                        margin-right: auto;
+                        top:0px;
+                        left:0px;
+                    }
+                }
+            }
+
+            #more-content {
+
+                .contact-info {
+                    padding-top: 50px;
+                }
+
+                .book {
+                    .book-collection {
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+                .news {
+                    .news-list.frontpage {
+                        .item {
+                            &:after {
+                                content: "";
+                                display: block;
+                                width: 90%;
+                                margin: 1px auto 0;
+                                padding-top: 25px;
+                                border-bottom: 1px solid $dark-blue;
+                            }
+
+                            &:last-child:after {
+                                border-bottom: 0px;
+                            }
+                            .bottom {
+                                position: relative;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #footer {
+            .row {
+                transform: none;
+                div {
+                    text-align: center;
+                }
+            }
+
+            .social-icons {
+                float:none;
+            }
+        }
     }
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-    #globe {
-        left: 0%;
-        top: 1%;
+    .slick-slider {
+        margin-left: 15px;
+        margin-right: 15px;
     }
-
     .row {
         display: flex;
-        flex-direction: column
+        //flex-direction: column
     }
-    .row > div:first-of-type {
+    #footer > .row > div:first-of-type {
         order: 1
+    }
+
+
+    #header {
+        padding-top: 50px;
+    }
+
+    #globe {
+        width: auto;
+        left: -4%;
+    }
+
+    body {
+
+
+
+        .contact {
+            padding: 0px;
+
+            .submit {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        #content {
+            text-align: center;
+
+            .profile-crop {
+                margin-left: auto;
+                margin-right: auto;
+                float: none;
+                width: 100%;
+            }
+
+            ul {
+                text-align: left !important;
+            }
+
+            .certification-logos {
+                height: 100px;
+            }
+
+            .QBecosystem {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .fraud {
+                margin-left: auto;
+                margin-right: auto;
+                background-size: cover;
+            }
+
+            .pointer {
+                margin-left: auto;
+                margin-right: auto;
+                background-size: cover;
+            }
+            .Roadmap {
+                margin-left: auto;
+                margin-right: auto;
+                background-size: cover;
+            }
+
+            .Systematically {
+                margin-left: auto;
+                margin-right: auto;
+                background-size: cover;
+            }
+
+            .Advisors {
+                margin-left: auto;
+                margin-right: auto;
+                background-size: cover;
+            }
+
+            #main-content {
+                padding-left: 15px;
+                text-align: left;
+
+
+                .full {
+                    height: 500px;
+
+                    #tagline {
+                        margin-left: 0px;
+                    }
+                }
+            }
+
+            .Audiobook {
+                width: auto;
+            }
+
+            .Listen {
+                width: auto;
+            }
+
+            // .blue-backdrop {
+            //     width: auto;
+            // }
+            //
+            // .green-backdrop {
+            //     width: auto;
+            // }
+            #more-content {
+                .sample {
+
+                    .read-more{
+                        bottom: -13px;
+                    }
+                }
+            }
+        }
     }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 
+    body {
+
+
+
+        .contact {
+            padding: 0px;
+        }
+
+        #content {
+            .QBecosystem {
+                width: 100%;
+            }
+            .fraud {
+                width: 100%;
+            }
+
+            .pointer {
+                width: 100%;
+            }
+
+            .Roadmap {
+                width: 100%;
+            }
+
+            .Systematically {
+                width: 100%;
+            }
+
+            .Advisors {
+                width: 100%;
+            }
+        }
+    }
 }
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {

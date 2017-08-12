@@ -100,7 +100,7 @@
         </div>
         <div class="row margin-100-bottom">
             <div class="col-12 center-block">
-                <div class="certs"></div>
+                <div class="certification-logos"></div>
             </div>
         </div>
 {% endblock %}

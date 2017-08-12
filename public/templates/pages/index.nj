@@ -1,6 +1,6 @@
 {% extends "layout.nj" %}
 {% block background %}
-    <div id="globe"></div>
+    <div id="globe" class="hidden-sm-down"></div>
     <div class="wave hidden-md-down"></div>
 {% endblock %}
 {% block main %}
@@ -37,7 +37,7 @@
             <div class="col-lg-7 pull-lg-5">
                 <h2>SENIOR ACCOUNTANT</h2>
                 <p>You are a successful business person with hundreds of concerns. If one of them is your accounting, you've come to the right place. Ms Bailey is an accounting fixer. She turns disasters into GAAP financial reporting. Beyond that, she can offer you support with every aspect of financial management and office systems. With many clients this involves active financial consultation.</p>
-                <a href="/quickbooks.html" class="square-button">MORE ABOUT OUR WORK</a>
+                <a href="/quickbooks.html" class="square-button blue-background">MORE ABOUT OUR WORK</a>
             </div>
         </div>
         <div class="row margin-150-bottom">
@@ -101,13 +101,13 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-12 col-xl-6">
                 <h2>RADICALLY SIMPLE ACCOUNTING</h2>
                 <p>Shows you a simpler way to learn private business accounting,  gain control of your finances, and make more profit!</p>
             </div>
         </div>
         <div class="row margin-150-bottom no-gutter full-width-bar green-fill">
-            <div class="col-12 col-lg-7 top-level">
+            <div class="col-12 col-xl-7 top-level">
                 <p>As an experienced business analyst, Madeline Bailey saves business owners from making the same accounting mistakes over and over again, helping them gain control of their finances in the process. That's why she wrote, Radically Simple Accounting, to help business owners who don't quite"connect" with traditional accounting books. She can help you make your businesses more profitable!</p>
             </div>
             <div class="col-12 hidden-lg-down col-lg-5">
@@ -122,16 +122,16 @@
         </div>
         <div class="row margin-100-bottom news">
             <div class="col-12">
-                <h4>LATEST NEWS</h4>
+                <h5 class="text-center">LATEST NEWS</h5>
             </div>
             <!-- dynamically pull in content-->
             <div class="container">
-                <div class="row row-eq-height news-list">
+                <div class="row row-eq-height news-list frontpage">
                     <div id="item-template" class="col-12 col-lg-4 item" style="display:none">
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
-                                    <h5 class="title">QuickBooks ProAdvisor of the Year.</h5>
+                                    <h6 class="title">QuickBooks ProAdvisor of the Year.</h6>
                                     <p class="content">Please vote for me. This is the first year I've had time to apply and I'd love to win. Voting closes on April 30th at midnight.</p>
                                 </div>
                             </div>
